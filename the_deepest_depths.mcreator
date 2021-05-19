@@ -3288,6 +3288,54 @@
           }
         ]
       }
+    },
+    {
+      "name": "AlienRock",
+      "type": "block",
+      "sortid": 299,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_rock"
+    },
+    {
+      "name": "VergoZone",
+      "type": "tab",
+      "sortid": 300,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "vergo_zone"
+    },
+    {
+      "name": "DeadAlienRock",
+      "type": "block",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dead_alien_rock"
+    },
+    {
+      "name": "AlienSeas",
+      "type": "biome",
+      "sortid": 302,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_seas"
+    },
+    {
+      "name": "VergoZoneDim",
+      "type": "dimension",
+      "sortid": 302,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "vergo_zone_dim",
+      "metadata": {
+        "ep": false
+      }
     }
   ],
   "variable_elements": [],
@@ -3310,6 +3358,7 @@
       "block.the_deepest_depths.ancient_tome": "Ancient Tome",
       "item.the_deepest_depths.blood_world": "Blood World Portal Igniter",
       "item.the_deepest_depths.muscle_fiber": "Muscle Fiber",
+      "biome.the_deepest_depths.alien_seas": "Alien Seas",
       "block.the_deepest_depths.pyroxene_stairs": "Pyroxene Stairs",
       "effect.slime_infection": "Slime Infection",
       "entity.the_deepest_depths.flesh_hunter": "Flesh Hunter",
@@ -3342,6 +3391,7 @@
       "block.the_deepest_depths.rune_y": "Ancient Rune",
       "block.the_deepest_depths.rune_z": "Ancient Rune",
       "block.the_deepest_depths.rune_k": "Ancient Rune",
+      "block.the_deepest_depths.dead_alien_rock": "Alien Rock",
       "block.the_deepest_depths.rune_l": "Ancient Rune",
       "block.the_deepest_depths.rune_m": "Ancient Rune",
       "block.the_deepest_depths.rune_n": "Ancient Rune",
@@ -3366,6 +3416,7 @@
       "block.the_deepest_depths.rune_a": "Ancient Rune",
       "block.the_deepest_depths.rune_b": "Ancient Rune",
       "block.the_deepest_depths.slate_slab": "Slate Slab",
+      "block.the_deepest_depths.alien_rock": "Alien Rock",
       "block.the_deepest_depths.ghostly_stairs": "Ghostly Stairs",
       "item.the_deepest_depths.muscle_helmet": "Muscle Cap",
       "item.the_deepest_depths.head_hunter_spawn_egg": "Head Hunter Spawn Egg",
@@ -3386,12 +3437,14 @@
       "item.the_deepest_depths.ectoplasm": "Ectoplasm",
       "block.the_deepest_depths.rooted_bloodstone": "Rooted Bloodstone",
       "item.the_deepest_depths.pyro_crystal": "Pyro-Crystal",
+      "itemGroup.tabvergo_zone": "Vergo Zone",
       "entity.the_deepest_depths.head_hunter": "Head Hunter",
       "block.the_deepest_depths.purple_diamond_ore": "Purple Diamond Ore",
       "item.the_deepest_depths.iron_bloodhound_sickle": "Iron Bloodhound Sickle",
       "item.the_deepest_depths.diamond_bloodhound_sickle": "Diamond Bloodhound Sickle",
       "block.the_deepest_depths.bloodshroom_planks": "Bloodshroom Planks",
-      "block.the_deepest_depths.ghostly_log": "Ghostly Log"
+      "block.the_deepest_depths.ghostly_log": "Ghostly Log",
+      "item.the_deepest_depths.vergo_zone_dim": "Vergo Zone Dim Portal Igniter"
     }
   },
   "foldersRoot": {
