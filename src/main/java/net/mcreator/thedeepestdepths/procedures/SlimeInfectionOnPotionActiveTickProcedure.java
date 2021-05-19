@@ -1,15 +1,9 @@
 package net.mcreator.thedeepestdepths.procedures;
 
-import net.minecraftforge.fml.server.ServerLifecycleHooks;
-
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.ChatType;
-import net.minecraft.util.Util;
 import net.minecraft.util.DamageSource;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.entity.SpawnReason;
@@ -64,11 +58,13 @@ public class SlimeInfectionOnPotionActiveTickProcedure extends TheDeepestDepthsM
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		entity.getPersistentData().putDouble("slimeinfectiontime",
-				(((new Random()).nextInt((int) 2 + 1)) + (entity.getPersistentData().getDouble("slimeinfectiontime"))));
+				(((new Random()).nextInt((int) 4 + 1)) + (entity.getPersistentData().getDouble("slimeinfectiontime"))));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(SlimeInfectionPotion.potion, (int) 60000, (int) 255, (false), (true)));
-		if ((((new Random()).nextInt((int) 10000 + 1)) == 1)) {
+		if ((((new Random()).nextInt((int) 1000 + 1)) == 1)) {
 			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) == 1)) {
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity).setHealth((float) 0);
 				for (int index0 = 0; index0 < (int) ((((new Random()).nextInt((int) 2 + 1)) + 2)); index0++) {
 					if (world instanceof ServerWorld) {
 						Entity entityToSpawn = new AdaptiveSlimeEntity.CustomEntity(AdaptiveSlimeEntity.entity, (World) world);
@@ -85,7 +81,9 @@ public class SlimeInfectionOnPotionActiveTickProcedure extends TheDeepestDepthsM
 				entity.attackEntityFrom(DamageSource.GENERIC, (float) 1);
 			}
 		}
-		if (((entity.getPersistentData().getDouble("slimeinfectiontime")) > 120000)) {
+		if (((entity.getPersistentData().getDouble("slimeinfectiontime")) > 14000)) {
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).setHealth((float) 0);
 			for (int index1 = 0; index1 < (int) ((((new Random()).nextInt((int) 2 + 1)) + 2)); index1++) {
 				if (world instanceof ServerWorld) {
 					Entity entityToSpawn = new AdaptiveSlimeEntity.CustomEntity(AdaptiveSlimeEntity.entity, (World) world);
@@ -96,16 +94,6 @@ public class SlimeInfectionOnPotionActiveTickProcedure extends TheDeepestDepthsM
 					world.addEntity(entityToSpawn);
 				}
 			}
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).setHealth((float) 0);
-		}
-		if (!world.isRemote()) {
-			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
-			if (mcserv != null)
-				mcserv.getPlayerList().func_232641_a_(
-						new StringTextComponent(
-								(new java.text.DecimalFormat("##").format((entity.getPersistentData().getDouble("slimeinfectiontime"))))),
-						ChatType.SYSTEM, Util.DUMMY_UUID);
 		}
 		return (true);
 	}
