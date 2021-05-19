@@ -1,0 +1,20 @@
+{
+  "_fv": 18,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Stone cutting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "rune",
+    "recipeShapeless": false,
+    "stoneCuttingInputStack": {
+      "value": "CUSTOM:Slate"
+    },
+    "stoneCuttingReturnStack": {
+      "value": "CUSTOM:RuneH"
+    },
+    "name": "rune_recipe_h",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "the_deepest_depths:blocks/bloodshroombrainroot",
+    "particle": "the_deepest_depths:blocks/bloodshroombrainroot"
+  }
+}

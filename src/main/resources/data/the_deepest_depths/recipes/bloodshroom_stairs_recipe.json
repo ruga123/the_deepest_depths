@@ -1,0 +1,33 @@
+{
+  "group": "bloodshroom_stairs",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "the_deepest_depths:bloodshroom_planks"
+    },
+    "3": {
+      "item": "the_deepest_depths:bloodshroom_planks"
+    },
+    "4": {
+      "item": "the_deepest_depths:bloodshroom_planks"
+    },
+    "6": {
+      "item": "the_deepest_depths:bloodshroom_planks"
+    },
+    "7": {
+      "item": "the_deepest_depths:bloodshroom_planks"
+    },
+    "8": {
+      "item": "the_deepest_depths:bloodshroom_planks"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:bloodshroom_stairs",
+    "count": 4
+  }
+}

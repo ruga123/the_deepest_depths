@@ -1,0 +1,94 @@
+{
+  "_fv": 18,
+  "_type": "biome",
+  "definition": {
+    "name": "Bloodshroom Forest",
+    "groundBlock": {
+      "value": "CUSTOM:Bloodstone"
+    },
+    "undergroundBlock": {
+      "value": "CUSTOM:Bloodstone"
+    },
+    "airColor": {
+      "value": -14155776,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -14155776,
+      "falpha": 0.0
+    },
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": "ambient.basalt_deltas.additions"
+    },
+    "music": {
+      "value": ""
+    },
+    "moodSound": {
+      "value": "ambient.nether_wastes.mood"
+    },
+    "moodSoundDelay": 6000,
+    "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "EXPLOSION_NORMAL"
+    },
+    "particlesProbability": 0.5,
+    "biomeCategory": "NONE",
+    "parent": {
+      "value": "No parent"
+    },
+    "rainingPossibility": 0.0,
+    "temperature": 0.5,
+    "baseHeight": 0.2,
+    "heightVariation": 0.25,
+    "biomeType": "WARM",
+    "spawnBiome": false,
+    "biomeWeight": 250,
+    "biomeDictionaryTypes": [
+      "NETHER"
+    ],
+    "grassPerChunk": 0,
+    "seagrassPerChunk": 0,
+    "flowersPerChunk": 0,
+    "mushroomsPerChunk": 0,
+    "bigMushroomsChunk": 0,
+    "sandPatchesPerChunk": 0,
+    "gravelPatchesPerChunk": 0,
+    "reedsPerChunk": 0,
+    "cactiPerChunk": 0,
+    "treesPerChunk": 0,
+    "vanillaTreeType": "Savanna trees",
+    "treeType": 1,
+    "minHeight": 6,
+    "maxWaterDepth": 0,
+    "treeStem": {
+      "value": "CUSTOM:BloodshroomStem"
+    },
+    "treeBranch": {
+      "value": "CUSTOM:BloodshroomBlock"
+    },
+    "treeVines": {
+      "value": ""
+    },
+    "treeFruits": {
+      "value": ""
+    },
+    "spawnStronghold": false,
+    "spawnMineshaft": false,
+    "spawnPillagerOutpost": false,
+    "villageType": "none",
+    "spawnWoodlandMansion": false,
+    "spawnJungleTemple": false,
+    "spawnDesertPyramid": false,
+    "spawnIgloo": false,
+    "spawnOceanMonument": false,
+    "spawnShipwreck": false,
+    "oceanRuinType": "NONE",
+    "defaultFeatures": [
+      "Caves"
+    ],
+    "spawnEntries": []
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_post",
+  "textures": {
+    "wall": "the_deepest_depths:blocks/slate",
+    "particle": "the_deepest_depths:blocks/slate"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "group": "bone_meal",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "the_deepest_depths:bloodhound_fang"
+    }
+  ],
+  "result": {
+    "item": "minecraft:bone_meal",
+    "count": 2
+  }
+}

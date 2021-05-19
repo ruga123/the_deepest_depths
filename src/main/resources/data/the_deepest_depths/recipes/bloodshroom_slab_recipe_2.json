@@ -1,0 +1,9 @@
+{
+  "group": "bloodshroom_slab",
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "the_deepest_depths:bloodshroom_planks"
+  },
+  "result": "the_deepest_depths:bloodshroom_slab"
+}

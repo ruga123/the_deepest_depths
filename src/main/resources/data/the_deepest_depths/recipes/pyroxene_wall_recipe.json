@@ -1,0 +1,32 @@
+{
+  "group": "pyroxenewall",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "the_deepest_depths:pyroxene"
+    },
+    "1": {
+      "item": "the_deepest_depths:pyroxene"
+    },
+    "2": {
+      "item": "the_deepest_depths:pyroxene"
+    },
+    "3": {
+      "item": "the_deepest_depths:pyroxene"
+    },
+    "4": {
+      "item": "the_deepest_depths:pyroxene"
+    },
+    "5": {
+      "item": "the_deepest_depths:pyroxene"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:pyroxene_wall",
+    "count": 6
+  }
+}

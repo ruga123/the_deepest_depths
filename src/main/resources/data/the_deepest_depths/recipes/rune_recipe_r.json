@@ -1,0 +1,9 @@
+{
+  "group": "rune",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "the_deepest_depths:slate"
+  },
+  "result": "the_deepest_depths:rune_r"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "the_deepest_depths:blocks/rune20",
+    "particle": "the_deepest_depths:blocks/rune20"
+  }
+}

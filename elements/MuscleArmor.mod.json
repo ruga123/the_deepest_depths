@@ -1,0 +1,58 @@
+{
+  "_fv": 18,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "muscle_helmet",
+    "enableBody": true,
+    "textureBody": "musclechestplate",
+    "enableLeggings": true,
+    "textureLeggings": "muscleleggings",
+    "enableBoots": true,
+    "textureBoots": "muscle_boots",
+    "creativeTab": {
+      "value": "CUSTOM:Bloodlands"
+    },
+    "armorTextureFile": "musclearmor_",
+    "helmetName": "Muscle Helmet",
+    "bodyName": "Muscle Chestplate",
+    "leggingsName": "Muscle Leggings",
+    "bootsName": "Muscle Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 25,
+    "damageValueHelmet": 3,
+    "damageValueBody": 9,
+    "damageValueLeggings": 7,
+    "damageValueBoots": 4,
+    "enchantability": 9,
+    "toughness": 4.5,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "item.armor.equip_leather"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:MuscleFiber"
+      }
+    ]
+  }
+}

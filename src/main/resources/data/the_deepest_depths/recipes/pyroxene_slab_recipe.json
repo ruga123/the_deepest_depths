@@ -1,0 +1,22 @@
+{
+  "group": "pyroxeneslab",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "the_deepest_depths:pyroxene"
+    },
+    "1": {
+      "item": "the_deepest_depths:pyroxene"
+    },
+    "2": {
+      "item": "the_deepest_depths:pyroxene"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:pyroxene_slab",
+    "count": 6
+  }
+}

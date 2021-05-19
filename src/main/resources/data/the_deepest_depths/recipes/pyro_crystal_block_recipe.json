@@ -1,0 +1,42 @@
+{
+  "group": "pyro_crystal_block",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "the_deepest_depths:pyro_crystal"
+    },
+    "1": {
+      "item": "the_deepest_depths:pyro_crystal"
+    },
+    "2": {
+      "item": "the_deepest_depths:pyro_crystal"
+    },
+    "3": {
+      "item": "the_deepest_depths:pyro_crystal"
+    },
+    "4": {
+      "item": "the_deepest_depths:pyro_crystal"
+    },
+    "5": {
+      "item": "the_deepest_depths:pyro_crystal"
+    },
+    "6": {
+      "item": "the_deepest_depths:pyro_crystal"
+    },
+    "7": {
+      "item": "the_deepest_depths:pyro_crystal"
+    },
+    "8": {
+      "item": "the_deepest_depths:pyro_crystal"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:pyro_crystal_block",
+    "count": 1
+  }
+}

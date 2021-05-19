@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "the_deepest_depths:blocks/bloodshroom_planks",
+    "top": "the_deepest_depths:blocks/bloodshroom_planks",
+    "side": "the_deepest_depths:blocks/bloodshroom_planks"
+  }
+}

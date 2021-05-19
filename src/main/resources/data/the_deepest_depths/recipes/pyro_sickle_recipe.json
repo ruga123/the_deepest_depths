@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "the_deepest_depths:netherite_bloodhound_sickle"
+  },
+  "addition": {
+    "item": "the_deepest_depths:pyro_crystal"
+  },
+  "result": {
+    "item": "the_deepest_depths:pyro_sickle"
+  }
+}

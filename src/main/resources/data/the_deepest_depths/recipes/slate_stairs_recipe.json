@@ -1,0 +1,9 @@
+{
+  "group": "slate_stairs",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "the_deepest_depths:slate"
+  },
+  "result": "the_deepest_depths:slate_stairs"
+}

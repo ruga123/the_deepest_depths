@@ -1,0 +1,33 @@
+{
+  "group": "slate_stairs",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 45",
+    "678"
+  ],
+  "key": {
+    "2": {
+      "item": "the_deepest_depths:slate"
+    },
+    "4": {
+      "item": "the_deepest_depths:slate"
+    },
+    "5": {
+      "item": "the_deepest_depths:slate"
+    },
+    "6": {
+      "item": "the_deepest_depths:slate"
+    },
+    "7": {
+      "item": "the_deepest_depths:slate"
+    },
+    "8": {
+      "item": "the_deepest_depths:slate"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:slate_stairs",
+    "count": 4
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "diamondbloodhoundsickle",
+    "customModelName": "Normal",
+    "name": "Diamond Bloodhound Sickle",
+    "specialInfo": [
+      "§6Beheading"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Bloodlands"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 4,
+    "efficiency": 16.0,
+    "attackSpeed": 1.8,
+    "enchantability": 15,
+    "damageVsEntity": 5.0,
+    "usageCount": 1873,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:BloodhoundFang"
+      },
+      {
+        "value": "Items.DIAMOND"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "BloodhoundSickleLivingEntityIsHitWithTool"
+    }
+  }
+}

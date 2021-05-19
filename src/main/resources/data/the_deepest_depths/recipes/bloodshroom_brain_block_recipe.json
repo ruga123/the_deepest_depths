@@ -1,0 +1,42 @@
+{
+  "group": "bloodshroom_brain_block",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "the_deepest_depths:bloodshroom_brain_root"
+    },
+    "1": {
+      "item": "the_deepest_depths:bloodshroom_brain_root"
+    },
+    "2": {
+      "item": "the_deepest_depths:bloodshroom_brain_root"
+    },
+    "3": {
+      "item": "the_deepest_depths:bloodshroom_brain_root"
+    },
+    "4": {
+      "item": "the_deepest_depths:bloodshroom_brain_root"
+    },
+    "5": {
+      "item": "the_deepest_depths:bloodshroom_brain_root"
+    },
+    "6": {
+      "item": "the_deepest_depths:bloodshroom_brain_root"
+    },
+    "7": {
+      "item": "the_deepest_depths:bloodshroom_brain_root"
+    },
+    "8": {
+      "item": "the_deepest_depths:bloodshroom_brain_root"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:bloodshroom_brain_block",
+    "count": 1
+  }
+}

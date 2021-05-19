@@ -1,0 +1,32 @@
+{
+  "group": "bloodstonewall",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "the_deepest_depths:bloodstone"
+    },
+    "1": {
+      "item": "the_deepest_depths:bloodstone"
+    },
+    "2": {
+      "item": "the_deepest_depths:bloodstone"
+    },
+    "3": {
+      "item": "the_deepest_depths:bloodstone"
+    },
+    "4": {
+      "item": "the_deepest_depths:bloodstone"
+    },
+    "5": {
+      "item": "the_deepest_depths:bloodstone"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:bloodstone_wall",
+    "count": 6
+  }
+}

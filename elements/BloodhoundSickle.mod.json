@@ -1,0 +1,39 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "bloodhoundsickle",
+    "customModelName": "Normal",
+    "name": "Iron Bloodhound Sickle",
+    "specialInfo": [
+      "§6Beheading"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Bloodlands"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 4,
+    "efficiency": 12.0,
+    "attackSpeed": 1.8,
+    "enchantability": 14,
+    "damageVsEntity": 4.0,
+    "usageCount": 300,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:BloodhoundFang"
+      },
+      {
+        "value": "Items.IRON_INGOT"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "BloodhoundSickleLivingEntityIsHitWithTool"
+    }
+  }
+}

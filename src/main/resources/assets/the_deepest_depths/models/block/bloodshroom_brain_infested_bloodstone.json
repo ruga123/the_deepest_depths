@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "the_deepest_depths:blocks/bloodstone",
+    "up": "the_deepest_depths:blocks/bloodshroom_brain_infested_bloodstone_top",
+    "north": "the_deepest_depths:blocks/bloodshroom_brain_infested_bloodstone",
+    "east": "the_deepest_depths:blocks/bloodshroom_brain_infested_bloodstone",
+    "south": "the_deepest_depths:blocks/bloodshroom_brain_infested_bloodstone",
+    "west": "the_deepest_depths:blocks/bloodshroom_brain_infested_bloodstone",
+    "particle": "the_deepest_depths:blocks/bloodstone"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_fv": 18,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "bloodshroom_stairs",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:BloodshroomPlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:BloodshroomPlanks"
+      },
+      {
+        "value": "CUSTOM:BloodshroomPlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:BloodshroomPlanks"
+      },
+      {
+        "value": "CUSTOM:BloodshroomPlanks"
+      },
+      {
+        "value": "CUSTOM:BloodshroomPlanks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:BloodshroomStairs"
+    },
+    "name": "bloodshroom_stairs_recipe",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "group": "ghostly_planks",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "the_deepest_depths:ghostly_log"
+    }
+  ],
+  "result": {
+    "item": "the_deepest_depths:ghostly_planks",
+    "count": 4
+  }
+}

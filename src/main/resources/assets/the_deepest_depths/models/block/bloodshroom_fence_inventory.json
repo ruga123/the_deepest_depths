@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "the_deepest_depths:blocks/bloodshroom_planks",
+    "particle": "the_deepest_depths:blocks/bloodshroom_planks"
+  }
+}

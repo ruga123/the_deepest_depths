@@ -1,0 +1,39 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "bloodhoundnetheritesickle",
+    "customModelName": "Normal",
+    "name": "Netherite Bloodhound Sickle",
+    "specialInfo": [
+      "§6Beheading"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Bloodlands"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 4,
+    "efficiency": 18.0,
+    "attackSpeed": 1.8,
+    "enchantability": 17,
+    "damageVsEntity": 6.0,
+    "usageCount": 2437,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:BloodhoundFang"
+      },
+      {
+        "value": "Items.NETHERITE_INGOT"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "BloodhoundSickleLivingEntityIsHitWithTool"
+    }
+  }
+}

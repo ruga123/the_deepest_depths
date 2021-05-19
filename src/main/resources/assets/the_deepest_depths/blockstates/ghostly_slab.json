@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "the_deepest_depths:block/ghostly_slab"
+    },
+    "type=top": {
+      "model": "the_deepest_depths:block/ghostly_slab_top"
+    },
+    "type=double": {
+      "model": "the_deepest_depths:block/ghostly_slab_full"
+    }
+  }
+}

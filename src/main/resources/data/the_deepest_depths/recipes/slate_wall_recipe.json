@@ -1,0 +1,32 @@
+{
+  "group": "slate_wall",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "the_deepest_depths:slate"
+    },
+    "1": {
+      "item": "the_deepest_depths:slate"
+    },
+    "2": {
+      "item": "the_deepest_depths:slate"
+    },
+    "3": {
+      "item": "the_deepest_depths:slate"
+    },
+    "4": {
+      "item": "the_deepest_depths:slate"
+    },
+    "5": {
+      "item": "the_deepest_depths:slate"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:slate_wall",
+    "count": 6
+  }
+}

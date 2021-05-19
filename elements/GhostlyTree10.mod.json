@@ -1,0 +1,36 @@
+{
+  "_fv": 18,
+  "_type": "structure",
+  "definition": {
+    "structure": "emptystructure",
+    "randomlyRotateStructure": false,
+    "surfaceDetectionType": "First motion blocking block",
+    "spawnProbability": 1000000,
+    "minCountPerChunk": 1,
+    "maxCountPerChunk": 1,
+    "spawnLocation": "Underground",
+    "spawnHeightOffset": 0,
+    "spawnXOffset": 0,
+    "spawnZOffset": 0,
+    "spawnWorldTypes": [
+      "CUSTOM:BloodWorld"
+    ],
+    "restrictionBlocks": [
+      {
+        "value": "CUSTOM:Pyroxene"
+      },
+      {
+        "value": "CUSTOM:Bloodstone"
+      }
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:DeathValley"
+      }
+    ],
+    "ignoreBlocks": "AIR_AND_STRUCTURE_BLOCK",
+    "onStructureGenerated": {
+      "name": "GhostlyTreeOnStructureInstanceGenerated"
+    }
+  }
+}

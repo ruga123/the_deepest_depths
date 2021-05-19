@@ -1,0 +1,20 @@
+{
+  "_fv": 18,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "xpReward": 1.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "purple_diamond_recipe",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:PurpleDiamondOre"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:PurpleDiamond"
+    },
+    "name": "purple_diamond_recipe_3",
+    "namespace": "mod"
+  }
+}

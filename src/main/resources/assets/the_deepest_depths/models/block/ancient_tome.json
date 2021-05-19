@@ -1,0 +1,8 @@
+{
+  "parent": "the_deepest_depths:custom/ancienttome",
+  "textures": {
+    "all": "the_deepest_depths:blocks/ancient_tome",
+    "particle": "the_deepest_depths:blocks/ancient_tome",
+    "0": "the_deepest_depths:blocks/ancient_tome"
+  }
+}

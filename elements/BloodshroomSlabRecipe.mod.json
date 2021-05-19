@@ -1,0 +1,46 @@
+{
+  "_fv": 18,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 6,
+    "group": "bloodshroom_slab",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:BloodshroomPlanks"
+      },
+      {
+        "value": "CUSTOM:BloodshroomPlanks"
+      },
+      {
+        "value": "CUSTOM:BloodshroomPlanks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:BloodshroomSlab"
+    },
+    "name": "bloodshroom_slab_recipe",
+    "namespace": "mod"
+  }
+}

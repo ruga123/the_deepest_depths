@@ -1,0 +1,22 @@
+{
+  "group": "slate_slab",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "the_deepest_depths:slate"
+    },
+    "1": {
+      "item": "the_deepest_depths:slate"
+    },
+    "2": {
+      "item": "the_deepest_depths:slate"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:slate_slab",
+    "count": 6
+  }
+}

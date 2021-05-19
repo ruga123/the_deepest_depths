@@ -1,0 +1,3432 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "Bloodstone",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodstone"
+    },
+    {
+      "name": "Pyroxene",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyroxene"
+    },
+    {
+      "name": "BloodstoneStairs",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodstone_stairs"
+    },
+    {
+      "name": "BloodstoneSlab",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodstone_slab"
+    },
+    {
+      "name": "BloodstoneWall",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodstone_wall"
+    },
+    {
+      "name": "PyroxeneStairs",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyroxene_stairs"
+    },
+    {
+      "name": "PyroxeneSlab",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyroxene_slab"
+    },
+    {
+      "name": "PyroxeneWall",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyroxene_wall"
+    },
+    {
+      "name": "BloodstoneStairsRecipe",
+      "type": "recipe",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodstone_stairs_recipe"
+    },
+    {
+      "name": "BloodstoneStairsRecipe2",
+      "type": "recipe",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodstone_stairs_recipe_2"
+    },
+    {
+      "name": "BloodstoneStairsRecipe3",
+      "type": "recipe",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodstone_stairs_recipe_3"
+    },
+    {
+      "name": "BloodstoneSlabRecipe",
+      "type": "recipe",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodstone_slab_recipe"
+    },
+    {
+      "name": "BloodstoneSlabRecipe2",
+      "type": "recipe",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodstone_slab_recipe_2"
+    },
+    {
+      "name": "BloodstoneWallRecipe",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodstone_wall_recipe"
+    },
+    {
+      "name": "BloodstoneWallRecipe2",
+      "type": "recipe",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodstone_wall_recipe_2"
+    },
+    {
+      "name": "PyroxeneStairRecipe",
+      "type": "recipe",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyroxene_stair_recipe"
+    },
+    {
+      "name": "PyroxeneStairRecipe2",
+      "type": "recipe",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyroxene_stair_recipe_2"
+    },
+    {
+      "name": "PyroxeneStairRecipe3",
+      "type": "recipe",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyroxene_stair_recipe_3"
+    },
+    {
+      "name": "PyroxeneSlabRecipe",
+      "type": "recipe",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyroxene_slab_recipe"
+    },
+    {
+      "name": "PyroxeneSlabRecipe2",
+      "type": "recipe",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyroxene_slab_recipe_2"
+    },
+    {
+      "name": "PyroxeneWallRecipe",
+      "type": "recipe",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyroxene_wall_recipe"
+    },
+    {
+      "name": "PyroxeneWallRecipe2",
+      "type": "recipe",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyroxene_wall_recipe_2"
+    },
+    {
+      "name": "Bloodlands",
+      "type": "tab",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodlands"
+    },
+    {
+      "name": "BloodyBarrens",
+      "type": "biome",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloody_barrens"
+    },
+    {
+      "name": "BloodWorld",
+      "type": "dimension",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "blood_world",
+      "metadata": {
+        "ep": false
+      }
+    },
+    {
+      "name": "BloodshroomStem",
+      "type": "block",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_stem"
+    },
+    {
+      "name": "BloodshroomBlock",
+      "type": "block",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_block"
+    },
+    {
+      "name": "BloodshroomForest",
+      "type": "biome",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_forest"
+    },
+    {
+      "name": "Bloodshroom",
+      "type": "structure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "BloodshroomOnStructureInstanceGenerated",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_on_structure_instance_generated",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom2",
+      "type": "structure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_2",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom3",
+      "type": "structure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_3",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom4",
+      "type": "structure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_4",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom5",
+      "type": "structure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_5",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom6",
+      "type": "structure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_6",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom7",
+      "type": "structure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_7",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom8",
+      "type": "structure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_8",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom9",
+      "type": "structure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_9",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom10",
+      "type": "structure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_10",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom11",
+      "type": "structure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_11",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom12",
+      "type": "structure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_12",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom13",
+      "type": "structure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_13",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom14",
+      "type": "structure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_14",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom15",
+      "type": "structure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_15",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom16",
+      "type": "structure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_16",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom17",
+      "type": "structure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_17",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom18",
+      "type": "structure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_18",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom19",
+      "type": "structure",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_19",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom20",
+      "type": "structure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_20",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom21",
+      "type": "structure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_21",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom22",
+      "type": "structure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_22",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom23",
+      "type": "structure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_23",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom24",
+      "type": "structure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_24",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom25",
+      "type": "structure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_25",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "BloodshroomBrainRootNeighbourBlockChanges",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_brain_root_neighbour_block_changes",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloodshroomBrainRoot",
+      "type": "block",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_brain_root"
+    },
+    {
+      "name": "BloodshroomBrainRootBlockIsPlacedBy",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_brain_root_block_is_placed_by",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloodshroomBrainInfestedBloodstone",
+      "type": "block",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_brain_infested_bloodstone"
+    },
+    {
+      "name": "BloodshroomBrainInfestedBloodstoneNeighbourBlockChanges",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_brain_infested_bloodstone_neighbour_block_changes",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloodshroomBrainRootBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_brain_root_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloodshroomBrainInfestedBloodstoneUpdateTick",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_brain_infested_bloodstone_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloodhoundParticleSpawningCondition",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodhound_particle_spawning_condition",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloodhoundAttack",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodhound_attack",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloodhoundBite",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodhound_bite",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bloodhound",
+      "type": "mob",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blood_hound"
+    },
+    {
+      "name": "InfectedBloodhound",
+      "type": "mob",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infected_blood_hound"
+    },
+    {
+      "name": "BloodhoundRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodhound_right_clicked_on_entity",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TameDetect",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tame_detect",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloodshroomPlanks",
+      "type": "block",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_planks"
+    },
+    {
+      "name": "BloodshroomStairs",
+      "type": "block",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_stairs"
+    },
+    {
+      "name": "BloodshroomSlab",
+      "type": "block",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_slab"
+    },
+    {
+      "name": "BloodshroomFence",
+      "type": "block",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_fence"
+    },
+    {
+      "name": "BloodshroomStairsRecipe",
+      "type": "recipe",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_stairs_recipe"
+    },
+    {
+      "name": "BloodshroomStairsRecipe2",
+      "type": "recipe",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_stairs_recipe_2"
+    },
+    {
+      "name": "BloodshroomStairsRecipe3",
+      "type": "recipe",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_stairs_recipe_3"
+    },
+    {
+      "name": "BloodshroomSlabRecipe",
+      "type": "recipe",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_slab_recipe"
+    },
+    {
+      "name": "BloodshroomSlabRecipe2",
+      "type": "recipe",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_slab_recipe_2"
+    },
+    {
+      "name": "BloodshroomFenceRecipe",
+      "type": "recipe",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_fence_recipe"
+    },
+    {
+      "name": "BloodshroomPlanksRecipe",
+      "type": "recipe",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_planks_recipe"
+    },
+    {
+      "name": "PyroRadiantOre",
+      "type": "block",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_ore"
+    },
+    {
+      "name": "PyroCrystal",
+      "type": "item",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_crystal"
+    },
+    {
+      "name": "PyroOre",
+      "type": "loottable",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_ore"
+    },
+    {
+      "name": "BloodshroomFungi",
+      "type": "loottable",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_fungi"
+    },
+    {
+      "name": "PyroNetheriteSwordLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_netherite_sword_living_entity_is_hit_with_tool",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PyroNetheriteSword",
+      "type": "tool",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_netherite_sword"
+    },
+    {
+      "name": "PyroSwordRecipe",
+      "type": "recipe",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_sword_recipe"
+    },
+    {
+      "name": "RootedBloodstone",
+      "type": "block",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rooted_bloodstone"
+    },
+    {
+      "name": "RootedBloodstoneLoot",
+      "type": "loottable",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rooted_bloodstone_loot"
+    },
+    {
+      "name": "InfectedBloodHoundLoot",
+      "type": "loottable",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infected_blood_hound_loot"
+    },
+    {
+      "name": "BloodHoundLoot",
+      "type": "loottable",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blood_hound_loot"
+    },
+    {
+      "name": "BloodhoundFang",
+      "type": "item",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodhound_fang"
+    },
+    {
+      "name": "PyroRadiantOreAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_radiant_ore_additional_generation_condition",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PyroCrystalBlock",
+      "type": "block",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_crystal_block"
+    },
+    {
+      "name": "PyroCrystalBlockRecipe",
+      "type": "recipe",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_crystal_block_recipe"
+    },
+    {
+      "name": "PyroCrystalRecipe",
+      "type": "recipe",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_crystal_recipe"
+    },
+    {
+      "name": "PyroCrystalBlockEntityWalksOnTheBlock",
+      "type": "procedure",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_crystal_block_entity_walks_on_the_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BoneMealBloodhoundFangRecipe",
+      "type": "recipe",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bone_meal_bloodhound_fang_recipe"
+    },
+    {
+      "name": "BloodhoundSickle",
+      "type": "tool",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_bloodhound_sickle"
+    },
+    {
+      "name": "BloodhoundSickleRecipe",
+      "type": "recipe",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodhound_sickle_recipe"
+    },
+    {
+      "name": "Bloodhoundsicklerecipe2",
+      "type": "recipe",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodhoundsicklerecipe_2"
+    },
+    {
+      "name": "Bloodhoundsicklerecipe3",
+      "type": "recipe",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodhoundsicklerecipe_3"
+    },
+    {
+      "name": "BloodhoundSickleLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodhound_sickle_living_entity_is_hit_with_tool",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Planks",
+      "type": "tag",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "planks"
+    },
+    {
+      "name": "DiamondBloodhoundSickle",
+      "type": "tool",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_bloodhound_sickle"
+    },
+    {
+      "name": "BloodhoundKillHead",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodhound_kill_head",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DiamondBloodhoundSickleRecipe",
+      "type": "recipe",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_bloodhound_sickle_recipe"
+    },
+    {
+      "name": "DiamondBloodhoundSickleRecipe2",
+      "type": "recipe",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_bloodhound_sickle_recipe_2"
+    },
+    {
+      "name": "DiamondBloodhoundSickleRecipe3",
+      "type": "recipe",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_bloodhound_sickle_recipe_3"
+    },
+    {
+      "name": "NetheriteBloodhoundSickle",
+      "type": "tool",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "netherite_bloodhound_sickle"
+    },
+    {
+      "name": "PyroSickle",
+      "type": "tool",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_sickle"
+    },
+    {
+      "name": "PyroSickleProcedure",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_sickle_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NetheriteSickleRecipe",
+      "type": "recipe",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "netherite_sickle_recipe"
+    },
+    {
+      "name": "PyroSickleRecipe",
+      "type": "recipe",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_sickle_recipe"
+    },
+    {
+      "name": "FleshHunter",
+      "type": "mob",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "flesh_hunter"
+    },
+    {
+      "name": "FleshHunterLoot",
+      "type": "loottable",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "flesh_hunter_loot"
+    },
+    {
+      "name": "Ectoplasm",
+      "type": "item",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ectoplasm"
+    },
+    {
+      "name": "StickyPistonRecipe",
+      "type": "recipe",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sticky_piston_recipe"
+    },
+    {
+      "name": "LeadRecipe",
+      "type": "recipe",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lead_recipe"
+    },
+    {
+      "name": "MagmaCreamRecipe",
+      "type": "recipe",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_cream_recipe"
+    },
+    {
+      "name": "SpectralArrowEctoplasmRecipe",
+      "type": "recipe",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spectral_arrow_ectoplasm_recipe"
+    },
+    {
+      "name": "PurpleDiamondOre",
+      "type": "block",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "purple_diamond_ore"
+    },
+    {
+      "name": "PurpleDiamond",
+      "type": "item",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "purple_diamond"
+    },
+    {
+      "name": "PurpleDiamondOreLoot",
+      "type": "loottable",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "purple_diamond_ore_loot"
+    },
+    {
+      "name": "PurpleDiamondBlock",
+      "type": "block",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "purple_diamond_block"
+    },
+    {
+      "name": "PurpleDiamondBlockRecipe",
+      "type": "recipe",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "purple_diamond_block_recipe"
+    },
+    {
+      "name": "PurpleDiamondRecipe",
+      "type": "recipe",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "purple_diamond_recipe"
+    },
+    {
+      "name": "PurpleDiamondRecipe2",
+      "type": "recipe",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "purple_diamond_recipe_2"
+    },
+    {
+      "name": "PurpleDiamondRecipe3",
+      "type": "recipe",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "purple_diamond_recipe_3"
+    },
+    {
+      "name": "PyroLamp",
+      "type": "block",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_lamp"
+    },
+    {
+      "name": "PyroLampRecipe",
+      "type": "recipe",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_lamp_recipe"
+    },
+    {
+      "name": "PyroLampPlacedBy",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_lamp_placed_by",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PyroLampUpdateTick",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyro_lamp_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DiamondLamp",
+      "type": "block",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_lamp"
+    },
+    {
+      "name": "DiamondLampHeal",
+      "type": "procedure",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_lamp_heal",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DiamondLampRecipe",
+      "type": "recipe",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_lamp_recipe"
+    },
+    {
+      "name": "AncientTome",
+      "type": "block",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ancient_tome"
+    },
+    {
+      "name": "AncientTomeOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ancient_tome_on_block_right_clicked",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BloodshroomBrainBlock",
+      "type": "block",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_brain_block"
+    },
+    {
+      "name": "BloodshroomBrainBlockRecipe",
+      "type": "recipe",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_brain_block_recipe"
+    },
+    {
+      "name": "BloodshroomBrainRootRecipe",
+      "type": "recipe",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_brain_root_recipe"
+    },
+    {
+      "name": "Bloodshroom26",
+      "type": "structure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_26",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom27",
+      "type": "structure",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_27",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom28",
+      "type": "structure",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_28",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom29",
+      "type": "structure",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_29",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom30",
+      "type": "structure",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_30",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom31",
+      "type": "structure",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_31",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom32",
+      "type": "structure",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_32",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom33",
+      "type": "structure",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_33",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom34",
+      "type": "structure",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_34",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom35",
+      "type": "structure",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_35",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom36",
+      "type": "structure",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_36",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom37",
+      "type": "structure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_37",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom38",
+      "type": "structure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_38",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom39",
+      "type": "structure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_39",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom40",
+      "type": "structure",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_40",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom41",
+      "type": "structure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_41",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom42",
+      "type": "structure",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_42",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom43",
+      "type": "structure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_43",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom44",
+      "type": "structure",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_44",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom45",
+      "type": "structure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_45",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom46",
+      "type": "structure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_46",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom47",
+      "type": "structure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_47",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom48",
+      "type": "structure",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_48",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom49",
+      "type": "structure",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_49",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "Bloodshroom50",
+      "type": "structure",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bloodshroom_50",
+      "path": "~/BloodshroomStructures"
+    },
+    {
+      "name": "HeadHunter",
+      "type": "mob",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "head_hunter"
+    },
+    {
+      "name": "HeadHunterHead",
+      "type": "mob",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "head_hunter_head"
+    },
+    {
+      "name": "Muscle",
+      "type": "armor",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "muscle",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "MuscleFiber",
+      "type": "item",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "muscle_fiber"
+    },
+    {
+      "name": "GreatDestruction",
+      "type": "mob",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "great_destruction"
+    },
+    {
+      "name": "DeathValley",
+      "type": "biome",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "death_valley"
+    },
+    {
+      "name": "GreatDestructionLoot",
+      "type": "loottable",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "great_destruction_loot"
+    },
+    {
+      "name": "HeadHunterLoot",
+      "type": "loottable",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "head_hunter_loot"
+    },
+    {
+      "name": "HeadHunterHeadOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "head_hunter_head_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HeadHunterKill",
+      "type": "procedure",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "head_hunter_kill",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GhostlyLog",
+      "type": "block",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_log"
+    },
+    {
+      "name": "GhostlyTree",
+      "type": "structure",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTreeOnStructureInstanceGenerated",
+      "type": "procedure",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_on_structure_instance_generated",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GhostlyTree1",
+      "type": "structure",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_1",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree2",
+      "type": "structure",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_2",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree3",
+      "type": "structure",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_3",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree4",
+      "type": "structure",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_4",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree5",
+      "type": "structure",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_5",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree6",
+      "type": "structure",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_6",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree7",
+      "type": "structure",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_7",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree8",
+      "type": "structure",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_8",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree9",
+      "type": "structure",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_9",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree10",
+      "type": "structure",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_10",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree11",
+      "type": "structure",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_11",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree12",
+      "type": "structure",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_12",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree13",
+      "type": "structure",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_13",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree14",
+      "type": "structure",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_14",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree15",
+      "type": "structure",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_15",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree16",
+      "type": "structure",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_16",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree17",
+      "type": "structure",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_17",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree18",
+      "type": "structure",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_18",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree19",
+      "type": "structure",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_19",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree20",
+      "type": "structure",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_20",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree21",
+      "type": "structure",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_21",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree22",
+      "type": "structure",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_22",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree23",
+      "type": "structure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_23",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree24",
+      "type": "structure",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_24",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree25",
+      "type": "structure",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_25",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree26",
+      "type": "structure",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_26",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree27",
+      "type": "structure",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_27",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree28",
+      "type": "structure",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_28",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree29",
+      "type": "structure",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_29",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "GhostlyTree30",
+      "type": "structure",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_tree_30",
+      "path": "~/GhostlyTreeStructures"
+    },
+    {
+      "name": "HeadHunterNaturalEntitySpawningCondition",
+      "type": "procedure",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "head_hunter_natural_entity_spawning_condition",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GreatDestructionNaturalEntitySpawningCondition",
+      "type": "procedure",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "great_destruction_natural_entity_spawning_condition",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GhostlyPlanks",
+      "type": "block",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_planks"
+    },
+    {
+      "name": "GhostlyPlanksRecipe",
+      "type": "recipe",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_planks_recipe"
+    },
+    {
+      "name": "GhostlySlab",
+      "type": "block",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_slab"
+    },
+    {
+      "name": "GhostlyStairs",
+      "type": "block",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_stairs"
+    },
+    {
+      "name": "GhostlySlabRecipe",
+      "type": "recipe",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_slab_recipe"
+    },
+    {
+      "name": "GhostlySlabRecipe2",
+      "type": "recipe",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_slab_recipe_2"
+    },
+    {
+      "name": "GhostlyStairsRecipe",
+      "type": "recipe",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_stairs_recipe"
+    },
+    {
+      "name": "GhostlyStairsRecipe2",
+      "type": "recipe",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_stairs_recipe_2"
+    },
+    {
+      "name": "GhostlyStairsRecipe3",
+      "type": "recipe",
+      "sortid": 232,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ghostly_stairs_recipe_3"
+    },
+    {
+      "name": "Slate",
+      "type": "block",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slate"
+    },
+    {
+      "name": "SlateSlab",
+      "type": "block",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slate_slab"
+    },
+    {
+      "name": "SlateStairs",
+      "type": "block",
+      "sortid": 235,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slate_stairs"
+    },
+    {
+      "name": "SlateWall",
+      "type": "block",
+      "sortid": 236,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slate_wall"
+    },
+    {
+      "name": "SlateSlabRecipe",
+      "type": "recipe",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slate_slab_recipe"
+    },
+    {
+      "name": "SlateSlabRecipe2",
+      "type": "recipe",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slate_slab_recipe_2"
+    },
+    {
+      "name": "SlateStairsRecipe",
+      "type": "recipe",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slate_stairs_recipe"
+    },
+    {
+      "name": "SlateStairsRecipe2",
+      "type": "recipe",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slate_stairs_recipe_2"
+    },
+    {
+      "name": "SlateStairsRecipe3",
+      "type": "recipe",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slate_stairs_recipe_3"
+    },
+    {
+      "name": "SlateWallRecipe",
+      "type": "recipe",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slate_wall_recipe"
+    },
+    {
+      "name": "SlateWallRecipe2",
+      "type": "recipe",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slate_wall_recipe_2"
+    },
+    {
+      "name": "RuneA",
+      "type": "block",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_a",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneB",
+      "type": "block",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_b",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneC",
+      "type": "block",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_c",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneD",
+      "type": "block",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_d",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneE",
+      "type": "block",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_e",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneF",
+      "type": "block",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_f",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneG",
+      "type": "block",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_g",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneH",
+      "type": "block",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_h",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneI",
+      "type": "block",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_i",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneJ",
+      "type": "block",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_j",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneK",
+      "type": "block",
+      "sortid": 254,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_k",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneL",
+      "type": "block",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_l",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneM",
+      "type": "block",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_m",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneN",
+      "type": "block",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_n",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneO",
+      "type": "block",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_o",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneP",
+      "type": "block",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_p",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneQ",
+      "type": "block",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_q",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneR",
+      "type": "block",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_r",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneS",
+      "type": "block",
+      "sortid": 262,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_s",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneT",
+      "type": "block",
+      "sortid": 263,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_t",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneU",
+      "type": "block",
+      "sortid": 264,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_u",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneV",
+      "type": "block",
+      "sortid": 265,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_v",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneW",
+      "type": "block",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_w",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneX",
+      "type": "block",
+      "sortid": 267,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_x",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneY",
+      "type": "block",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_y",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneZ",
+      "type": "block",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_z",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeA",
+      "type": "recipe",
+      "sortid": 270,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_a",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeB",
+      "type": "recipe",
+      "sortid": 271,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_b",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeC",
+      "type": "recipe",
+      "sortid": 272,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_c",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeD",
+      "type": "recipe",
+      "sortid": 273,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_d",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeE",
+      "type": "recipe",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_e",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeF",
+      "type": "recipe",
+      "sortid": 275,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_f",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeG",
+      "type": "recipe",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_g",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeH",
+      "type": "recipe",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_h",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeI",
+      "type": "recipe",
+      "sortid": 278,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_i",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeJ",
+      "type": "recipe",
+      "sortid": 279,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_j",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeK",
+      "type": "recipe",
+      "sortid": 280,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_k",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeL",
+      "type": "recipe",
+      "sortid": 281,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_l",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeM",
+      "type": "recipe",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_m",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeN",
+      "type": "recipe",
+      "sortid": 283,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_n",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeO",
+      "type": "recipe",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_o",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeP",
+      "type": "recipe",
+      "sortid": 285,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_p",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeQ",
+      "type": "recipe",
+      "sortid": 286,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_q",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeR",
+      "type": "recipe",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_r",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeS",
+      "type": "recipe",
+      "sortid": 288,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_s",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeT",
+      "type": "recipe",
+      "sortid": 289,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_t",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeU",
+      "type": "recipe",
+      "sortid": 290,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_u",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeV",
+      "type": "recipe",
+      "sortid": 291,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_v",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeW",
+      "type": "recipe",
+      "sortid": 292,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_w",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeX",
+      "type": "recipe",
+      "sortid": 293,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_x",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeY",
+      "type": "recipe",
+      "sortid": 294,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_y",
+      "path": "~/Runes"
+    },
+    {
+      "name": "RuneRecipeZ",
+      "type": "recipe",
+      "sortid": 295,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_recipe_z",
+      "path": "~/Runes"
+    },
+    {
+      "name": "AdaptiveSlime",
+      "type": "mob",
+      "sortid": 296,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infectious_slime"
+    },
+    {
+      "name": "SlimeInfection",
+      "type": "potion",
+      "sortid": 297,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slime_infection"
+    },
+    {
+      "name": "SlimeInfectionOnPotionActiveTick",
+      "type": "procedure",
+      "sortid": 298,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slime_infection_on_potion_active_tick",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "block.the_deepest_depths.bloodstone_wall": "Bloodstone Wall",
+      "item.minecraft.tipped_arrow.effect.slime_infection": "Arrow of Slime Infection",
+      "block.the_deepest_depths.bloodshroom_stairs": "Bloodshroom Planks",
+      "entity.the_deepest_depths.infected_blood_hound": "Infected Bloodhound",
+      "block.the_deepest_depths.bloodshroom_slab": "Bloodshroom Planks",
+      "item.the_deepest_depths.pyro_netherite_sword": "Pyro-Netherite Sword",
+      "item.the_deepest_depths.infected_blood_hound_spawn_egg": "Infected Bloodhound Spawn Egg",
+      "death.attack.heat": "%1$s was melted to death",
+      "block.the_deepest_depths.slate_wall": "Slate Wall",
+      "block.the_deepest_depths.ghostly_planks": "Ghostly Planks",
+      "block.the_deepest_depths.slate_stairs": "Slate Stairs",
+      "entity.the_deepest_depths.blood_hound": "Bloodhound",
+      "item.the_deepest_depths.blood_hound_spawn_egg": "Bloodhound Spawn Egg",
+      "block.the_deepest_depths.ancient_tome": "Ancient Tome",
+      "item.the_deepest_depths.blood_world": "Blood World Portal Igniter",
+      "item.the_deepest_depths.muscle_fiber": "Muscle Fiber",
+      "block.the_deepest_depths.pyroxene_stairs": "Pyroxene Stairs",
+      "effect.slime_infection": "Slime Infection",
+      "entity.the_deepest_depths.flesh_hunter": "Flesh Hunter",
+      "block.the_deepest_depths.bloodshroom_brain_root": "Bloodshroom Brain Root",
+      "item.the_deepest_depths.pyro_sickle": "Pyro-Netherite Bloodhound Sickle",
+      "block.the_deepest_depths.bloodshroom_fence": "Bloodshroom Planks",
+      "biome.the_deepest_depths.bloodshroom_forest": "Bloodshroom Forest",
+      "item.the_deepest_depths.flesh_hunter_spawn_egg": "Flesh Hunter Spawn Egg",
+      "biome.the_deepest_depths.bloody_barrens": "Bloody Barrens",
+      "block.the_deepest_depths.ghostly_slab": "Ghostly Slab",
+      "item.the_deepest_depths.infectious_slime_spawn_egg": "Infectious Slime Spawn Egg",
+      "item.the_deepest_depths.head_hunter_head_spawn_egg": "Head Hunter Head Spawn Egg",
+      "itemGroup.tabbloodlands": "Bloodlands",
+      "block.the_deepest_depths.bloodshroom_brain_infested_bloodstone": "Bloodshroom Brain Infested Bloodstone",
+      "block.the_deepest_depths.pyroxene_wall": "Pyroxene Wall",
+      "block.the_deepest_depths.pyro_lamp": "Pyro-Lamp",
+      "item.the_deepest_depths.muscle_chestplate": "Muscle Tunic",
+      "item.the_deepest_depths.muscle_boots": "Muscle Boots",
+      "block.the_deepest_depths.purple_diamond_block": "Pyro Crystal Block",
+      "item.minecraft.lingering_potion.effect.slime_infection": "Lingering Slime Infection",
+      "block.the_deepest_depths.rune_s": "Ancient Rune",
+      "block.the_deepest_depths.rune_t": "Ancient Rune",
+      "block.the_deepest_depths.rune_u": "Ancient Rune",
+      "block.the_deepest_depths.rune_v": "Ancient Rune",
+      "entity.the_deepest_depths.head_hunter_head": "Head Hunter Head",
+      "block.the_deepest_depths.rune_w": "Ancient Rune",
+      "block.the_deepest_depths.rune_x": "Ancient Rune",
+      "block.the_deepest_depths.pyroxene": "Pyroxene",
+      "block.the_deepest_depths.slate": "Slate",
+      "block.the_deepest_depths.rune_y": "Ancient Rune",
+      "block.the_deepest_depths.rune_z": "Ancient Rune",
+      "block.the_deepest_depths.rune_k": "Ancient Rune",
+      "block.the_deepest_depths.rune_l": "Ancient Rune",
+      "block.the_deepest_depths.rune_m": "Ancient Rune",
+      "block.the_deepest_depths.rune_n": "Ancient Rune",
+      "item.minecraft.potion.effect.slime_infection": "Slime Infection",
+      "block.the_deepest_depths.rune_o": "Ancient Rune",
+      "block.the_deepest_depths.rune_p": "Ancient Rune",
+      "block.the_deepest_depths.rune_q": "Ancient Rune",
+      "item.the_deepest_depths.bloodhound_fang": "Bloodhound Fang",
+      "block.the_deepest_depths.rune_r": "Ancient Rune",
+      "item.the_deepest_depths.muscle_leggings": "Muscle Pants",
+      "block.the_deepest_depths.rune_c": "Ancient Rune",
+      "block.the_deepest_depths.rune_d": "Ancient Rune",
+      "item.the_deepest_depths.netherite_bloodhound_sickle": "Netherite Bloodhound Sickle",
+      "block.the_deepest_depths.rune_e": "Ancient Rune",
+      "block.the_deepest_depths.rune_f": "Ancient Rune",
+      "block.the_deepest_depths.rune_g": "Ancient Rune",
+      "block.the_deepest_depths.rune_h": "Ancient Rune",
+      "block.the_deepest_depths.rune_i": "Ancient Rune",
+      "block.the_deepest_depths.rune_j": "Ancient Rune",
+      "block.the_deepest_depths.bloodshroom_stem": "Bloodshroom Stem",
+      "entity.the_deepest_depths.infectious_slime": "Infectious Slime",
+      "block.the_deepest_depths.rune_a": "Ancient Rune",
+      "block.the_deepest_depths.rune_b": "Ancient Rune",
+      "block.the_deepest_depths.slate_slab": "Slate Slab",
+      "block.the_deepest_depths.ghostly_stairs": "Ghostly Stairs",
+      "item.the_deepest_depths.muscle_helmet": "Muscle Cap",
+      "item.the_deepest_depths.head_hunter_spawn_egg": "Head Hunter Spawn Egg",
+      "block.the_deepest_depths.bloodstone_slab": "Bloodstone Slab",
+      "biome.the_deepest_depths.death_valley": "Death Valley",
+      "item.the_deepest_depths.purple_diamond": "Purple Diamond",
+      "block.the_deepest_depths.bloodshroom_block": "Bloodshroom Block",
+      "entity.the_deepest_depths.great_destruction": "Great Destruction",
+      "block.the_deepest_depths.bloodshroom_brain_block": "Bloodshroom Brain Block",
+      "item.the_deepest_depths.great_destruction_spawn_egg": "Great Destruction Spawn Egg",
+      "block.the_deepest_depths.diamond_lamp": "Diamond Lamp",
+      "block.the_deepest_depths.bloodstone_stairs": "Bloodstone Stairs",
+      "block.the_deepest_depths.pyro_ore": "Pyro-Radiant Ore",
+      "block.the_deepest_depths.pyro_crystal_block": "Pyro Crystal Block",
+      "block.the_deepest_depths.pyroxene_slab": "Pyroxene Slab",
+      "item.minecraft.splash_potion.effect.slime_infection": "Splash Slime Infection",
+      "block.the_deepest_depths.bloodstone": "Bloodstone",
+      "item.the_deepest_depths.ectoplasm": "Ectoplasm",
+      "block.the_deepest_depths.rooted_bloodstone": "Rooted Bloodstone",
+      "item.the_deepest_depths.pyro_crystal": "Pyro-Crystal",
+      "entity.the_deepest_depths.head_hunter": "Head Hunter",
+      "block.the_deepest_depths.purple_diamond_ore": "Purple Diamond Ore",
+      "item.the_deepest_depths.iron_bloodhound_sickle": "Iron Bloodhound Sickle",
+      "item.the_deepest_depths.diamond_bloodhound_sickle": "Diamond Bloodhound Sickle",
+      "block.the_deepest_depths.bloodshroom_planks": "Bloodshroom Planks",
+      "block.the_deepest_depths.ghostly_log": "Ghostly Log"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "BloodshroomStructures",
+        "children": []
+      },
+      {
+        "name": "GhostlyTreeStructures",
+        "children": []
+      },
+      {
+        "name": "Runes",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "the_deepest_depths",
+    "modName": "The Deepest Depths",
+    "version": "1.0.0",
+    "author": "yujing, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "modElementsPackage": "net.mcreator.thedeepestdepths",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100118117
+}

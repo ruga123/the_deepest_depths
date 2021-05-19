@@ -1,0 +1,66 @@
+{
+  "_fv": 18,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "muscle_helmet",
+    "enableBody": true,
+    "textureBody": "musclechestplate",
+    "enableLeggings": true,
+    "textureLeggings": "muscleleggings",
+    "enableBoots": true,
+    "textureBoots": "muscle_boots",
+    "creativeTab": {
+      "value": "CUSTOM:Bloodlands"
+    },
+    "armorTextureFile": "musclearmor_",
+    "helmetName": "Muscle Cap",
+    "bodyName": "Muscle Tunic",
+    "leggingsName": "Muscle Pants",
+    "bootsName": "Muscle Boots",
+    "helmetSpecialInfo": [
+      "§6Reflex"
+    ],
+    "bodySpecialInfo": [
+      "§6Reflex"
+    ],
+    "leggingsSpecialInfo": [
+      "§6Reflex"
+    ],
+    "bootsSpecialInfo": [
+      "§6Reflex"
+    ],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 54,
+    "damageValueHelmet": 4,
+    "damageValueBody": 8,
+    "damageValueLeggings": 7,
+    "damageValueBoots": 2,
+    "enchantability": 15,
+    "toughness": 4.0,
+    "knockbackResistance": 0.1,
+    "equipSound": {
+      "value": "item.armor.equip_leather"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:MuscleFiber"
+      }
+    ]
+  }
+}

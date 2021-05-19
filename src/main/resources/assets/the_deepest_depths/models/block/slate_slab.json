@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "the_deepest_depths:blocks/slate",
+    "top": "the_deepest_depths:blocks/slate",
+    "side": "the_deepest_depths:blocks/slate"
+  }
+}

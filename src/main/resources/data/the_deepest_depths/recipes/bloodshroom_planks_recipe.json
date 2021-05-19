@@ -1,0 +1,13 @@
+{
+  "group": "the_deepest_depths",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "the_deepest_depths:bloodshroom_stem"
+    }
+  ],
+  "result": {
+    "item": "the_deepest_depths:bloodshroom_planks",
+    "count": 4
+  }
+}

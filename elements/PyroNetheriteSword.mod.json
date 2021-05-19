@@ -1,0 +1,39 @@
+{
+  "_fv": 18,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "pyro-netherite-sword",
+    "customModelName": "Normal",
+    "name": "Pyro-Netherite Sword",
+    "specialInfo": [
+      "§6Flaming"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:Bloodlands"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 4,
+    "efficiency": 12.0,
+    "attackSpeed": 1.6,
+    "enchantability": 18,
+    "damageVsEntity": 9.0,
+    "usageCount": 3047,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:PyroCrystal"
+      },
+      {
+        "value": "Items.NETHERITE_INGOT"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "PyroNetheriteSwordLivingEntityIsHitWithTool"
+    }
+  }
+}

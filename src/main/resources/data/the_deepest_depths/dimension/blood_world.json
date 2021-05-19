@@ -1,0 +1,117 @@
+{
+  "type": "the_deepest_depths:blood_world",
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": 0,
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "seed": 0,
+      "temperature_noise": {
+        "firstOctave": -5.53,
+        "amplitudes": [
+          2,
+          2
+        ]
+      },
+      "humidity_noise": {
+        "firstOctave": -5.53,
+        "amplitudes": [
+          2,
+          2
+        ]
+      },
+      "altitude_noise": {
+        "firstOctave": -5.53,
+        "amplitudes": [
+          2,
+          2
+        ]
+      },
+      "weirdness_noise": {
+        "firstOctave": -5.53,
+        "amplitudes": [
+          2,
+          2
+        ]
+      },
+      "biomes": [
+        {
+          "biome": "the_deepest_depths:bloody_barrens",
+          "parameters": {
+            "temperature": 1,
+            "humidity": -1,
+            "altitude": 0.75,
+            "weirdness": -1.5,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "the_deepest_depths:bloodshroom_forest",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "altitude": -0.75,
+            "weirdness": 1.5,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "the_deepest_depths:death_valley",
+          "parameters": {
+            "temperature": -1,
+            "humidity": 1,
+            "altitude": 0.75,
+            "weirdness": -1.5,
+            "offset": 0
+          }
+        }
+      ]
+    },
+    "settings": {
+      "name": "the_deepest_depths:blood_world",
+      "bedrock_roof_position": 0,
+      "bedrock_floor_position": 0,
+      "sea_level": 72,
+      "disable_mob_generation": true,
+      "default_block": {
+        "Name": "the_deepest_depths:bloodstone"
+      },
+      "default_fluid": {
+        "Name": "minecraft:air",
+        "Properties": {
+          "level": "0"
+        }
+      },
+      "noise": {
+        "density_factor": 0,
+        "density_offset": 0.019921875,
+        "simplex_surface_noise": false,
+        "random_density_offset": false,
+        "island_noise_override": false,
+        "amplified": false,
+        "size_horizontal": 1,
+        "size_vertical": 2,
+        "height": 256,
+        "sampling": {
+          "xz_scale": 1,
+          "y_scale": 3,
+          "xz_factor": 80,
+          "y_factor": 60
+        },
+        "bottom_slide": {
+          "target": 320,
+          "size": 4,
+          "offset": -1
+        },
+        "top_slide": {
+          "target": 120,
+          "size": 3,
+          "offset": 0
+        }
+      },
+      "structures": {
+        "structures": {}
+      }
+    }
+  }
+}

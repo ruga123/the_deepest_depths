@@ -1,0 +1,13 @@
+{
+  "group": "bloodshroom_brain_root",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "the_deepest_depths:bloodshroom_brain_block"
+    }
+  ],
+  "result": {
+    "item": "the_deepest_depths:bloodshroom_brain_root",
+    "count": 9
+  }
+}

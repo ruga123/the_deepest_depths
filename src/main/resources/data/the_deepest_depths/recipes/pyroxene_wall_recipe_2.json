@@ -1,0 +1,9 @@
+{
+  "group": "pyroxenewall",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "the_deepest_depths:pyroxene"
+  },
+  "result": "the_deepest_depths:pyroxene_wall"
+}

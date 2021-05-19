@@ -1,0 +1,46 @@
+{
+  "_fv": 18,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "bloodstonestairs",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Bloodstone"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Bloodstone"
+      },
+      {
+        "value": "CUSTOM:Bloodstone"
+      },
+      {
+        "value": "CUSTOM:Bloodstone"
+      },
+      {
+        "value": "CUSTOM:Bloodstone"
+      },
+      {
+        "value": "CUSTOM:Bloodstone"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:BloodstoneStairs"
+    },
+    "name": "bloodstone_stairs_recipe_2",
+    "namespace": "mod"
+  }
+}

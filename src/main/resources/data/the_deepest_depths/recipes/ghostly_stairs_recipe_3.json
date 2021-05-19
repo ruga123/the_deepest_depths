@@ -1,0 +1,9 @@
+{
+  "group": "ghostly_stairs",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "the_deepest_depths:ghostly_planks"
+  },
+  "result": "the_deepest_depths:ghostly_stairs"
+}

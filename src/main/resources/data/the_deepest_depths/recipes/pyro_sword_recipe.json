@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "addition": {
+    "item": "the_deepest_depths:pyro_crystal"
+  },
+  "result": {
+    "item": "the_deepest_depths:pyro_netherite_sword"
+  }
+}

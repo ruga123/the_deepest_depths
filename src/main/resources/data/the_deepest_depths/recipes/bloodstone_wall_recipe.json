@@ -1,0 +1,9 @@
+{
+  "group": "bloodstonewall",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "the_deepest_depths:bloodstone"
+  },
+  "result": "the_deepest_depths:bloodstone_wall"
+}

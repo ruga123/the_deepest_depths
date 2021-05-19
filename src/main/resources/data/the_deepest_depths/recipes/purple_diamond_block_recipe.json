@@ -1,0 +1,42 @@
+{
+  "group": "purple_diamond_block",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "the_deepest_depths:purple_diamond"
+    },
+    "1": {
+      "item": "the_deepest_depths:purple_diamond"
+    },
+    "2": {
+      "item": "the_deepest_depths:purple_diamond"
+    },
+    "3": {
+      "item": "the_deepest_depths:purple_diamond"
+    },
+    "4": {
+      "item": "the_deepest_depths:purple_diamond"
+    },
+    "5": {
+      "item": "the_deepest_depths:purple_diamond"
+    },
+    "6": {
+      "item": "the_deepest_depths:purple_diamond"
+    },
+    "7": {
+      "item": "the_deepest_depths:purple_diamond"
+    },
+    "8": {
+      "item": "the_deepest_depths:purple_diamond"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:purple_diamond_block",
+    "count": 1
+  }
+}

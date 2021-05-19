@@ -1,0 +1,33 @@
+{
+  "group": "bloodstonestairs",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "the_deepest_depths:bloodstone"
+    },
+    "3": {
+      "item": "the_deepest_depths:bloodstone"
+    },
+    "4": {
+      "item": "the_deepest_depths:bloodstone"
+    },
+    "6": {
+      "item": "the_deepest_depths:bloodstone"
+    },
+    "7": {
+      "item": "the_deepest_depths:bloodstone"
+    },
+    "8": {
+      "item": "the_deepest_depths:bloodstone"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:bloodstone_stairs",
+    "count": 4
+  }
+}

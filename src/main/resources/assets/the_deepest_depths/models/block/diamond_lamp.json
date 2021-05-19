@@ -1,0 +1,8 @@
+{
+  "parent": "the_deepest_depths:custom/purplediamondlamp",
+  "textures": {
+    "all": "the_deepest_depths:blocks/purplediamondlamp",
+    "particle": "the_deepest_depths:blocks/purplediamondlamp",
+    "0": "the_deepest_depths:blocks/purplediamondlamp"
+  }
+}

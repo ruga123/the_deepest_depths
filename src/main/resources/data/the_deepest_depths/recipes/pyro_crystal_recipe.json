@@ -1,0 +1,13 @@
+{
+  "group": "pyro_crystal",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "the_deepest_depths:pyro_crystal_block"
+    }
+  ],
+  "result": {
+    "item": "the_deepest_depths:pyro_crystal",
+    "count": 9
+  }
+}
