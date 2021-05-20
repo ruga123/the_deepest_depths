@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "the_deepest_depths:blocks/alienwoodplanks",
+    "particle": "the_deepest_depths:blocks/alienwoodplanks"
+  }
+}

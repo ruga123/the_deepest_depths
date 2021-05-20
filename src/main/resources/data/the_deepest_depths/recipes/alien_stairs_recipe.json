@@ -1,0 +1,9 @@
+{
+  "group": "alien_stairs",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "the_deepest_depths:alien_planks"
+  },
+  "result": "the_deepest_depths:alien_stairs"
+}

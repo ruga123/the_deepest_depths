@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "the_deepest_depths:block/alien_log"
+    },
+    "facing=north": {
+      "model": "the_deepest_depths:block/alien_log"
+    },
+    "facing=east": {
+      "model": "the_deepest_depths:block/alien_log",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "the_deepest_depths:block/alien_log",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "the_deepest_depths:block/alien_log",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "the_deepest_depths:block/alien_log",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

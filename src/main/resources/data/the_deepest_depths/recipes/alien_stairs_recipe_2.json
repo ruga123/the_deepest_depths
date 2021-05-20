@@ -1,0 +1,33 @@
+{
+  "group": "alien_stairs",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "the_deepest_depths:alien_planks"
+    },
+    "3": {
+      "item": "the_deepest_depths:alien_planks"
+    },
+    "4": {
+      "item": "the_deepest_depths:alien_planks"
+    },
+    "6": {
+      "item": "the_deepest_depths:alien_planks"
+    },
+    "7": {
+      "item": "the_deepest_depths:alien_planks"
+    },
+    "8": {
+      "item": "the_deepest_depths:alien_planks"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:alien_stairs",
+    "count": 4
+  }
+}

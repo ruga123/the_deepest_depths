@@ -62,7 +62,8 @@ public class PyroSickleItem extends TheDeepestDepthsModElements.ModElement {
 			@Override
 			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 				super.addInformation(itemstack, world, list, flag);
-				list.add(new StringTextComponent("\u00A76Beheading\\\u00A76Flaming"));
+				list.add(new StringTextComponent("\u00A76Beheading"));
+				list.add(new StringTextComponent("\u00A76Flaming"));
 			}
 
 			@Override

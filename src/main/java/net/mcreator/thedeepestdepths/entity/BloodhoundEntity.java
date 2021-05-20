@@ -22,7 +22,6 @@ import net.minecraft.particles.ParticleTypes;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -51,6 +50,7 @@ import net.mcreator.thedeepestdepths.procedures.BloodhoundRightClickedOnEntityPr
 import net.mcreator.thedeepestdepths.procedures.BloodhoundParticleSpawningConditionProcedure;
 import net.mcreator.thedeepestdepths.procedures.BloodhoundKillHeadProcedure;
 import net.mcreator.thedeepestdepths.procedures.BloodhoundBiteProcedure;
+import net.mcreator.thedeepestdepths.itemgroup.BloodlandsItemGroup;
 import net.mcreator.thedeepestdepths.entity.renderer.BloodhoundRenderer;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
 
@@ -75,7 +75,7 @@ public class BloodhoundEntity extends TheDeepestDepthsModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -6711040, -10066432, new Item.Properties().group(ItemGroup.MISC))
+		elements.items.add(() -> new SpawnEggItem(entity, -6711040, -10066432, new Item.Properties().group(BloodlandsItemGroup.tab))
 				.setRegistryName("blood_hound_spawn_egg"));
 	}
 

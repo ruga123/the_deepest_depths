@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "the_deepest_depths:blocks/alienlog",
+    "up": "the_deepest_depths:blocks/alienlog",
+    "north": "the_deepest_depths:blocks/alienlogside",
+    "east": "the_deepest_depths:blocks/alienlogside",
+    "south": "the_deepest_depths:blocks/alienlogside",
+    "west": "the_deepest_depths:blocks/alienlogside",
+    "particle": "the_deepest_depths:blocks/alienlog"
+  }
+}

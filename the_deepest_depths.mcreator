@@ -1008,26 +1008,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -3317,24 +3297,584 @@
       "registry_name": "dead_alien_rock"
     },
     {
-      "name": "AlienSeas",
-      "type": "biome",
-      "sortid": 302,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_seas"
-    },
-    {
       "name": "VergoZoneDim",
       "type": "dimension",
       "sortid": 302,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "vergo_zone_dim",
+      "registry_name": "vergo_dim",
       "metadata": {
         "ep": false
+      }
+    },
+    {
+      "name": "AlienPlains",
+      "type": "biome",
+      "sortid": 303,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_plains"
+    },
+    {
+      "name": "AlienLog",
+      "type": "block",
+      "sortid": 304,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_log"
+    },
+    {
+      "name": "AlienTree",
+      "type": "procedure",
+      "sortid": 305,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AlienTreeSpawn",
+      "type": "structure",
+      "sortid": 306,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn1",
+      "type": "structure",
+      "sortid": 307,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_1",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn2",
+      "type": "structure",
+      "sortid": 308,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_2",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn3",
+      "type": "structure",
+      "sortid": 309,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_3",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn4",
+      "type": "structure",
+      "sortid": 310,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_4",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn5",
+      "type": "structure",
+      "sortid": 311,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_5",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn6",
+      "type": "structure",
+      "sortid": 312,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_6",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn7",
+      "type": "structure",
+      "sortid": 313,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_7",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn8",
+      "type": "structure",
+      "sortid": 314,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_8",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn9",
+      "type": "structure",
+      "sortid": 315,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_9",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn10",
+      "type": "structure",
+      "sortid": 316,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_10",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn11",
+      "type": "structure",
+      "sortid": 317,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_11",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn12",
+      "type": "structure",
+      "sortid": 318,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_12",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn13",
+      "type": "structure",
+      "sortid": 319,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_13",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn14",
+      "type": "structure",
+      "sortid": 320,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_14",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn15",
+      "type": "structure",
+      "sortid": 321,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_15",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn16",
+      "type": "structure",
+      "sortid": 322,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_16",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn17",
+      "type": "structure",
+      "sortid": 323,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_17",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn18",
+      "type": "structure",
+      "sortid": 324,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_18",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn19",
+      "type": "structure",
+      "sortid": 325,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_19",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn20",
+      "type": "structure",
+      "sortid": 326,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_20",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn21",
+      "type": "structure",
+      "sortid": 327,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_21",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn22",
+      "type": "structure",
+      "sortid": 328,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_22",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn23",
+      "type": "structure",
+      "sortid": 329,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_23",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn24",
+      "type": "structure",
+      "sortid": 330,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_24",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn25",
+      "type": "structure",
+      "sortid": 331,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_25",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn26",
+      "type": "structure",
+      "sortid": 332,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_26",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn27",
+      "type": "structure",
+      "sortid": 333,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_27",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn28",
+      "type": "structure",
+      "sortid": 334,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_28",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn29",
+      "type": "structure",
+      "sortid": 335,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_29",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn30",
+      "type": "structure",
+      "sortid": 336,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_30",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienLeaves",
+      "type": "block",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_leaves"
+    },
+    {
+      "name": "ShadowGuardian",
+      "type": "mob",
+      "sortid": 338,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_guardian"
+    },
+    {
+      "name": "EntitySetTargetProcedure",
+      "type": "procedure",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entity_set_target_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShadowGuardianLoot",
+      "type": "loottable",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_guardian_loot"
+    },
+    {
+      "name": "Stone",
+      "type": "tag",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stone"
+    },
+    {
+      "name": "AlienPlanks",
+      "type": "block",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_planks"
+    },
+    {
+      "name": "AlienPlanksRecipe",
+      "type": "recipe",
+      "sortid": 343,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_planks_recipe"
+    },
+    {
+      "name": "AlienStairs",
+      "type": "block",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_stairs"
+    },
+    {
+      "name": "AlienSlab",
+      "type": "block",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_slab"
+    },
+    {
+      "name": "AlienFence",
+      "type": "block",
+      "sortid": 346,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_fence"
+    },
+    {
+      "name": "AlienFenceGate",
+      "type": "block",
+      "sortid": 347,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_fence_gate"
+    },
+    {
+      "name": "AlienSlabRecipe",
+      "type": "recipe",
+      "sortid": 348,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_slab_recipe"
+    },
+    {
+      "name": "AlienSlabRecipe2",
+      "type": "recipe",
+      "sortid": 349,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_slab_recipe_2"
+    },
+    {
+      "name": "AlienStairsRecipe",
+      "type": "recipe",
+      "sortid": 350,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_stairs_recipe"
+    },
+    {
+      "name": "AlienStairsRecipe2",
+      "type": "recipe",
+      "sortid": 351,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_stairs_recipe_2"
+    },
+    {
+      "name": "AlienStairsRecipe3",
+      "type": "recipe",
+      "sortid": 352,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_stairs_recipe_3"
+    },
+    {
+      "name": "AlienFenceRecipe",
+      "type": "recipe",
+      "sortid": 353,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_fence_recipe"
+    },
+    {
+      "name": "AlienFenceGateRecipe",
+      "type": "recipe",
+      "sortid": 354,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_fence_gate_recipe"
+    },
+    {
+      "name": "GreatDestructionEntityIsHurt",
+      "type": "procedure",
+      "sortid": 355,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "great_destruction_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     }
   ],
@@ -3345,6 +3885,7 @@
       "block.the_deepest_depths.bloodstone_wall": "Bloodstone Wall",
       "item.minecraft.tipped_arrow.effect.slime_infection": "Arrow of Slime Infection",
       "block.the_deepest_depths.bloodshroom_stairs": "Bloodshroom Planks",
+      "block.the_deepest_depths.alien_planks": "Alien Planks",
       "entity.the_deepest_depths.infected_blood_hound": "Infected Bloodhound",
       "block.the_deepest_depths.bloodshroom_slab": "Bloodshroom Planks",
       "item.the_deepest_depths.pyro_netherite_sword": "Pyro-Netherite Sword",
@@ -3358,7 +3899,6 @@
       "block.the_deepest_depths.ancient_tome": "Ancient Tome",
       "item.the_deepest_depths.blood_world": "Blood World Portal Igniter",
       "item.the_deepest_depths.muscle_fiber": "Muscle Fiber",
-      "biome.the_deepest_depths.alien_seas": "Alien Seas",
       "block.the_deepest_depths.pyroxene_stairs": "Pyroxene Stairs",
       "effect.slime_infection": "Slime Infection",
       "entity.the_deepest_depths.flesh_hunter": "Flesh Hunter",
@@ -3366,6 +3906,7 @@
       "item.the_deepest_depths.pyro_sickle": "Pyro-Netherite Bloodhound Sickle",
       "block.the_deepest_depths.bloodshroom_fence": "Bloodshroom Planks",
       "biome.the_deepest_depths.bloodshroom_forest": "Bloodshroom Forest",
+      "biome.the_deepest_depths.alien_plains": "Alien Plains",
       "item.the_deepest_depths.flesh_hunter_spawn_egg": "Flesh Hunter Spawn Egg",
       "biome.the_deepest_depths.bloody_barrens": "Bloody Barrens",
       "block.the_deepest_depths.ghostly_slab": "Ghostly Slab",
@@ -3379,6 +3920,7 @@
       "item.the_deepest_depths.muscle_boots": "Muscle Boots",
       "block.the_deepest_depths.purple_diamond_block": "Pyro Crystal Block",
       "item.minecraft.lingering_potion.effect.slime_infection": "Lingering Slime Infection",
+      "block.the_deepest_depths.alien_slab": "Alien Planks",
       "block.the_deepest_depths.rune_s": "Ancient Rune",
       "block.the_deepest_depths.rune_t": "Ancient Rune",
       "block.the_deepest_depths.rune_u": "Ancient Rune",
@@ -3415,12 +3957,16 @@
       "entity.the_deepest_depths.infectious_slime": "Infectious Slime",
       "block.the_deepest_depths.rune_a": "Ancient Rune",
       "block.the_deepest_depths.rune_b": "Ancient Rune",
+      "item.the_deepest_depths.vergo_dim": "Vergo Zone Dim Portal Igniter",
+      "block.the_deepest_depths.alien_leaves": "Alien Leaves",
       "block.the_deepest_depths.slate_slab": "Slate Slab",
       "block.the_deepest_depths.alien_rock": "Alien Rock",
       "block.the_deepest_depths.ghostly_stairs": "Ghostly Stairs",
       "item.the_deepest_depths.muscle_helmet": "Muscle Cap",
+      "entity.the_deepest_depths.shadow_guardian": "Shadow Guardian",
       "item.the_deepest_depths.head_hunter_spawn_egg": "Head Hunter Spawn Egg",
       "block.the_deepest_depths.bloodstone_slab": "Bloodstone Slab",
+      "block.the_deepest_depths.alien_log": "Alien Log",
       "biome.the_deepest_depths.death_valley": "Death Valley",
       "item.the_deepest_depths.purple_diamond": "Purple Diamond",
       "block.the_deepest_depths.bloodshroom_block": "Bloodshroom Block",
@@ -3429,22 +3975,25 @@
       "item.the_deepest_depths.great_destruction_spawn_egg": "Great Destruction Spawn Egg",
       "block.the_deepest_depths.diamond_lamp": "Diamond Lamp",
       "block.the_deepest_depths.bloodstone_stairs": "Bloodstone Stairs",
+      "item.the_deepest_depths.shadow_guardian_spawn_egg": "Shadow Guardian Spawn Egg",
+      "block.the_deepest_depths.alien_stairs": "Alien Planks",
       "block.the_deepest_depths.pyro_ore": "Pyro-Radiant Ore",
       "block.the_deepest_depths.pyro_crystal_block": "Pyro Crystal Block",
       "block.the_deepest_depths.pyroxene_slab": "Pyroxene Slab",
       "item.minecraft.splash_potion.effect.slime_infection": "Splash Slime Infection",
       "block.the_deepest_depths.bloodstone": "Bloodstone",
       "item.the_deepest_depths.ectoplasm": "Ectoplasm",
+      "block.the_deepest_depths.alien_fence": "Alien Planks",
       "block.the_deepest_depths.rooted_bloodstone": "Rooted Bloodstone",
       "item.the_deepest_depths.pyro_crystal": "Pyro-Crystal",
       "itemGroup.tabvergo_zone": "Vergo Zone",
       "entity.the_deepest_depths.head_hunter": "Head Hunter",
+      "block.the_deepest_depths.alien_fence_gate": "Alien Planks",
       "block.the_deepest_depths.purple_diamond_ore": "Purple Diamond Ore",
       "item.the_deepest_depths.iron_bloodhound_sickle": "Iron Bloodhound Sickle",
       "item.the_deepest_depths.diamond_bloodhound_sickle": "Diamond Bloodhound Sickle",
       "block.the_deepest_depths.bloodshroom_planks": "Bloodshroom Planks",
-      "block.the_deepest_depths.ghostly_log": "Ghostly Log",
-      "item.the_deepest_depths.vergo_zone_dim": "Vergo Zone Dim Portal Igniter"
+      "block.the_deepest_depths.ghostly_log": "Ghostly Log"
     }
   },
   "foldersRoot": {
@@ -3460,6 +4009,10 @@
       },
       {
         "name": "Runes",
+        "children": []
+      },
+      {
+        "name": "AlienTreeFolder",
         "children": []
       }
     ]

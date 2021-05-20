@@ -1,6 +1,8 @@
 package net.mcreator.thedeepestdepths.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -8,10 +10,15 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.world.Explosion;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Hand;
 import net.minecraft.util.DamageSource;
 import net.minecraft.potion.EffectInstance;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -25,6 +32,7 @@ import net.minecraft.entity.Entity;
 
 import net.mcreator.thedeepestdepths.potion.SlimeInfectionPotion;
 import net.mcreator.thedeepestdepths.item.MuscleItem;
+import net.mcreator.thedeepestdepths.entity.ShadowGuardianEntity;
 import net.mcreator.thedeepestdepths.entity.InfectedBloodhoundEntity;
 import net.mcreator.thedeepestdepths.entity.BloodhoundEntity;
 import net.mcreator.thedeepestdepths.entity.AdaptiveSlimeEntity;
@@ -91,6 +99,50 @@ public class BloodhoundAttackProcedure extends TheDeepestDepthsModElements.ModEl
 		IWorld world = (IWorld) dependencies.get("world");
 		double reflex = 0;
 		double damage = 0;
+		double rand = 0;
+		if ((entity instanceof ShadowGuardianEntity.CustomEntity)) {
+			rand = (double) Math.floor((Math.random()
+					* Math.max(Math.abs(((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) - 1) / 15)), 1.08)));
+			if (((rand) == 0)) {
+				if (entity instanceof LivingEntity) {
+					((LivingEntity) entity).swing(Hand.OFF_HAND, true);
+				}
+				entity.getPersistentData().putDouble("shield_blocks", (1 + (entity.getPersistentData().getDouble("shield_blocks"))));
+				if (dependencies.get("event") != null) {
+					Object _obj = dependencies.get("event");
+					if (_obj instanceof Event) {
+						Event _evt = (Event) _obj;
+						if (_evt.isCancelable())
+							_evt.setCanceled(true);
+					}
+				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.block")),
+							SoundCategory.NEUTRAL, (float) 0.8, (float) 0.8);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.block")),
+							SoundCategory.NEUTRAL, (float) 0.8, (float) 0.8, false);
+				}
+				if (((entity.getPersistentData().getDouble("shield_blocks")) >= 5)) {
+					entity.getPersistentData().putDouble("shield_blocks", ((entity.getPersistentData().getDouble("shield_blocks")) - 5));
+					if (world instanceof World && !((World) world).isRemote) {
+						((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) Math.min(Math.ceil(((amount) / 6)), 6),
+								Explosion.Mode.BREAK);
+					}
+					if (world instanceof ServerWorld) {
+						((ServerWorld) world).spawnParticle(ParticleTypes.ENCHANTED_HIT, x, y, z, (int) 5, 2, 2, 2, 0.25);
+					}
+					if (world instanceof ServerWorld) {
+						((ServerWorld) world).spawnParticle(ParticleTypes.END_ROD, x, y, z, (int) 5, 2, 2, 2, 0.25);
+					}
+					if (world instanceof ServerWorld) {
+						((ServerWorld) world).spawnParticle(ParticleTypes.PORTAL, x, y, z, (int) 5, 2, 2, 2, 0.25);
+					}
+				}
+			}
+		}
 		if (((sourceentity instanceof BloodhoundEntity.CustomEntity) || (sourceentity instanceof InfectedBloodhoundEntity.CustomEntity))) {
 			if (((entity.getPersistentData().getBoolean("bite")) || (((new Random()).nextInt((int) 3 + 1)) == 2))) {
 				if (sourceentity instanceof LivingEntity)
@@ -168,27 +220,28 @@ public class BloodhoundAttackProcedure extends TheDeepestDepthsModElements.ModEl
 					}
 				}
 			}
-		} else if ((sourceentity instanceof AdaptiveSlimeEntity.CustomEntity)) {
+		}
+		if ((sourceentity instanceof AdaptiveSlimeEntity.CustomEntity)) {
 			if ((!(entity.getPersistentData().getBoolean("adaptive_slime")))) {
-				if ((!((entity instanceof PlayerEntity) || (entity instanceof ServerPlayerEntity)))) {
-					entity.getPersistentData().putBoolean("adaptive_slime", (true));
-					entity.getPersistentData().putDouble("adaptive_slimehealth",
-							((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1));
-					if (entity instanceof LivingEntity)
-						((LivingEntity) entity)
-								.setHealth((float) Math.min(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1),
-										(4 * ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHealth() : -1))));
-					if (entity instanceof LivingEntity)
-						((LivingEntity) entity).addPotionEffect(new EffectInstance(SlimeInfectionPotion.potion, (int) 60, (int) 1, (false), (true)));
-					if (!sourceentity.world.isRemote())
-						sourceentity.remove();
-				}
+				entity.getPersistentData().putBoolean("adaptive_slime", (true));
+				entity.getPersistentData().putDouble("adaptive_slimehealth",
+						((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1));
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity)
+							.setHealth((float) Math.min(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1),
+									(4 * ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHealth() : -1))));
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(SlimeInfectionPotion.potion, (int) 60, (int) 1, (false), (true)));
+				if (!sourceentity.world.isRemote())
+					sourceentity.remove();
 			}
 		}
 		if ((entity.getPersistentData().getBoolean("adaptive_slime"))) {
 			if ((!(sourceentity instanceof AdaptiveSlimeEntity.CustomEntity))) {
-				if ((((new Random()).nextInt((int) (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1)
-						- (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) - 1)) + 1)) == 0)) {
+				if ((((new Random()).nextInt((int) Math.abs((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1)
+						- Math.min((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) + 6),
+								(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1) - 1))))
+						+ 1)) == 0)) {
 					if (world instanceof ServerWorld) {
 						Entity entityToSpawn = new AdaptiveSlimeEntity.CustomEntity(AdaptiveSlimeEntity.entity, (World) world);
 						entityToSpawn.setLocationAndAngles(x, y, z, (float) (entity.rotationYaw), (float) 0);

@@ -19,7 +19,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.passive.AnimalEntity;
@@ -45,6 +44,7 @@ import net.minecraft.entity.CreatureAttribute;
 import net.mcreator.thedeepestdepths.procedures.BloodhoundParticleSpawningConditionProcedure;
 import net.mcreator.thedeepestdepths.procedures.BloodhoundKillHeadProcedure;
 import net.mcreator.thedeepestdepths.procedures.BloodhoundBiteProcedure;
+import net.mcreator.thedeepestdepths.itemgroup.BloodlandsItemGroup;
 import net.mcreator.thedeepestdepths.entity.renderer.InfectedBloodhoundRenderer;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
 
@@ -69,7 +69,7 @@ public class InfectedBloodhoundEntity extends TheDeepestDepthsModElements.ModEle
 	@Override
 	public void initElements() {
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -3381760, -65434, new Item.Properties().group(ItemGroup.MISC))
+		elements.items.add(() -> new SpawnEggItem(entity, -3381760, -65434, new Item.Properties().group(BloodlandsItemGroup.tab))
 				.setRegistryName("infected_blood_hound_spawn_egg"));
 	}
 

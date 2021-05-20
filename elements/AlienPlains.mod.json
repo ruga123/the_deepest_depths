@@ -2,7 +2,7 @@
   "_fv": 18,
   "_type": "biome",
   "definition": {
-    "name": "Alien Seas",
+    "name": "Alien Plains",
     "groundBlock": {
       "value": "CUSTOM:AlienRock"
     },
@@ -41,12 +41,14 @@
     },
     "rainingPossibility": 0.5,
     "temperature": 2.0,
-    "baseHeight": 0.01,
+    "baseHeight": 0.12,
     "heightVariation": 0.4,
     "biomeType": "WARM",
     "spawnBiome": false,
     "biomeWeight": 10,
-    "biomeDictionaryTypes": [],
+    "biomeDictionaryTypes": [
+      "END"
+    ],
     "grassPerChunk": 0,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 0,
@@ -84,9 +86,7 @@
     "spawnOceanMonument": false,
     "spawnShipwreck": false,
     "oceanRuinType": "NONE",
-    "defaultFeatures": [
-      "Caves"
-    ],
+    "defaultFeatures": [],
     "spawnEntries": []
   }
 }

@@ -4,7 +4,7 @@
   "definition": {
     "biomesInDimension": [
       {
-        "value": "CUSTOM:AlienSeas"
+        "value": "CUSTOM:AlienPlains"
       }
     ],
     "worldGenType": "Nether like gen",
@@ -15,7 +15,7 @@
       "value": "Blocks.AIR"
     },
     "canRespawnHere": false,
-    "hasFog": true,
+    "hasFog": false,
     "isDark": true,
     "doesWaterVaporize": false,
     "sleepResult": "ALLOW",

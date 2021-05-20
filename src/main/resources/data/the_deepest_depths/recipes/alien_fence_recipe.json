@@ -1,0 +1,32 @@
+{
+  "group": "alien_fence",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "the_deepest_depths:alien_planks"
+    },
+    "1": {
+      "item": "minecraft:stick"
+    },
+    "2": {
+      "item": "the_deepest_depths:alien_planks"
+    },
+    "3": {
+      "item": "the_deepest_depths:alien_planks"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "the_deepest_depths:alien_planks"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:alien_fence",
+    "count": 3
+  }
+}

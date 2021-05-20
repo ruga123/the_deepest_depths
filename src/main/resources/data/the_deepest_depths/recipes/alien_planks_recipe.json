@@ -1,0 +1,16 @@
+{
+  "group": "alien_planks",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "the_deepest_depths:alien_log"
+    }
+  },
+  "result": {
+    "item": "the_deepest_depths:alien_planks",
+    "count": 4
+  }
+}

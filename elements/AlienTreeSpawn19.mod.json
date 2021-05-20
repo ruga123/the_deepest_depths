@@ -1,0 +1,33 @@
+{
+  "_fv": 18,
+  "_type": "structure",
+  "definition": {
+    "structure": "emptystructure",
+    "randomlyRotateStructure": false,
+    "surfaceDetectionType": "First motion blocking block",
+    "spawnProbability": 1000000,
+    "minCountPerChunk": 1,
+    "maxCountPerChunk": 2,
+    "spawnLocation": "Underground",
+    "spawnHeightOffset": 0,
+    "spawnXOffset": 0,
+    "spawnZOffset": 0,
+    "spawnWorldTypes": [
+      "CUSTOM:VergoZoneDim"
+    ],
+    "restrictionBlocks": [
+      {
+        "value": "CUSTOM:AlienRock"
+      }
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:AlienPlains"
+      }
+    ],
+    "ignoreBlocks": "STRUCTURE_BLOCK",
+    "onStructureGenerated": {
+      "name": "AlienTree"
+    }
+  }
+}

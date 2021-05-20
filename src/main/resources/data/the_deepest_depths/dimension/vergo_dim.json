@@ -1,5 +1,5 @@
 {
-  "type": "the_deepest_depths:vergo_zone_dim",
+  "type": "the_deepest_depths:vergo_dim",
   "generator": {
     "type": "minecraft:noise",
     "seed": 0,
@@ -36,7 +36,7 @@
       },
       "biomes": [
         {
-          "biome": "the_deepest_depths:alien_seas",
+          "biome": "the_deepest_depths:alien_plains",
           "parameters": {
             "temperature": 0,
             "humidity": 0,
@@ -48,7 +48,7 @@
       ]
     },
     "settings": {
-      "name": "the_deepest_depths:vergo_zone_dim",
+      "name": "the_deepest_depths:vergo_dim",
       "bedrock_roof_position": 0,
       "bedrock_floor_position": 0,
       "sea_level": 32,

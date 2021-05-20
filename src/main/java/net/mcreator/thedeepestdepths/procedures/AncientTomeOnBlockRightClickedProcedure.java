@@ -112,7 +112,7 @@ public class AncientTomeOnBlockRightClickedProcedure extends TheDeepestDepthsMod
 				for (Entity entityiterator : _entfound) {
 					if (((entityiterator instanceof PlayerEntity) == (entityiterator instanceof ServerPlayerEntity))) {
 						if (((world instanceof World ? (((World) world).getDimensionKey()) : World.OVERWORLD) == (RegistryKey
-								.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("the_deepest_depths:vergo_zone_dim"))))) {
+								.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("the_deepest_depths:vergo_dim"))))) {
 							if (world instanceof ServerWorld) {
 								IWorld _worldorig = world;
 								world = ((ServerWorld) world).getServer().getWorld(World.OVERWORLD);
@@ -170,7 +170,7 @@ public class AncientTomeOnBlockRightClickedProcedure extends TheDeepestDepthsMod
 							if (world instanceof ServerWorld) {
 								IWorld _worldorig = world;
 								world = ((ServerWorld) world).getServer().getWorld(
-										RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("the_deepest_depths:vergo_zone_dim")));
+										RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("the_deepest_depths:vergo_dim")));
 								if (world != null) {
 									while ((true)) {
 										if ((((world.getBlockState(new BlockPos((int) (xe), (int) (ye), (int) (ze)))).getBlock() == Blocks.AIR
@@ -184,7 +184,7 @@ public class AncientTomeOnBlockRightClickedProcedure extends TheDeepestDepthsMod
 												Entity _ent = entityiterator;
 												if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
 													RegistryKey<World> destinationType = RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
-															new ResourceLocation("the_deepest_depths:vergo_zone_dim"));
+															new ResourceLocation("the_deepest_depths:vergo_dim"));
 													ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
 													if (nextWorld != null) {
 														((ServerPlayerEntity) _ent).connection
@@ -226,7 +226,7 @@ public class AncientTomeOnBlockRightClickedProcedure extends TheDeepestDepthsMod
 												Entity _ent = entityiterator;
 												if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
 													RegistryKey<World> destinationType = RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
-															new ResourceLocation("the_deepest_depths:vergo_zone_dim"));
+															new ResourceLocation("the_deepest_depths:vergo_dim"));
 													ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
 													if (nextWorld != null) {
 														((ServerPlayerEntity) _ent).connection
@@ -268,7 +268,7 @@ public class AncientTomeOnBlockRightClickedProcedure extends TheDeepestDepthsMod
 												Entity _ent = entityiterator;
 												if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
 													RegistryKey<World> destinationType = RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
-															new ResourceLocation("the_deepest_depths:vergo_zone_dim"));
+															new ResourceLocation("the_deepest_depths:vergo_dim"));
 													ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
 													if (nextWorld != null) {
 														((ServerPlayerEntity) _ent).connection
@@ -310,7 +310,7 @@ public class AncientTomeOnBlockRightClickedProcedure extends TheDeepestDepthsMod
 												Entity _ent = entityiterator;
 												if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
 													RegistryKey<World> destinationType = RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
-															new ResourceLocation("the_deepest_depths:vergo_zone_dim"));
+															new ResourceLocation("the_deepest_depths:vergo_dim"));
 													ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
 													if (nextWorld != null) {
 														((ServerPlayerEntity) _ent).connection
@@ -352,7 +352,7 @@ public class AncientTomeOnBlockRightClickedProcedure extends TheDeepestDepthsMod
 												Entity _ent = entityiterator;
 												if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
 													RegistryKey<World> destinationType = RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
-															new ResourceLocation("the_deepest_depths:vergo_zone_dim"));
+															new ResourceLocation("the_deepest_depths:vergo_dim"));
 													ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
 													if (nextWorld != null) {
 														((ServerPlayerEntity) _ent).connection

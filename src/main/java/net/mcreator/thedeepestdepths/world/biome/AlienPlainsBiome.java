@@ -5,23 +5,26 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.common.BiomeDictionary;
 
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraft.world.biome.MobSpawnInfo;
-import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.biome.BiomeGenerationSettings;
 import net.minecraft.world.biome.BiomeAmbience;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.RegistryKey;
 
 import net.mcreator.thedeepestdepths.block.AlienRockBlock;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
 
 @TheDeepestDepthsModElements.ModElement.Tag
-public class AlienSeasBiome extends TheDeepestDepthsModElements.ModElement {
+public class AlienPlainsBiome extends TheDeepestDepthsModElements.ModElement {
 	public static Biome biome;
-	public AlienSeasBiome(TheDeepestDepthsModElements instance) {
-		super(instance, 302);
+	public AlienPlainsBiome(TheDeepestDepthsModElements instance) {
+		super(instance, 303);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -33,16 +36,16 @@ public class AlienSeasBiome extends TheDeepestDepthsModElements.ModElement {
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(AlienRockBlock.block.getDefaultState(),
 								AlienRockBlock.block.getDefaultState(), AlienRockBlock.block.getDefaultState())));
-				DefaultBiomeFeatures.withCavesAndCanyons(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
-				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(0.01f).scale(0.4f).temperature(2f)
+				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(0.12f).scale(0.4f).temperature(2f)
 						.downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("the_deepest_depths:alien_seas"));
+				event.getRegistry().register(biome.setRegistryName("the_deepest_depths:alien_plains"));
 			}
 		}
 	}
 	@Override
 	public void init(FMLCommonSetupEvent event) {
+		BiomeDictionary.addTypes(RegistryKey.getOrCreateKey(Registry.BIOME_KEY, WorldGenRegistries.BIOME.getKey(biome)), BiomeDictionary.Type.END);
 	}
 }

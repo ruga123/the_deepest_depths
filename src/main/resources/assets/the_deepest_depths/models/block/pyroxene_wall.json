@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_side",
+  "textures": {
+    "wall": "the_deepest_depths:blocks/pyroxene",
+    "particle": "the_deepest_depths:blocks/pyroxene"
+  }
+}

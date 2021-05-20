@@ -56,14 +56,14 @@ public class VergoZoneDimDimension extends TheDeepestDepthsModElements.ModElemen
 
 			@Override
 			public boolean func_230493_a_(int x, int y) {
-				return true;
+				return false;
 			}
 		};
 		DeferredWorkQueue.runLater(() -> {
 			try {
 				Object2ObjectMap<ResourceLocation, DimensionRenderInfo> effectsRegistry = (Object2ObjectMap<ResourceLocation, DimensionRenderInfo>) ObfuscationReflectionHelper
 						.getPrivateValue(DimensionRenderInfo.class, null, "field_239208_a_");
-				effectsRegistry.put(new ResourceLocation("the_deepest_depths:vergo_zone_dim"), customEffect);
+				effectsRegistry.put(new ResourceLocation("the_deepest_depths:vergo_dim"), customEffect);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

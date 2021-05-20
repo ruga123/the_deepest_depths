@@ -18,7 +18,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -35,11 +34,17 @@ import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 
 import net.mcreator.thedeepestdepths.procedures.GreatDestructionNaturalEntitySpawningConditionProcedure;
+import net.mcreator.thedeepestdepths.procedures.GreatDestructionEntityIsHurtProcedure;
+import net.mcreator.thedeepestdepths.itemgroup.BloodlandsItemGroup;
 import net.mcreator.thedeepestdepths.entity.renderer.GreatDestructionRenderer;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
+
+import java.util.Map;
+import java.util.HashMap;
 
 import com.google.common.collect.ImmutableMap;
 
@@ -58,7 +63,7 @@ public class GreatDestructionEntity extends TheDeepestDepthsModElements.ModEleme
 	@Override
 	public void initElements() {
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -6750208, -13421824, new Item.Properties().group(ItemGroup.MISC))
+		elements.items.add(() -> new SpawnEggItem(entity, -6750208, -13421824, new Item.Properties().group(BloodlandsItemGroup.tab))
 				.setRegistryName("great_destruction_spawn_egg"));
 	}
 
@@ -142,6 +147,20 @@ public class GreatDestructionEntity extends TheDeepestDepthsModElements.ModEleme
 
 		@Override
 		public boolean attackEntityFrom(DamageSource source, float amount) {
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+			Entity sourceentity = source.getTrueSource();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				GreatDestructionEntityIsHurtProcedure.executeProcedure($_dependencies);
+			}
 			if (source == DamageSource.DROWN)
 				return false;
 			if (source == DamageSource.WITHER)

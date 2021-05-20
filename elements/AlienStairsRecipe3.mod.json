@@ -1,0 +1,46 @@
+{
+  "_fv": 18,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "alien_stairs",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:AlienPlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:AlienPlanks"
+      },
+      {
+        "value": "CUSTOM:AlienPlanks"
+      },
+      {
+        "value": "CUSTOM:AlienPlanks"
+      },
+      {
+        "value": "CUSTOM:AlienPlanks"
+      },
+      {
+        "value": "CUSTOM:AlienPlanks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:AlienStairs"
+    },
+    "name": "alien_stairs_recipe_3",
+    "namespace": "mod"
+  }
+}

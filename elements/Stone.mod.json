@@ -1,0 +1,26 @@
+{
+  "_fv": 18,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:Bloodstone"
+      },
+      {
+        "value": "CUSTOM:Pyroxene"
+      },
+      {
+        "value": "CUSTOM:AlienRock"
+      },
+      {
+        "value": "CUSTOM:DeadAlienRock"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "stone",
+    "namespace": "forge"
+  }
+}

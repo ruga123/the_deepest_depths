@@ -7,7 +7,8 @@
     "customModelName": "Normal",
     "name": "Pyro-Netherite Bloodhound Sickle",
     "specialInfo": [
-      "§6Beheading\\§6Flaming"
+      "§6Beheading",
+      "§6Flaming"
     ],
     "creativeTab": {
       "value": "CUSTOM:Bloodlands"
