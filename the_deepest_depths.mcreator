@@ -3947,36 +3947,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "AdaptiveSlimeNaturalEntitySpawningCondition",
-      "type": "procedure",
-      "sortid": 401,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "adaptive_slime_natural_entity_spawning_condition",
-      "metadata": {
-        "return_type": "LOGIC",
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
     }
   ],
   "variable_elements": [],

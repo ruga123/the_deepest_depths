@@ -111,11 +111,8 @@
     "rangedItemType": "Default item",
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningCondition": {
-      "name": "AdaptiveSlimeNaturalEntitySpawningCondition"
-    },
     "spawningProbability": 1,
-    "mobSpawningType": "ambient",
+    "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [
