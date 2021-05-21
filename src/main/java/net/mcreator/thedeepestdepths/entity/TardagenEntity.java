@@ -33,6 +33,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
+import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
@@ -105,8 +106,8 @@ public class TardagenEntity extends TheDeepestDepthsModElements.ModElement {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
 			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 50);
-			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 21);
-			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
+			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 32);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 4);
 			ammma = ammma.createMutableAttribute(Attributes.FLYING_SPEED, 0.3);
 			event.put(entity, ammma.create());
 		}
@@ -133,11 +134,10 @@ public class TardagenEntity extends TheDeepestDepthsModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1, false));
-			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
-			this.goalSelector.addGoal(3, new AvoidEntityGoal(this, AlienBubbleEntity.CustomEntity.class, (float) 8, 0.9, 0.9));
-			this.goalSelector.addGoal(4, new AvoidEntityGoal(this, AdaptiveSlimeEntity.CustomEntity.class, (float) 8, 0.9, 0.9));
-			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, false, false) {
+			this.goalSelector.addGoal(1, new AvoidEntityGoal(this, AlienBubbleEntity.CustomEntity.class, (float) 8, 1.2, 1.2));
+			this.goalSelector.addGoal(2, new AvoidEntityGoal(this, AdaptiveSlimeEntity.CustomEntity.class, (float) 8, 1.2, 1.2));
+			this.goalSelector.addGoal(3, new PanicGoal(this, 1.2));
+			this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false) {
 				@Override
 				public boolean shouldExecute() {
 					double x = CustomEntity.this.getPosX();
@@ -148,7 +148,18 @@ public class TardagenEntity extends TheDeepestDepthsModElements.ModElement {
 							&& TardagenAttackConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world));
 				}
 			});
-			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false) {
+			this.targetSelector.addGoal(5, new HurtByTargetGoal(this) {
+				@Override
+				public boolean shouldExecute() {
+					double x = CustomEntity.this.getPosX();
+					double y = CustomEntity.this.getPosY();
+					double z = CustomEntity.this.getPosZ();
+					Entity entity = CustomEntity.this;
+					return super.shouldExecute()
+							&& TardagenAttackConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world));
+				}
+			}.setCallsForHelp(this.getClass()));
+			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, false, false) {
 				@Override
 				public boolean shouldExecute() {
 					double x = CustomEntity.this.getPosX();
@@ -159,7 +170,7 @@ public class TardagenEntity extends TheDeepestDepthsModElements.ModElement {
 							&& TardagenAttackConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world));
 				}
 			});
-			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, AnimalEntity.class, false, false) {
+			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false) {
 				@Override
 				public boolean shouldExecute() {
 					double x = CustomEntity.this.getPosX();
@@ -170,7 +181,18 @@ public class TardagenEntity extends TheDeepestDepthsModElements.ModElement {
 							&& TardagenAttackConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world));
 				}
 			});
-			this.goalSelector.addGoal(8, new RandomWalkingGoal(this, 0.8, 20) {
+			this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, AnimalEntity.class, false, false) {
+				@Override
+				public boolean shouldExecute() {
+					double x = CustomEntity.this.getPosX();
+					double y = CustomEntity.this.getPosY();
+					double z = CustomEntity.this.getPosZ();
+					Entity entity = CustomEntity.this;
+					return super.shouldExecute()
+							&& TardagenAttackConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world));
+				}
+			});
+			this.goalSelector.addGoal(9, new RandomWalkingGoal(this, 1, 20) {
 				@Override
 				protected Vector3d getPosition() {
 					Random random = CustomEntity.this.getRNG();
@@ -180,7 +202,7 @@ public class TardagenEntity extends TheDeepestDepthsModElements.ModElement {
 					return new Vector3d(dir_x, dir_y, dir_z);
 				}
 			});
-			this.goalSelector.addGoal(9, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(10, new LookRandomlyGoal(this));
 		}
 
 		@Override
