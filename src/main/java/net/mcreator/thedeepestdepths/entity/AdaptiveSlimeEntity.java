@@ -37,13 +37,16 @@ import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureAttribute;
 
+import net.mcreator.thedeepestdepths.procedures.AdaptiveSlimeNaturalEntitySpawningConditionProcedure;
 import net.mcreator.thedeepestdepths.itemgroup.VergoZoneItemGroup;
 import net.mcreator.thedeepestdepths.entity.renderer.AdaptiveSlimeRenderer;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
 
+import com.google.common.collect.ImmutableMap;
+
 @TheDeepestDepthsModElements.ModElement.Tag
 public class AdaptiveSlimeEntity extends TheDeepestDepthsModElements.ModElement {
-	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
 			.size(0.8f, 0.8f)).build("infectious_slime").setRegistryName("infectious_slime");
 	public AdaptiveSlimeEntity(TheDeepestDepthsModElements instance) {
@@ -67,13 +70,19 @@ public class AdaptiveSlimeEntity extends TheDeepestDepthsModElements.ModElement 
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
-		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 4, 4, 4));
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 1, 4, 4));
 	}
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
-		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-				MonsterEntity::canMonsterSpawn);
+		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS,
+				Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+					int x = pos.getX();
+					int y = pos.getY();
+					int z = pos.getZ();
+					return AdaptiveSlimeNaturalEntitySpawningConditionProcedure
+							.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world));
+				});
 	}
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
@@ -107,14 +116,15 @@ public class AdaptiveSlimeEntity extends TheDeepestDepthsModElements.ModElement 
 		protected void registerGoals() {
 			super.registerGoals();
 			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 0.3, false));
-			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
-			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, false, false));
-			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, AnimalEntity.class, false, false));
-			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, BloodhoundEntity.CustomEntity.class, false, false));
-			this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, (float) 0.5));
-			this.goalSelector.addGoal(7, new RandomWalkingGoal(this, 0.3));
-			this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
-			this.goalSelector.addGoal(9, new SwimGoal(this));
+			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, AlienBubbleEntity.CustomEntity.class, false, false));
+			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, false, false));
+			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, AnimalEntity.class, false, false));
+			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, BloodhoundEntity.CustomEntity.class, false, false));
+			this.goalSelector.addGoal(7, new LeapAtTargetGoal(this, (float) 0.5));
+			this.goalSelector.addGoal(8, new RandomWalkingGoal(this, 0.3));
+			this.goalSelector.addGoal(9, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(10, new SwimGoal(this));
 		}
 
 		@Override

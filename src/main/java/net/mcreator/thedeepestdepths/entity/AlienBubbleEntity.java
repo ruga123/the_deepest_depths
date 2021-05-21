@@ -24,8 +24,12 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.projectile.PotionEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
+import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.controller.FlyingMovementController;
@@ -39,7 +43,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.thedeepestdepths.procedures.AlienBubbleOnEntityTickUpdateProcedure;
+import net.mcreator.thedeepestdepths.procedures.AlienBubbleEntityIsHurtProcedure;
+import net.mcreator.thedeepestdepths.procedures.AlienBubbleEntityDiesProcedure;
 import net.mcreator.thedeepestdepths.entity.renderer.AlienBubbleRenderer;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
 
@@ -49,7 +54,7 @@ import java.util.HashMap;
 
 @TheDeepestDepthsModElements.ModElement.Tag
 public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
-	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.AMBIENT)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
 			.size(0.8f, 0.8f)).build("alien_bubble").setRegistryName("alien_bubble");
 	public AlienBubbleEntity(TheDeepestDepthsModElements instance) {
@@ -73,13 +78,13 @@ public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
-		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 1, 1, 1));
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 3, 1, 1));
 	}
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
-		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-				MonsterEntity::canMonsterSpawn);
+		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS,
+				Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
 	}
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
@@ -117,7 +122,10 @@ public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
 		protected void registerGoals() {
 			super.registerGoals();
 			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 0.8, false));
-			this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.7, 20) {
+			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, true, true));
+			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, PlayerEntity.class, true, true));
+			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, AnimalEntity.class, true, true));
+			this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 0.7, 20) {
 				@Override
 				protected Vector3d getPosition() {
 					Random random = CustomEntity.this.getRNG();
@@ -127,7 +135,7 @@ public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
 					return new Vector3d(dir_x, dir_y, dir_z);
 				}
 			});
-			this.goalSelector.addGoal(3, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
 		}
 
 		@Override
@@ -152,6 +160,21 @@ public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
 
 		@Override
 		public boolean attackEntityFrom(DamageSource source, float amount) {
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+			Entity sourceentity = source.getTrueSource();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("sourceentity", sourceentity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				AlienBubbleEntityIsHurtProcedure.executeProcedure($_dependencies);
+			}
 			if (source.getImmediateSource() instanceof PotionEntity)
 				return false;
 			if (source == DamageSource.FALL)
@@ -174,15 +197,20 @@ public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
 		}
 
 		@Override
-		public void baseTick() {
-			super.baseTick();
+		public void onDeath(DamageSource source) {
+			super.onDeath(source);
 			double x = this.getPosX();
 			double y = this.getPosY();
 			double z = this.getPosZ();
+			Entity sourceentity = source.getTrueSource();
 			Entity entity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				AlienBubbleOnEntityTickUpdateProcedure.executeProcedure($_dependencies);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				AlienBubbleEntityDiesProcedure.executeProcedure($_dependencies);
 			}
 		}
 

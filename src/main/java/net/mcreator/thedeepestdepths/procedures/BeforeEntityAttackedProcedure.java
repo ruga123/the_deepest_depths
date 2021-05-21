@@ -35,6 +35,7 @@ import net.mcreator.thedeepestdepths.item.MuscleItem;
 import net.mcreator.thedeepestdepths.entity.ShadowGuardianEntity;
 import net.mcreator.thedeepestdepths.entity.InfectedBloodhoundEntity;
 import net.mcreator.thedeepestdepths.entity.BloodhoundEntity;
+import net.mcreator.thedeepestdepths.entity.AlienBubbleEntity;
 import net.mcreator.thedeepestdepths.entity.AdaptiveSlimeEntity;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsMod;
@@ -48,46 +49,46 @@ import java.util.HashMap;
 import java.util.Comparator;
 
 @TheDeepestDepthsModElements.ModElement.Tag
-public class BloodhoundAttackProcedure extends TheDeepestDepthsModElements.ModElement {
-	public BloodhoundAttackProcedure(TheDeepestDepthsModElements instance) {
-		super(instance, 64);
+public class BeforeEntityAttackedProcedure extends TheDeepestDepthsModElements.ModElement {
+	public BeforeEntityAttackedProcedure(TheDeepestDepthsModElements instance) {
+		super(instance, 397);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency entity for procedure BloodhoundAttack!");
+				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency entity for procedure BeforeEntityAttacked!");
 			return false;
 		}
 		if (dependencies.get("sourceentity") == null) {
 			if (!dependencies.containsKey("sourceentity"))
-				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency sourceentity for procedure BloodhoundAttack!");
+				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency sourceentity for procedure BeforeEntityAttacked!");
 			return false;
 		}
 		if (dependencies.get("amount") == null) {
 			if (!dependencies.containsKey("amount"))
-				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency amount for procedure BloodhoundAttack!");
+				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency amount for procedure BeforeEntityAttacked!");
 			return false;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency x for procedure BloodhoundAttack!");
+				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency x for procedure BeforeEntityAttacked!");
 			return false;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency y for procedure BloodhoundAttack!");
+				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency y for procedure BeforeEntityAttacked!");
 			return false;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency z for procedure BloodhoundAttack!");
+				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency z for procedure BeforeEntityAttacked!");
 			return false;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency world for procedure BloodhoundAttack!");
+				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency world for procedure BeforeEntityAttacked!");
 			return false;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -100,14 +101,22 @@ public class BloodhoundAttackProcedure extends TheDeepestDepthsModElements.ModEl
 		double reflex = 0;
 		double damage = 0;
 		double rand = 0;
-		if ((entity instanceof ShadowGuardianEntity.CustomEntity)) {
-			rand = (double) Math.floor((Math.random()
-					* Math.max(Math.abs(((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) - 1) / 15)), 1.08)));
-			if (((rand) == 0)) {
-				if (entity instanceof LivingEntity) {
-					((LivingEntity) entity).swing(Hand.OFF_HAND, true);
-				}
-				entity.getPersistentData().putDouble("shield_blocks", (1 + (entity.getPersistentData().getDouble("shield_blocks"))));
+		if ((sourceentity instanceof AlienBubbleEntity.CustomEntity)) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("sourceentity", sourceentity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				AlienBubbleBeaProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if ((sourceentity instanceof BloodhoundEntity.CustomEntity)) {
+			if (((entity.getPersistentData().getBoolean("bite")) || (((new Random()).nextInt((int) 3 + 1)) == 2))) {
+				if (sourceentity instanceof LivingEntity)
+					((LivingEntity) sourceentity).setHealth(
+							(float) (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHealth() : -1) + ((amount) / 4.5)));
 				if (dependencies.get("event") != null) {
 					Object _obj = dependencies.get("event");
 					if (_obj instanceof Event) {
@@ -116,29 +125,75 @@ public class BloodhoundAttackProcedure extends TheDeepestDepthsModElements.ModEl
 							_evt.setCanceled(true);
 					}
 				}
-				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.block")),
-							SoundCategory.NEUTRAL, (float) 0.8, (float) 0.8);
+				new Object() {
+					private int ticks = 0;
+					private float waitTicks;
+					private IWorld world;
+					public void start(IWorld world, int waitTicks) {
+						this.waitTicks = waitTicks;
+						MinecraftForge.EVENT_BUS.register(this);
+						this.world = world;
+					}
+
+					@SubscribeEvent
+					public void tick(TickEvent.ServerTickEvent event) {
+						if (event.phase == TickEvent.Phase.END) {
+							this.ticks += 1;
+							if (this.ticks >= this.waitTicks)
+								run();
+						}
+					}
+
+					private void run() {
+						if ((entity.isAlive())) {
+							if (entity instanceof LivingEntity)
+								((LivingEntity) entity).setHealth(
+										(float) (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) + ((amount) / 4)));
+						}
+						MinecraftForge.EVENT_BUS.unregister(this);
+					}
+				}.start(world, (int) 4);
+			} else {
+				if ((((new Random()).nextInt((int) 3 + 1)) == 2)) {
+					if (entity instanceof LivingEntity) {
+						((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
+					}
 				} else {
-					((World) world).playSound(x, y, z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.block")),
-							SoundCategory.NEUTRAL, (float) 0.8, (float) 0.8, false);
+					if (entity instanceof LivingEntity) {
+						((LivingEntity) entity).swing(Hand.OFF_HAND, true);
+					}
 				}
-				if (((entity.getPersistentData().getDouble("shield_blocks")) >= 5)) {
-					entity.getPersistentData().putDouble("shield_blocks", ((entity.getPersistentData().getDouble("shield_blocks")) - 5));
-					if (world instanceof World && !((World) world).isRemote) {
-						((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) Math.min(Math.ceil(((amount) / 6)), 6),
-								Explosion.Mode.BREAK);
-					}
-					if (world instanceof ServerWorld) {
-						((ServerWorld) world).spawnParticle(ParticleTypes.ENCHANTED_HIT, x, y, z, (int) 5, 2, 2, 2, 0.25);
-					}
-					if (world instanceof ServerWorld) {
-						((ServerWorld) world).spawnParticle(ParticleTypes.END_ROD, x, y, z, (int) 5, 2, 2, 2, 0.25);
-					}
-					if (world instanceof ServerWorld) {
-						((ServerWorld) world).spawnParticle(ParticleTypes.PORTAL, x, y, z, (int) 5, 2, 2, 2, 0.25);
+			}
+		} else if (((entity instanceof PlayerEntity) || (entity instanceof ServerPlayerEntity))) {
+			if ((!(((PlayerEntity) entity).isActiveItemStackBlocking()))) {
+				reflex = (double) 0;
+				if ((((entity instanceof LivingEntity)
+						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
+						: ItemStack.EMPTY).getItem() == new ItemStack(MuscleItem.boots, (int) (1)).getItem())) {
+					reflex = (double) ((reflex) + 1);
+				}
+				if ((((entity instanceof LivingEntity)
+						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
+						: ItemStack.EMPTY).getItem() == new ItemStack(MuscleItem.legs, (int) (1)).getItem())) {
+					reflex = (double) ((reflex) + 1);
+				}
+				if ((((entity instanceof LivingEntity)
+						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
+						: ItemStack.EMPTY).getItem() == new ItemStack(MuscleItem.body, (int) (1)).getItem())) {
+					reflex = (double) ((reflex) + 1);
+				}
+				if ((((entity instanceof LivingEntity)
+						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
+						: ItemStack.EMPTY).getItem() == new ItemStack(MuscleItem.helmet, (int) (1)).getItem())) {
+					reflex = (double) ((reflex) + 1);
+				}
+				if (((reflex) > 0)) {
+					if ((((new Random()).nextInt((int) (5 - (reflex)) + 1)) == 0)) {
+						if (entity instanceof LivingEntity) {
+							((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
+						}
+						damage = (double) Math.min((((amount) * (reflex)) / 3), 16);
+						sourceentity.attackEntityFrom(DamageSource.GENERIC, (float) (damage));
 					}
 				}
 			}
@@ -234,6 +289,49 @@ public class BloodhoundAttackProcedure extends TheDeepestDepthsModElements.ModEl
 					((LivingEntity) entity).addPotionEffect(new EffectInstance(SlimeInfectionPotion.potion, (int) 60, (int) 1, (false), (true)));
 				if (!sourceentity.world.isRemote())
 					sourceentity.remove();
+			}
+		}
+		if ((entity instanceof ShadowGuardianEntity.CustomEntity)) {
+			rand = (double) Math.floor((Math.random()
+					* Math.max(Math.abs(((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) - 1) / 15)), 1.08)));
+			if (((rand) == 0)) {
+				if (entity instanceof LivingEntity) {
+					((LivingEntity) entity).swing(Hand.OFF_HAND, true);
+				}
+				entity.getPersistentData().putDouble("shield_blocks", (1 + (entity.getPersistentData().getDouble("shield_blocks"))));
+				if (dependencies.get("event") != null) {
+					Object _obj = dependencies.get("event");
+					if (_obj instanceof Event) {
+						Event _evt = (Event) _obj;
+						if (_evt.isCancelable())
+							_evt.setCanceled(true);
+					}
+				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.block")),
+							SoundCategory.NEUTRAL, (float) 0.8, (float) 0.8);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.block")),
+							SoundCategory.NEUTRAL, (float) 0.8, (float) 0.8, false);
+				}
+				if (((entity.getPersistentData().getDouble("shield_blocks")) >= 5)) {
+					entity.getPersistentData().putDouble("shield_blocks", ((entity.getPersistentData().getDouble("shield_blocks")) - 5));
+					if (world instanceof World && !((World) world).isRemote) {
+						((World) world).createExplosion(null, (int) x, (int) y, (int) z, (float) Math.min(Math.ceil(((amount) / 6)), 6),
+								Explosion.Mode.BREAK);
+					}
+					if (world instanceof ServerWorld) {
+						((ServerWorld) world).spawnParticle(ParticleTypes.ENCHANTED_HIT, x, y, z, (int) 5, 2, 2, 2, 0.25);
+					}
+					if (world instanceof ServerWorld) {
+						((ServerWorld) world).spawnParticle(ParticleTypes.END_ROD, x, y, z, (int) 5, 2, 2, 2, 0.25);
+					}
+					if (world instanceof ServerWorld) {
+						((ServerWorld) world).spawnParticle(ParticleTypes.PORTAL, x, y, z, (int) 5, 2, 2, 2, 0.25);
+					}
+				}
 			}
 		}
 		if ((entity.getPersistentData().getBoolean("adaptive_slime"))) {

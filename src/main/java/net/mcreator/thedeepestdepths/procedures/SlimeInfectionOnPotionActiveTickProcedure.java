@@ -13,6 +13,7 @@ import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.thedeepestdepths.potion.SlimeInfectionPotion;
+import net.mcreator.thedeepestdepths.entity.AlienBubbleEntity;
 import net.mcreator.thedeepestdepths.entity.AdaptiveSlimeEntity;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsMod;
@@ -57,44 +58,46 @@ public class SlimeInfectionOnPotionActiveTickProcedure extends TheDeepestDepthsM
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		entity.getPersistentData().putDouble("slimeinfectiontime",
-				(((new Random()).nextInt((int) 4 + 1)) + (entity.getPersistentData().getDouble("slimeinfectiontime"))));
-		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(SlimeInfectionPotion.potion, (int) 60000, (int) 255, (false), (true)));
-		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 1.8)) {
-			if ((entity.isAlive())) {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).setHealth((float) 0);
-				for (int index0 = 0; index0 < (int) ((((new Random()).nextInt((int) 1 + 1)) + 1)); index0++) {
-					if (world instanceof ServerWorld) {
-						Entity entityToSpawn = new AdaptiveSlimeEntity.CustomEntity(AdaptiveSlimeEntity.entity, (World) world);
-						entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof MobEntity)
-							((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world,
-									world.getDifficultyForLocation(entityToSpawn.getPosition()), SpawnReason.MOB_SUMMONED, (ILivingEntityData) null,
-									(CompoundNBT) null);
-						world.addEntity(entityToSpawn);
+		if ((!(entity instanceof AlienBubbleEntity.CustomEntity))) {
+			entity.getPersistentData().putDouble("slimeinfectiontime",
+					(((new Random()).nextInt((int) 4 + 1)) + (entity.getPersistentData().getDouble("slimeinfectiontime"))));
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(SlimeInfectionPotion.potion, (int) 60000, (int) 255, (false), (true)));
+			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 1.8)) {
+				if ((entity.isAlive())) {
+					if (entity instanceof LivingEntity)
+						((LivingEntity) entity).setHealth((float) 0);
+					for (int index0 = 0; index0 < (int) ((((new Random()).nextInt((int) 1 + 1)) + 1)); index0++) {
+						if (world instanceof ServerWorld) {
+							Entity entityToSpawn = new AdaptiveSlimeEntity.CustomEntity(AdaptiveSlimeEntity.entity, (World) world);
+							entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+							if (entityToSpawn instanceof MobEntity)
+								((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world,
+										world.getDifficultyForLocation(entityToSpawn.getPosition()), SpawnReason.MOB_SUMMONED,
+										(ILivingEntityData) null, (CompoundNBT) null);
+							world.addEntity(entityToSpawn);
+						}
 					}
+					return (true);
 				}
-				return (true);
 			}
-		}
-		if ((((new Random()).nextInt((int) 1000 + 1)) == 1)) {
-			entity.attackEntityFrom(DamageSource.GENERIC, (float) 1);
-		}
-		if (((entity.getPersistentData().getDouble("slimeinfectiontime")) > 18000)) {
-			if ((entity.isAlive())) {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).setHealth((float) 0);
-				for (int index1 = 0; index1 < (int) ((((new Random()).nextInt((int) 2 + 1)) + 2)); index1++) {
-					if (world instanceof ServerWorld) {
-						Entity entityToSpawn = new AdaptiveSlimeEntity.CustomEntity(AdaptiveSlimeEntity.entity, (World) world);
-						entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof MobEntity)
-							((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world,
-									world.getDifficultyForLocation(entityToSpawn.getPosition()), SpawnReason.MOB_SUMMONED, (ILivingEntityData) null,
-									(CompoundNBT) null);
-						world.addEntity(entityToSpawn);
+			if ((((new Random()).nextInt((int) 1000 + 1)) == 1)) {
+				entity.attackEntityFrom(DamageSource.GENERIC, (float) 1);
+			}
+			if (((entity.getPersistentData().getDouble("slimeinfectiontime")) > 18000)) {
+				if ((entity.isAlive())) {
+					if (entity instanceof LivingEntity)
+						((LivingEntity) entity).setHealth((float) 0);
+					for (int index1 = 0; index1 < (int) ((((new Random()).nextInt((int) 2 + 1)) + 2)); index1++) {
+						if (world instanceof ServerWorld) {
+							Entity entityToSpawn = new AdaptiveSlimeEntity.CustomEntity(AdaptiveSlimeEntity.entity, (World) world);
+							entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+							if (entityToSpawn instanceof MobEntity)
+								((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world,
+										world.getDifficultyForLocation(entityToSpawn.getPosition()), SpawnReason.MOB_SUMMONED,
+										(ILivingEntityData) null, (CompoundNBT) null);
+							world.addEntity(entityToSpawn);
+						}
 					}
 				}
 			}

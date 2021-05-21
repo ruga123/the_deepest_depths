@@ -1,5 +1,7 @@
 package net.mcreator.thedeepestdepths.procedures;
 
+import net.minecraft.world.IWorld;
+import net.minecraft.world.Difficulty;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
@@ -20,8 +22,15 @@ public class TardagenAttackConditionProcedure extends TheDeepestDepthsModElement
 				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency entity for procedure TardagenAttackCondition!");
 			return false;
 		}
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency world for procedure TardagenAttackCondition!");
+			return false;
+		}
 		Entity entity = (Entity) dependencies.get("entity");
-		return ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1)
-				/ ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1)) > 3);
+		IWorld world = (IWorld) dependencies.get("world");
+		return ((!(world.getDifficulty() == Difficulty.PEACEFUL))
+				&& ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1)
+						/ ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1)) > 3));
 	}
 }

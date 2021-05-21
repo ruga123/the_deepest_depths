@@ -68,7 +68,7 @@
         "amplified": false,
         "size_horizontal": 1,
         "size_vertical": 2,
-        "height": 128,
+        "height": 256,
         "sampling": {
           "xz_scale": 1,
           "y_scale": 3,

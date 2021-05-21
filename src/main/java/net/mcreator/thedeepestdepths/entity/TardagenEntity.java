@@ -91,7 +91,7 @@ public class TardagenEntity extends TheDeepestDepthsModElements.ModElement {
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
-		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 1, 1, 2));
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 2, 1, 2));
 	}
 
 	@Override
@@ -133,50 +133,44 @@ public class TardagenEntity extends TheDeepestDepthsModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 0.8, false));
+			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1, false));
 			this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
-			this.goalSelector.addGoal(3, new AvoidEntityGoal(this, AdaptiveSlimeEntity.CustomEntity.class, (float) 8, 0.7, 0.7));
-			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, false, false) {
+			this.goalSelector.addGoal(3, new AvoidEntityGoal(this, AlienBubbleEntity.CustomEntity.class, (float) 8, 0.9, 0.9));
+			this.goalSelector.addGoal(4, new AvoidEntityGoal(this, AdaptiveSlimeEntity.CustomEntity.class, (float) 8, 0.9, 0.9));
+			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, false, false) {
 				@Override
 				public boolean shouldExecute() {
 					double x = CustomEntity.this.getPosX();
 					double y = CustomEntity.this.getPosY();
 					double z = CustomEntity.this.getPosZ();
 					Entity entity = CustomEntity.this;
-					return super.shouldExecute() && TardagenAttackConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity));
+					return super.shouldExecute()
+							&& TardagenAttackConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world));
 				}
 			});
-			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false) {
+			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false) {
 				@Override
 				public boolean shouldExecute() {
 					double x = CustomEntity.this.getPosX();
 					double y = CustomEntity.this.getPosY();
 					double z = CustomEntity.this.getPosZ();
 					Entity entity = CustomEntity.this;
-					return super.shouldExecute() && TardagenAttackConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity));
+					return super.shouldExecute()
+							&& TardagenAttackConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world));
 				}
 			});
-			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, AnimalEntity.class, false, false) {
+			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, AnimalEntity.class, false, false) {
 				@Override
 				public boolean shouldExecute() {
 					double x = CustomEntity.this.getPosX();
 					double y = CustomEntity.this.getPosY();
 					double z = CustomEntity.this.getPosZ();
 					Entity entity = CustomEntity.this;
-					return super.shouldExecute() && TardagenAttackConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity));
+					return super.shouldExecute()
+							&& TardagenAttackConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity, "world", world));
 				}
 			});
-			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, MobEntity.class, false, false) {
-				@Override
-				public boolean shouldExecute() {
-					double x = CustomEntity.this.getPosX();
-					double y = CustomEntity.this.getPosY();
-					double z = CustomEntity.this.getPosZ();
-					Entity entity = CustomEntity.this;
-					return super.shouldExecute() && TardagenAttackConditionProcedure.executeProcedure(ImmutableMap.of("entity", entity));
-				}
-			});
-			this.goalSelector.addGoal(8, new RandomWalkingGoal(this, 0.6, 20) {
+			this.goalSelector.addGoal(8, new RandomWalkingGoal(this, 0.8, 20) {
 				@Override
 				protected Vector3d getPosition() {
 					Random random = CustomEntity.this.getRNG();
