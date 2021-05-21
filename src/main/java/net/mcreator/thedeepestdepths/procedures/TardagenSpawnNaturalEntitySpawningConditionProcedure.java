@@ -11,9 +11,11 @@ import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.thedeepestdepths.entity.TardagenEntity;
+import net.mcreator.thedeepestdepths.entity.AlienBubbleEntity;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsMod;
 
+import java.util.Random;
 import java.util.Map;
 
 @TheDeepestDepthsModElements.ModElement.Tag
@@ -48,14 +50,26 @@ public class TardagenSpawnNaturalEntitySpawningConditionProcedure extends TheDee
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((world.isAirBlock(new BlockPos((int) x, (int) y, (int) z)))) {
-			if (world instanceof ServerWorld) {
-				Entity entityToSpawn = new TardagenEntity.CustomEntity(TardagenEntity.entity, (World) world);
-				entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);
-				entityToSpawn.setRenderYawOffset((float) 0);
-				if (entityToSpawn instanceof MobEntity)
-					((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-							SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-				world.addEntity(entityToSpawn);
+			if ((((new Random()).nextInt((int) 1 + 1)) == 1)) {
+				if (world instanceof ServerWorld) {
+					Entity entityToSpawn = new TardagenEntity.CustomEntity(TardagenEntity.entity, (World) world);
+					entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);
+					entityToSpawn.setRenderYawOffset((float) 0);
+					if (entityToSpawn instanceof MobEntity)
+						((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
+								SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
+					world.addEntity(entityToSpawn);
+				}
+			} else {
+				if (world instanceof ServerWorld) {
+					Entity entityToSpawn = new AlienBubbleEntity.CustomEntity(AlienBubbleEntity.entity, (World) world);
+					entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);
+					entityToSpawn.setRenderYawOffset((float) 0);
+					if (entityToSpawn instanceof MobEntity)
+						((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
+								SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
+					world.addEntity(entityToSpawn);
+				}
 			}
 		}
 		return (false);

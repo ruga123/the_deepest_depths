@@ -83,10 +83,10 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "entity.small_slime.hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "entity.small_slime.death"
     },
     "stepSound": {
       "value": ""

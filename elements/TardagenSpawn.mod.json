@@ -120,10 +120,10 @@
     "spawningCondition": {
       "name": "TardagenSpawnNaturalEntitySpawningCondition"
     },
-    "spawningProbability": 1,
+    "spawningProbability": 12,
     "mobSpawningType": "ambient",
     "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 2,
+    "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:AlienPlains"

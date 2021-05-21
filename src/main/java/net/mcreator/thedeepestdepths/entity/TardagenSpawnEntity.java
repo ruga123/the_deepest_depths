@@ -76,7 +76,7 @@ public class TardagenSpawnEntity extends TheDeepestDepthsModElements.ModElement 
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
-		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 1, 1, 2));
+		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 12, 1, 1));
 	}
 
 	@Override

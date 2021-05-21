@@ -72,14 +72,16 @@ public class AlienBubbleEntityDiesProcedure extends TheDeepestDepthsModElements.
 				}
 
 				private void run() {
-					if (world instanceof ServerWorld) {
-						Entity entityToSpawn = new AlienBubbleEntity.CustomEntity(AlienBubbleEntity.entity, (World) world);
-						entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (entityToSpawn instanceof MobEntity)
-							((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world,
-									world.getDifficultyForLocation(entityToSpawn.getPosition()), SpawnReason.MOB_SUMMONED, (ILivingEntityData) null,
-									(CompoundNBT) null);
-						world.addEntity(entityToSpawn);
+					for (int index0 = 0; index0 < (int) ((((new Random()).nextInt((int) 2 + 1)) + 1)); index0++) {
+						if (world instanceof ServerWorld) {
+							Entity entityToSpawn = new AlienBubbleEntity.CustomEntity(AlienBubbleEntity.entity, (World) world);
+							entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+							if (entityToSpawn instanceof MobEntity)
+								((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world,
+										world.getDifficultyForLocation(entityToSpawn.getPosition()), SpawnReason.MOB_SUMMONED,
+										(ILivingEntityData) null, (CompoundNBT) null);
+							world.addEntity(entityToSpawn);
+						}
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}

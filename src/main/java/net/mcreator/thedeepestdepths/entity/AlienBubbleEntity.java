@@ -7,12 +7,8 @@ import net.minecraftforge.fml.network.FMLPlayMessages;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
-import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.gen.Heightmap;
-import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.World;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.BlockPos;
@@ -24,7 +20,6 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.projectile.PotionEntity;
-import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.monster.MonsterEntity;
@@ -37,7 +32,6 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
@@ -61,7 +55,6 @@ public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
 		super(instance, 394);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new AlienBubbleRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
-		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@Override
@@ -71,20 +64,8 @@ public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
 				.setRegistryName("alien_bubble_spawn_egg"));
 	}
 
-	@SubscribeEvent
-	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		boolean biomeCriteria = false;
-		if (new ResourceLocation("the_deepest_depths:alien_plains").equals(event.getName()))
-			biomeCriteria = true;
-		if (!biomeCriteria)
-			return;
-		event.getSpawns().getSpawner(EntityClassification.AMBIENT).add(new MobSpawnInfo.Spawners(entity, 3, 1, 1));
-	}
-
 	@Override
 	public void init(FMLCommonSetupEvent event) {
-		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.NO_RESTRICTIONS,
-				Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MobEntity::canSpawnOn);
 	}
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
@@ -122,7 +103,7 @@ public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
 		protected void registerGoals() {
 			super.registerGoals();
 			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 0.8, false));
-			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, true, true));
+			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, BloodhoundEntity.CustomEntity.class, true, true));
 			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, PlayerEntity.class, true, true));
 			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, AnimalEntity.class, true, true));
 			this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 0.7, 20) {
@@ -140,7 +121,7 @@ public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
 
 		@Override
 		public CreatureAttribute getCreatureAttribute() {
-			return CreatureAttribute.WATER;
+			return CreatureAttribute.UNDEFINED;
 		}
 
 		@Override
