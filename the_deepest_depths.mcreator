@@ -3367,306 +3367,6 @@
       "path": "~/AlienTreeFolder"
     },
     {
-      "name": "AlienTreeSpawn1",
-      "type": "structure",
-      "sortid": 307,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_1",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn2",
-      "type": "structure",
-      "sortid": 308,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_2",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn3",
-      "type": "structure",
-      "sortid": 309,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_3",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn4",
-      "type": "structure",
-      "sortid": 310,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_4",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn5",
-      "type": "structure",
-      "sortid": 311,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_5",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn6",
-      "type": "structure",
-      "sortid": 312,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_6",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn7",
-      "type": "structure",
-      "sortid": 313,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_7",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn8",
-      "type": "structure",
-      "sortid": 314,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_8",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn9",
-      "type": "structure",
-      "sortid": 315,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_9",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn10",
-      "type": "structure",
-      "sortid": 316,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_10",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn11",
-      "type": "structure",
-      "sortid": 317,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_11",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn12",
-      "type": "structure",
-      "sortid": 318,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_12",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn13",
-      "type": "structure",
-      "sortid": 319,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_13",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn14",
-      "type": "structure",
-      "sortid": 320,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_14",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn15",
-      "type": "structure",
-      "sortid": 321,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_15",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn16",
-      "type": "structure",
-      "sortid": 322,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_16",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn17",
-      "type": "structure",
-      "sortid": 323,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_17",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn18",
-      "type": "structure",
-      "sortid": 324,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_18",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn19",
-      "type": "structure",
-      "sortid": 325,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_19",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn20",
-      "type": "structure",
-      "sortid": 326,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_20",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn21",
-      "type": "structure",
-      "sortid": 327,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_21",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn22",
-      "type": "structure",
-      "sortid": 328,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_22",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn23",
-      "type": "structure",
-      "sortid": 329,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_23",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn24",
-      "type": "structure",
-      "sortid": 330,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_24",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn25",
-      "type": "structure",
-      "sortid": 331,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_25",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn26",
-      "type": "structure",
-      "sortid": 332,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_26",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn27",
-      "type": "structure",
-      "sortid": 333,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_27",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn28",
-      "type": "structure",
-      "sortid": 334,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_28",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn29",
-      "type": "structure",
-      "sortid": 335,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_29",
-      "path": "~/AlienTreeFolder"
-    },
-    {
-      "name": "AlienTreeSpawn30",
-      "type": "structure",
-      "sortid": 336,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alien_tree_spawn_30",
-      "path": "~/AlienTreeFolder"
-    },
-    {
       "name": "AlienLeaves",
       "type": "block",
       "sortid": 337,
@@ -3876,6 +3576,265 @@
           }
         ]
       }
+    },
+    {
+      "name": "Tardagen",
+      "type": "mob",
+      "sortid": 356,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tardagen"
+    },
+    {
+      "name": "AlienTreeSpawn1",
+      "type": "structure",
+      "sortid": 357,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_1",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn2",
+      "type": "structure",
+      "sortid": 358,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_2",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn3",
+      "type": "structure",
+      "sortid": 359,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_3",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn4",
+      "type": "structure",
+      "sortid": 360,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_4",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn5",
+      "type": "structure",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_5",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn6",
+      "type": "structure",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_6",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn7",
+      "type": "structure",
+      "sortid": 363,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_7",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn8",
+      "type": "structure",
+      "sortid": 364,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_8",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn9",
+      "type": "structure",
+      "sortid": 365,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_9",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "AlienTreeSpawn10",
+      "type": "structure",
+      "sortid": 366,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_tree_spawn_10",
+      "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "TardagenOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 387,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tardagen_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TardagenSpawnNaturalEntitySpawningCondition",
+      "type": "procedure",
+      "sortid": 388,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tardagen_spawn_natural_entity_spawning_condition",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TardagenSpawn",
+      "type": "mob",
+      "sortid": 388,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tardagen_spawn"
+    },
+    {
+      "name": "TardagenSpawnOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 389,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tardagen_spawn_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TardagenSpawnThisEntityKillsAnotherOne",
+      "type": "procedure",
+      "sortid": 390,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tardagen_spawn_this_entity_kills_another_one",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TardagenAttackCondition",
+      "type": "procedure",
+      "sortid": 391,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tardagen_attack_condition",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AlienLeavesLootTable",
+      "type": "loottable",
+      "sortid": 392,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_leaves_loot_table"
+    },
+    {
+      "name": "AlienRockUpdateTick",
+      "type": "procedure",
+      "sortid": 393,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alien_rock_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -3928,6 +3887,7 @@
       "entity.the_deepest_depths.head_hunter_head": "Head Hunter Head",
       "block.the_deepest_depths.rune_w": "Ancient Rune",
       "block.the_deepest_depths.rune_x": "Ancient Rune",
+      "item.the_deepest_depths.tardagen_spawn_spawn_egg": "Tardagen Spawn Spawn Egg",
       "block.the_deepest_depths.pyroxene": "Pyroxene",
       "block.the_deepest_depths.slate": "Slate",
       "block.the_deepest_depths.rune_y": "Ancient Rune",
@@ -3936,6 +3896,7 @@
       "block.the_deepest_depths.dead_alien_rock": "Alien Rock",
       "block.the_deepest_depths.rune_l": "Ancient Rune",
       "block.the_deepest_depths.rune_m": "Ancient Rune",
+      "entity.the_deepest_depths.tardagen": "Tardagen",
       "block.the_deepest_depths.rune_n": "Ancient Rune",
       "item.minecraft.potion.effect.slime_infection": "Slime Infection",
       "block.the_deepest_depths.rune_o": "Ancient Rune",
@@ -3946,6 +3907,8 @@
       "item.the_deepest_depths.muscle_leggings": "Muscle Pants",
       "block.the_deepest_depths.rune_c": "Ancient Rune",
       "block.the_deepest_depths.rune_d": "Ancient Rune",
+      "item.the_deepest_depths.tardagen_spawn_egg": "Tardagen Spawn Egg",
+      "entity.the_deepest_depths.tardagen_spawn": "Tardagen Spawn",
       "item.the_deepest_depths.netherite_bloodhound_sickle": "Netherite Bloodhound Sickle",
       "block.the_deepest_depths.rune_e": "Ancient Rune",
       "block.the_deepest_depths.rune_f": "Ancient Rune",

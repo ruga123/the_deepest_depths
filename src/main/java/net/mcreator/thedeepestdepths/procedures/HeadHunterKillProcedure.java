@@ -6,7 +6,6 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector2f;
-import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.monster.WitherSkeletonEntity;
@@ -16,6 +15,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
 
+import net.mcreator.thedeepestdepths.entity.BloodhoundEntity;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsMod;
 
@@ -58,7 +58,7 @@ public class HeadHunterKillProcedure extends TheDeepestDepthsModElements.ModElem
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((entity instanceof PlayerEntity) || (entity instanceof ServerPlayerEntity))) {
+		if (((entity instanceof PlayerEntity) || (entity instanceof BloodhoundEntity.CustomEntity))) {
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
@@ -123,13 +123,6 @@ public class HeadHunterKillProcedure extends TheDeepestDepthsModElements.ModElem
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 						"data merge entity @e[type=the_deepest_depths:head_hunter,limit=1,sort=nearest] {PersistenceRequired:1b}");
-			}
-		} else {
-			if (world instanceof ServerWorld) {
-				((World) world).getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
-						"summon the_deepest_depths:head_hunter_head ~ ~ ~ {Invulnerable:1b,ArmorItems:[{},{},{},{id:\"minecraft:chest\",Count:1b,tag:{BlockEntityTag:{Items:[{Slot:0b,id:\"minecraft:egg\",Count:1b}]}}}]}");
 			}
 		}
 	}

@@ -109,13 +109,12 @@ public class AdaptiveSlimeEntity extends TheDeepestDepthsModElements.ModElement 
 			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 0.3, false));
 			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
 			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, false, false));
-			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, ShadowGuardianEntity.CustomEntity.class, false, false));
-			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, AnimalEntity.class, false, false));
-			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, BloodhoundEntity.CustomEntity.class, false, false));
-			this.goalSelector.addGoal(7, new LeapAtTargetGoal(this, (float) 0.5));
-			this.goalSelector.addGoal(8, new RandomWalkingGoal(this, 0.3));
-			this.goalSelector.addGoal(9, new LookRandomlyGoal(this));
-			this.goalSelector.addGoal(10, new SwimGoal(this));
+			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, AnimalEntity.class, false, false));
+			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, BloodhoundEntity.CustomEntity.class, false, false));
+			this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, (float) 0.5));
+			this.goalSelector.addGoal(7, new RandomWalkingGoal(this, 0.3));
+			this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(9, new SwimGoal(this));
 		}
 
 		@Override

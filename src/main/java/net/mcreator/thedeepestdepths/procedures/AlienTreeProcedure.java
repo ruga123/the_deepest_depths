@@ -4,7 +4,6 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.block.Blocks;
 
-import net.mcreator.thedeepestdepths.block.AlienRockBlock;
 import net.mcreator.thedeepestdepths.block.AlienLogBlock;
 import net.mcreator.thedeepestdepths.block.AlienLeavesBlock;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
@@ -54,7 +53,6 @@ public class AlienTreeProcedure extends TheDeepestDepthsModElements.ModElement {
 		double loop1 = 0;
 		double loop2 = 0;
 		boolean dir = false;
-		world.setBlockState(new BlockPos((int) x, (int) y, (int) z), AlienRockBlock.block.getDefaultState(), 3);
 		temp = (double) 0;
 		for (int index0 = 0; index0 < (int) ((((new Random()).nextInt((int) 2 + 1)) + 3)); index0++) {
 			temp = (double) ((temp) - 1);
@@ -62,11 +60,11 @@ public class AlienTreeProcedure extends TheDeepestDepthsModElements.ModElement {
 				world.setBlockState(new BlockPos((int) x, (int) (y + (temp)), (int) z), AlienLogBlock.block.getDefaultState(), 3);
 			} else {
 				for (int index1 = 0; index1 < (int) (((temp) - 1)); index1++) {
-					if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((temp) - 1)), (int) z))).getBlock() == AlienLogBlock.block
+					if (((world.getBlockState(new BlockPos((int) x, (int) (y + ((temp) + 1)), (int) z))).getBlock() == AlienLogBlock.block
 							.getDefaultState().getBlock())) {
-						world.setBlockState(new BlockPos((int) x, (int) (y + ((temp) - 1)), (int) z), Blocks.AIR.getDefaultState(), 3);
+						world.setBlockState(new BlockPos((int) x, (int) (y + ((temp) + 1)), (int) z), Blocks.AIR.getDefaultState(), 3);
 					}
-					temp = (double) ((temp) - 1);
+					temp = (double) ((temp) + 1);
 				}
 				return (true);
 			}

@@ -7,8 +7,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.util.Direction;
-import net.minecraft.loot.LootContext;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -20,9 +18,6 @@ import net.minecraft.block.Block;
 
 import net.mcreator.thedeepestdepths.itemgroup.VergoZoneItemGroup;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
-
-import java.util.List;
-import java.util.Collections;
 
 @TheDeepestDepthsModElements.ModElement.Tag
 public class AlienLeavesBlock extends TheDeepestDepthsModElements.ModElement {
@@ -53,14 +48,6 @@ public class AlienLeavesBlock extends TheDeepestDepthsModElements.ModElement {
 		@OnlyIn(Dist.CLIENT)
 		public boolean isSideInvisible(BlockState state, BlockState adjacentBlockState, Direction side) {
 			return adjacentBlockState.getBlock() == this ? true : super.isSideInvisible(state, adjacentBlockState, side);
-		}
-
-		@Override
-		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-			if (!dropsOriginal.isEmpty())
-				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
 		}
 	}
 }

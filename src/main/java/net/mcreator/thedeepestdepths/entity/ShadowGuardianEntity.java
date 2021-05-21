@@ -91,13 +91,12 @@ public class ShadowGuardianEntity extends TheDeepestDepthsModElements.ModElement
 		protected void registerGoals() {
 			super.registerGoals();
 			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true));
-			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, AdaptiveSlimeEntity.CustomEntity.class, false, false));
-			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
-			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, false, false));
-			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, AnimalEntity.class, false, false));
-			this.goalSelector.addGoal(6, new RandomWalkingGoal(this, 1));
-			this.targetSelector.addGoal(7, new HurtByTargetGoal(this));
-			this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
+			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, false, false));
+			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, AnimalEntity.class, false, false));
+			this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 1));
+			this.targetSelector.addGoal(6, new HurtByTargetGoal(this));
+			this.goalSelector.addGoal(7, new LookRandomlyGoal(this));
 		}
 
 		@Override

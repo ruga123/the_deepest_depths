@@ -19,6 +19,8 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.Item;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.monster.WitherSkeletonEntity;
 import net.minecraft.entity.monster.SkeletonEntity;
@@ -122,15 +124,17 @@ public class HeadHunterEntity extends TheDeepestDepthsModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.8, false));
-			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, HeadHunterEntity.CustomEntity.class, false, false));
-			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, ZombieEntity.class, false, false));
-			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, WitherSkeletonEntity.class, false, false));
-			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, SkeletonEntity.class, false, false));
-			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, CreeperEntity.class, false, false));
-			this.goalSelector.addGoal(7, new RandomWalkingGoal(this, 1));
-			this.targetSelector.addGoal(8, new HurtByTargetGoal(this));
-			this.goalSelector.addGoal(9, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.9, false));
+			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, false, false));
+			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, HeadHunterEntity.CustomEntity.class, false, false));
+			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, ZombieEntity.class, false, false));
+			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, WitherSkeletonEntity.class, false, false));
+			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, SkeletonEntity.class, false, false));
+			this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, CreeperEntity.class, false, false));
+			this.goalSelector.addGoal(9, new RandomWalkingGoal(this, 1));
+			this.targetSelector.addGoal(10, new HurtByTargetGoal(this));
+			this.goalSelector.addGoal(11, new LookRandomlyGoal(this));
 		}
 
 		@Override

@@ -2,26 +2,26 @@
   "_fv": 18,
   "_type": "mob",
   "definition": {
-    "mobName": "Shadow Guardian",
+    "mobName": "Tardagen Spawn",
     "mobLabel": "",
-    "mobModelName": "ModelAlienGuardian",
-    "mobModelTexture": "alienguardian.png",
-    "mobModelGlowTexture": "alienguardianglow.png",
-    "modelWidth": 0.6,
-    "modelHeight": 2.0,
-    "modelShadowSize": 0.5,
+    "mobModelName": "Biped",
+    "mobModelTexture": "empty.png",
+    "mobModelGlowTexture": "",
+    "modelWidth": 0.0,
+    "modelHeight": 0.0,
+    "modelShadowSize": 0.0,
     "mountedYOffset": 0.0,
-    "hasSpawnEgg": true,
+    "hasSpawnEgg": false,
     "spawnEggBaseColor": {
-      "value": -10092442,
+      "value": -1,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -13434829,
+      "value": -1,
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "CUSTOM:VergoZone"
+      "value": "MISC"
     },
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -46,16 +46,16 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 10,
+    "attackStrength": 3,
     "attackKnockback": 0.0,
-    "knockbackResistance": 0.1,
-    "movementSpeed": 0.33,
-    "armorBaseValue": 12.0,
+    "knockbackResistance": 0.0,
+    "movementSpeed": 0.3,
+    "armorBaseValue": 0.0,
     "trackingRange": 64,
-    "health": 150,
+    "health": 999,
     "xpAmount": 0,
     "waterMob": false,
-    "flyingMob": false,
+    "flyingMob": true,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
@@ -66,11 +66,11 @@
     "immuneToFire": true,
     "immuneToArrows": true,
     "immuneToFallDamage": true,
-    "immuneToCactus": false,
+    "immuneToCactus": true,
     "immuneToDrowning": true,
     "immuneToLightning": true,
     "immuneToPotions": true,
-    "immuneToPlayer": false,
+    "immuneToPlayer": true,
     "immuneToExplosion": true,
     "immuneToTrident": true,
     "immuneToAnvil": true,
@@ -83,10 +83,10 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": ""
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": ""
     },
     "stepSound": {
       "value": ""
@@ -98,9 +98,15 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "hasAI": true,
+    "whenThisMobKillsAnother": {
+      "name": "TardagenSpawnThisEntityKillsAnotherOne"
+    },
+    "onInitialSpawn": {
+      "name": "TardagenSpawnOnInitialEntitySpawn"
+    },
+    "hasAI": false,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayerMP</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityAnimal</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -109,10 +115,13 @@
       "value": ""
     },
     "rangedItemType": "Default item",
-    "spawnThisMob": false,
+    "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
+    "spawningCondition": {
+      "name": "TardagenSpawnNaturalEntitySpawningCondition"
+    },
     "spawningProbability": 1,
-    "mobSpawningType": "monster",
+    "mobSpawningType": "ambient",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 2,
     "restrictionBiomes": [
