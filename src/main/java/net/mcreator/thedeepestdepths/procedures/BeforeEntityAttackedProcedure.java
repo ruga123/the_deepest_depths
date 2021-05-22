@@ -35,6 +35,7 @@ import net.mcreator.thedeepestdepths.item.MuscleItem;
 import net.mcreator.thedeepestdepths.entity.ShadowGuardianEntity;
 import net.mcreator.thedeepestdepths.entity.InfectedBloodhoundEntity;
 import net.mcreator.thedeepestdepths.entity.BloodhoundEntity;
+import net.mcreator.thedeepestdepths.entity.BloodGodEntity;
 import net.mcreator.thedeepestdepths.entity.AlienBubbleEntity;
 import net.mcreator.thedeepestdepths.entity.AdaptiveSlimeEntity;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
@@ -110,6 +111,18 @@ public class BeforeEntityAttackedProcedure extends TheDeepestDepthsModElements.M
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				AlienBubbleBeaProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if ((sourceentity instanceof BloodGodEntity.CustomEntity)) {
+			entity.getPersistentData().putDouble("healths", ((entity.getPersistentData().getDouble("healths")) + ((amount) * 0.8)));
+		}
+		if ((entity instanceof BloodGodEntity.CustomEntity)) {
+			if ((((new Random()).nextInt((int) 2 + 1)) == 0)) {
+				if (entity instanceof LivingEntity) {
+					((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
+				}
+				damage = (double) Math.min((((amount) * 4) / 3), 16);
+				sourceentity.attackEntityFrom(DamageSource.GENERIC, (float) (damage));
 			}
 		}
 		if ((sourceentity instanceof BloodhoundEntity.CustomEntity)) {

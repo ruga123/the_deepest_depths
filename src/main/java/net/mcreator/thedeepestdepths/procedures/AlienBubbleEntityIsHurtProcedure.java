@@ -116,7 +116,7 @@ public class AlienBubbleEntityIsHurtProcedure extends TheDeepestDepthsModElement
 							}
 							MinecraftForge.EVENT_BUS.unregister(this);
 						}
-					}.start(world, (int) 12);
+					}.start(world, (int) 1);
 					if ((e)) {
 						{
 							List<Entity> _entfound = world.getEntitiesWithinAABB(Entity.class,

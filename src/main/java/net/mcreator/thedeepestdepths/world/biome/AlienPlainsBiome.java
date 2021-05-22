@@ -37,7 +37,7 @@ public class AlienPlainsBiome extends TheDeepestDepthsModElements.ModElement {
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(AlienRockBlock.block.getDefaultState(),
 								AlienRockBlock.block.getDefaultState(), AlienRockBlock.block.getDefaultState())));
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
-				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(0.12f).scale(0.4f).temperature(2f)
+				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(0.2f).scale(0.32f).temperature(2f)
 						.downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
 				event.getRegistry().register(biome.setRegistryName("the_deepest_depths:alien_plains"));

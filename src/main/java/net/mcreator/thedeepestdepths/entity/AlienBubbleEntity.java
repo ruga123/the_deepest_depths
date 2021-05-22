@@ -17,7 +17,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.pathfinding.FlyingPathNavigator;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.projectile.PotionEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -38,7 +37,7 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.thedeepestdepths.procedures.AlienBubbleEntityIsHurtProcedure;
-import net.mcreator.thedeepestdepths.procedures.AlienBubbleEntityDiesProcedure;
+import net.mcreator.thedeepestdepths.itemgroup.VergoZoneItemGroup;
 import net.mcreator.thedeepestdepths.entity.renderer.AlienBubbleRenderer;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
 
@@ -60,7 +59,7 @@ public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -3407617, -3355393, new Item.Properties().group(ItemGroup.MISC))
+		elements.items.add(() -> new SpawnEggItem(entity, -3407617, -3355393, new Item.Properties().group(VergoZoneItemGroup.tab))
 				.setRegistryName("alien_bubble_spawn_egg"));
 	}
 
@@ -103,10 +102,7 @@ public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
 		protected void registerGoals() {
 			super.registerGoals();
 			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 0.8, false));
-			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, BloodhoundEntity.CustomEntity.class, true, true));
-			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, PlayerEntity.class, true, true));
-			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, AnimalEntity.class, true, true));
-			this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 0.7, 20) {
+			this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.7, 20) {
 				@Override
 				protected Vector3d getPosition() {
 					Random random = CustomEntity.this.getRNG();
@@ -116,6 +112,9 @@ public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
 					return new Vector3d(dir_x, dir_y, dir_z);
 				}
 			});
+			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, BloodhoundEntity.CustomEntity.class, true, true));
+			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, PlayerEntity.class, true, true));
+			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, AnimalEntity.class, true, true));
 			this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
 		}
 
@@ -175,24 +174,6 @@ public class AlienBubbleEntity extends TheDeepestDepthsModElements.ModElement {
 			if (source.getDamageType().equals("witherSkull"))
 				return false;
 			return super.attackEntityFrom(source, amount);
-		}
-
-		@Override
-		public void onDeath(DamageSource source) {
-			super.onDeath(source);
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity sourceentity = source.getTrueSource();
-			Entity entity = this;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				AlienBubbleEntityDiesProcedure.executeProcedure($_dependencies);
-			}
 		}
 
 		@Override
