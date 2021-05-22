@@ -3947,6 +3947,42 @@
           }
         ]
       }
+    },
+    {
+      "name": "MuscleRecipeChestplate",
+      "type": "recipe",
+      "sortid": 401,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "muscle_recipe_chestplate"
+    },
+    {
+      "name": "MuscleRecipeBoots",
+      "type": "recipe",
+      "sortid": 402,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "muscle_recipe_boots"
+    },
+    {
+      "name": "MuscleRecipeLeggings",
+      "type": "recipe",
+      "sortid": 403,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "muscle_recipe_leggings"
+    },
+    {
+      "name": "MuscleRecipeHelmet",
+      "type": "recipe",
+      "sortid": 404,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "muscle_recipe_helmet"
     }
   ],
   "variable_elements": [],
@@ -4098,8 +4134,7 @@
     "modid": "the_deepest_depths",
     "modName": "The Deepest Depths",
     "version": "1.0.0",
-    "author": "yujing, MCreator",
-    "websiteURL": "https://mcreator.net",
+    "author": "Rug123",
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,

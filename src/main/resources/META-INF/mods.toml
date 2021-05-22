@@ -8,7 +8,7 @@ version="1.0.0"
 displayName="The Deepest Depths"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
-authors="yujing, MCreator"
+authors="Rug123"
 
 [[dependencies.the_deepest_depths]]
     modId="minecraft"
