@@ -3996,11 +3996,30 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
+            "name": "sourceentity",
             "type": "entity"
           }
         ]
       }
+    },
+    {
+      "name": "BloodGodLoot",
+      "type": "loottable",
+      "sortid": 408,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blood_god_loot"
+    },
+    {
+      "name": "WarpedGrassSpawn",
+      "type": "structure",
+      "sortid": 410,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "warped_grass_spawn",
+      "path": "~/AlienTreeFolder"
     }
   ],
   "variable_elements": [],
@@ -4009,16 +4028,16 @@
     "en_us": {
       "block.the_deepest_depths.bloodstone_wall": "Bloodstone Wall",
       "item.minecraft.tipped_arrow.effect.slime_infection": "Arrow of Slime Infection",
-      "block.the_deepest_depths.bloodshroom_stairs": "Bloodshroom Planks",
       "block.the_deepest_depths.alien_planks": "Alien Planks",
+      "block.the_deepest_depths.bloodshroom_stairs": "Bloodshroom Planks",
       "entity.the_deepest_depths.infected_blood_hound": "Infected Bloodhound",
       "block.the_deepest_depths.bloodshroom_slab": "Bloodshroom Planks",
       "item.the_deepest_depths.pyro_netherite_sword": "Pyro-Netherite Sword",
       "item.the_deepest_depths.infected_blood_hound_spawn_egg": "Infected Bloodhound Spawn Egg",
       "death.attack.heat": "%1$s was melted to death",
       "block.the_deepest_depths.slate_wall": "Slate Wall",
-      "block.the_deepest_depths.ghostly_planks": "Ghostly Planks",
       "entity.the_deepest_depths.blood_god": "Blood God",
+      "block.the_deepest_depths.ghostly_planks": "Ghostly Planks",
       "block.the_deepest_depths.slate_stairs": "Slate Stairs",
       "entity.the_deepest_depths.blood_hound": "Bloodhound",
       "item.the_deepest_depths.blood_hound_spawn_egg": "Bloodhound Spawn Egg",

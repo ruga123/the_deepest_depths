@@ -114,7 +114,7 @@ public class BeforeEntityAttackedProcedure extends TheDeepestDepthsModElements.M
 			}
 		}
 		if ((sourceentity instanceof BloodGodEntity.CustomEntity)) {
-			entity.getPersistentData().putDouble("healths", ((entity.getPersistentData().getDouble("healths")) + ((amount) * 0.8)));
+			sourceentity.getPersistentData().putDouble("healths", ((sourceentity.getPersistentData().getDouble("healths")) + ((amount) * 0.8)));
 		}
 		if ((entity instanceof BloodGodEntity.CustomEntity)) {
 			if ((((new Random()).nextInt((int) 2 + 1)) == 0)) {

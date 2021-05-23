@@ -50,33 +50,35 @@ public class EntitySetTargetProcedureProcedure extends TheDeepestDepthsModElemen
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((sourceentity instanceof ShadowGuardianEntity.CustomEntity)) {
 			if ((!(sourceentity.getPersistentData().getBoolean("outing")))) {
-				while (((Math.abs(((sourceentity.getPosX()) - (entity.getPosX()))) > 8)
-						|| ((Math.abs(((sourceentity.getPosY()) - (entity.getPosY()))) > 8)
-								|| (Math.abs(((sourceentity.getPosZ()) - (entity.getPosZ()))) > 8)))) {
+				while (((Math.abs(((sourceentity.getPosX()) - (entity.getPosX()))) > 10)
+						|| ((Math.abs(((sourceentity.getPosY()) - (entity.getPosY()))) > 10)
+								|| (Math.abs(((sourceentity.getPosZ()) - (entity.getPosZ()))) > 10)))) {
 					sourceentity.getPersistentData().putBoolean("outing", (true));
 					while ((true)) {
 						if ((((sourceentity.getPosY()) <= 0) || (!(world.isAirBlock(new BlockPos((int) (sourceentity.getPosX()),
 								(int) ((sourceentity.getPosY()) + 1.2), (int) (sourceentity.getPosZ()))))))) {
 							{
 								Entity _ent = sourceentity;
-								_ent.setPositionAndUpdate((entity.getPosX()), ((entity.getPosY()) - 4), (entity.getPosZ()));
+								_ent.setPositionAndUpdate(((((new Random()).nextInt((int) 2 + 1)) - 1) + (entity.getPosX())),
+										((entity.getPosY()) - 6), ((((new Random()).nextInt((int) 2 + 1)) - 1) + (entity.getPosZ())));
 								if (_ent instanceof ServerPlayerEntity) {
-									((ServerPlayerEntity) _ent).connection.setPlayerLocation((entity.getPosX()), ((entity.getPosY()) - 4),
-											(entity.getPosZ()), _ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
+									((ServerPlayerEntity) _ent).connection.setPlayerLocation(
+											((((new Random()).nextInt((int) 2 + 1)) - 1) + (entity.getPosX())), ((entity.getPosY()) - 6),
+											((((new Random()).nextInt((int) 2 + 1)) - 1) + (entity.getPosZ())), _ent.rotationYaw, _ent.rotationPitch,
+											Collections.emptySet());
 								}
 							}
+							sourceentity.setInvisible((true));
+							sourceentity.setInvulnerable((true));
 							break;
 						}
 						sourceentity.setNoGravity((true));
 						{
 							Entity _ent = sourceentity;
-							_ent.setPositionAndUpdate(((sourceentity.getPosX()) + ((new Random()).nextInt((int) 2 + 1))),
-									((sourceentity.getPosY()) - 0.1), ((sourceentity.getPosZ()) + ((new Random()).nextInt((int) 2 + 1))));
+							_ent.setPositionAndUpdate((sourceentity.getPosX()), ((sourceentity.getPosY()) - 0.1), (sourceentity.getPosZ()));
 							if (_ent instanceof ServerPlayerEntity) {
-								((ServerPlayerEntity) _ent).connection.setPlayerLocation(
-										((sourceentity.getPosX()) + ((new Random()).nextInt((int) 2 + 1))), ((sourceentity.getPosY()) - 0.1),
-										((sourceentity.getPosZ()) + ((new Random()).nextInt((int) 2 + 1))), _ent.rotationYaw, _ent.rotationPitch,
-										Collections.emptySet());
+								((ServerPlayerEntity) _ent).connection.setPlayerLocation((sourceentity.getPosX()), ((sourceentity.getPosY()) - 0.1),
+										(sourceentity.getPosZ()), _ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
 							}
 						}
 						sourceentity.setMotion((sourceentity.getMotion().getX()), (-1.6), (sourceentity.getMotion().getZ()));
@@ -108,6 +110,7 @@ public class EntitySetTargetProcedureProcedure extends TheDeepestDepthsModElemen
 
 					private void run() {
 						if ((sourceentity.getPersistentData().getBoolean("outing"))) {
+							sourceentity.getPersistentData().putBoolean("outing", (false));
 							new Object() {
 								private int ticks = 0;
 								private float waitTicks;
@@ -128,7 +131,20 @@ public class EntitySetTargetProcedureProcedure extends TheDeepestDepthsModElemen
 								}
 
 								private void run() {
-									for (int index2 = 0; index2 < (int) (40); index2++) {
+									sourceentity.setInvulnerable((false));
+									sourceentity.setInvisible((false));
+									{
+										Entity _ent = sourceentity;
+										_ent.setPositionAndUpdate(((((new Random()).nextInt((int) 2 + 1)) - 1) + (entity.getPosX())),
+												((entity.getPosY()) - 6), ((((new Random()).nextInt((int) 2 + 1)) - 1) + (entity.getPosZ())));
+										if (_ent instanceof ServerPlayerEntity) {
+											((ServerPlayerEntity) _ent).connection.setPlayerLocation(
+													((((new Random()).nextInt((int) 2 + 1)) - 1) + (entity.getPosX())), ((entity.getPosY()) - 6),
+													((((new Random()).nextInt((int) 2 + 1)) - 1) + (entity.getPosZ())), _ent.rotationYaw,
+													_ent.rotationPitch, Collections.emptySet());
+										}
+									}
+									for (int index2 = 0; index2 < (int) (60); index2++) {
 										if (((sourceentity.getPosY()) >= (entity.getPosY()))) {
 											break;
 										}
@@ -148,7 +164,6 @@ public class EntitySetTargetProcedureProcedure extends TheDeepestDepthsModElemen
 													(sourceentity.getPosY()), (sourceentity.getPosZ()), (int) 1, 1, 1, 1, 0.1);
 										}
 									}
-									sourceentity.getPersistentData().putBoolean("outing", (false));
 									MinecraftForge.EVENT_BUS.unregister(this);
 								}
 							}.start(world, (int) 17);

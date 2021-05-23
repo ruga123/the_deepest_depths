@@ -15,17 +15,17 @@ public class BloodGodThisEntityKillsAnotherOneProcedure extends TheDeepestDepths
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency entity for procedure BloodGodThisEntityKillsAnotherOne!");
+		if (dependencies.get("sourceentity") == null) {
+			if (!dependencies.containsKey("sourceentity"))
+				TheDeepestDepthsMod.LOGGER.warn("Failed to load dependency sourceentity for procedure BloodGodThisEntityKillsAnotherOne!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
-		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).setHealth((float) Math.min(
-					(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1)
-							+ (entity.getPersistentData().getDouble("healths"))),
-					((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1)));
-		entity.getPersistentData().putDouble("healths", 0);
+		Entity sourceentity = (Entity) dependencies.get("sourceentity");
+		if (sourceentity instanceof LivingEntity)
+			((LivingEntity) sourceentity).setHealth((float) Math.min(
+					(((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHealth() : -1)
+							+ (sourceentity.getPersistentData().getDouble("healths"))),
+					((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getMaxHealth() : -1)));
+		sourceentity.getPersistentData().putDouble("healths", 0);
 	}
 }

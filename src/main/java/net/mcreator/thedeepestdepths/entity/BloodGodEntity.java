@@ -89,6 +89,7 @@ public class BloodGodEntity extends TheDeepestDepthsModElements.ModElement {
 			super(type, world);
 			experienceValue = 30;
 			setNoAI(false);
+			enablePersistence();
 		}
 
 		@Override
@@ -113,6 +114,11 @@ public class BloodGodEntity extends TheDeepestDepthsModElements.ModElement {
 		@Override
 		public CreatureAttribute getCreatureAttribute() {
 			return CreatureAttribute.UNDEFINED;
+		}
+
+		@Override
+		public boolean canDespawn(double distanceToClosestPlayer) {
+			return false;
 		}
 
 		@Override
@@ -160,7 +166,7 @@ public class BloodGodEntity extends TheDeepestDepthsModElements.ModElement {
 			Entity sourceentity = this;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
+				$_dependencies.put("sourceentity", sourceentity);
 				BloodGodThisEntityKillsAnotherOneProcedure.executeProcedure($_dependencies);
 			}
 		}
