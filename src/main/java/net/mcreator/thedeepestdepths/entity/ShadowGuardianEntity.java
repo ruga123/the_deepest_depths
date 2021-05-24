@@ -7,8 +7,12 @@ import net.minecraftforge.fml.network.FMLPlayMessages;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.common.MinecraftForge;
 
+import net.minecraft.world.gen.Heightmap;
+import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.World;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
@@ -31,6 +35,7 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureAttribute;
 
@@ -47,6 +52,7 @@ public class ShadowGuardianEntity extends TheDeepestDepthsModElements.ModElement
 		super(instance, 338);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new ShadowGuardianRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@Override
@@ -56,8 +62,22 @@ public class ShadowGuardianEntity extends TheDeepestDepthsModElements.ModElement
 				.setRegistryName("shadow_guardian_spawn_egg"));
 	}
 
+	@SubscribeEvent
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("the_deepest_depths:shadow_desert").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("the_deepest_depths:shadow_hills").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
+		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 1, 1, 1));
+	}
+
 	@Override
 	public void init(FMLCommonSetupEvent event) {
+		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
+				MonsterEntity::canMonsterSpawn);
 	}
 	private static class EntityAttributesRegisterHandler {
 		@SubscribeEvent
@@ -68,6 +88,7 @@ public class ShadowGuardianEntity extends TheDeepestDepthsModElements.ModElement
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 21);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 10);
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 0.1);
+			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 256);
 			event.put(entity, ammma.create());
 		}
 	}
@@ -143,6 +164,11 @@ public class ShadowGuardianEntity extends TheDeepestDepthsModElements.ModElement
 			if (source.getDamageType().equals("witherSkull"))
 				return false;
 			return super.attackEntityFrom(source, amount);
+		}
+
+		@Override
+		public boolean canBeCollidedWith() {
+			return false;
 		}
 	}
 }

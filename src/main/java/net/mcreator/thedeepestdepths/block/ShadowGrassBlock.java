@@ -4,28 +4,33 @@ package net.mcreator.thedeepestdepths.block;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
 
+import net.minecraft.world.server.ServerWorld;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.FallingBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.thedeepestdepths.procedures.ShadowGrassUpdateTickProcedure;
 import net.mcreator.thedeepestdepths.itemgroup.ShadowItemGroup;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
 
+import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
 
 @TheDeepestDepthsModElements.ModElement.Tag
-public class ShadowSandBlock extends TheDeepestDepthsModElements.ModElement {
-	@ObjectHolder("the_deepest_depths:shadow_sand")
+public class ShadowGrassBlock extends TheDeepestDepthsModElements.ModElement {
+	@ObjectHolder("the_deepest_depths:shadow_grass")
 	public static final Block block = null;
-	public ShadowSandBlock(TheDeepestDepthsModElements instance) {
-		super(instance, 416);
+	public ShadowGrassBlock(TheDeepestDepthsModElements instance) {
+		super(instance, 419);
 	}
 
 	@Override
@@ -33,11 +38,11 @@ public class ShadowSandBlock extends TheDeepestDepthsModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ShadowItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
-	public static class CustomBlock extends FallingBlock {
+	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.SAND).sound(SoundType.SAND).hardnessAndResistance(0.4f, 0.8f).setLightLevel(s -> 0)
-					.harvestLevel(-1).harvestTool(ToolType.SHOVEL));
-			setRegistryName("shadow_sand");
+			super(Block.Properties.create(Material.EARTH).sound(SoundType.GROUND).hardnessAndResistance(0.5f, 0.8f).setLightLevel(s -> 0)
+					.harvestLevel(1).harvestTool(ToolType.SHOVEL).tickRandomly());
+			setRegistryName("shadow_grass");
 		}
 
 		@Override
@@ -46,6 +51,22 @@ public class ShadowSandBlock extends TheDeepestDepthsModElements.ModElement {
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 1));
+		}
+
+		@Override
+		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+			super.tick(state, world, pos, random);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ShadowGrassUpdateTickProcedure.executeProcedure($_dependencies);
+			}
 		}
 	}
 }

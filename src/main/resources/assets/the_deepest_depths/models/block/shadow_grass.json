@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "the_deepest_depths:blocks/shadowdirt",
+    "up": "the_deepest_depths:blocks/shadowgrasstop",
+    "north": "the_deepest_depths:blocks/shadowgrass",
+    "east": "the_deepest_depths:blocks/shadowgrass",
+    "south": "the_deepest_depths:blocks/shadowgrass",
+    "west": "the_deepest_depths:blocks/shadowgrass",
+    "particle": "the_deepest_depths:blocks/shadowdirt"
+  }
+}

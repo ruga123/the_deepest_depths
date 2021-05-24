@@ -4,10 +4,10 @@
   "definition": {
     "name": "Shadow Desert",
     "groundBlock": {
-      "value": "CUSTOM:ShadowSand"
+      "value": "CUSTOM:ShadowGrass"
     },
     "undergroundBlock": {
-      "value": "CUSTOM:ShadowSand"
+      "value": "CUSTOM:ShadowDirt"
     },
     "airColor": {
       "value": -16777165,
@@ -35,20 +35,21 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
-    "biomeCategory": "DESERT",
+    "biomeCategory": "EXTREME_HILLS",
     "parent": {
       "value": "No parent"
     },
     "rainingPossibility": 0.0,
     "temperature": 2.0,
-    "baseHeight": 0.2,
-    "heightVariation": 0.08,
-    "biomeType": "DESERT",
+    "baseHeight": 0.34,
+    "heightVariation": 0.21,
+    "biomeType": "COOL",
     "spawnBiome": false,
-    "biomeWeight": 20,
+    "biomeWeight": 24,
     "biomeDictionaryTypes": [
-      "DRY",
-      "SANDY"
+      "MOUNTAIN",
+      "COLD",
+      "WET"
     ],
     "grassPerChunk": 0,
     "seagrassPerChunk": 0,

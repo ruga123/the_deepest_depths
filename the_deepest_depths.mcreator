@@ -3338,7 +3338,7 @@
       "type": "mob",
       "sortid": 338,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "shadow_guardian"
     },
@@ -4062,9 +4062,74 @@
       "type": "block",
       "sortid": 416,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "shadow_sand"
+    },
+    {
+      "name": "ShadowShrub",
+      "type": "plant",
+      "sortid": 417,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_shrub"
+    },
+    {
+      "name": "ShadowDirt",
+      "type": "block",
+      "sortid": 418,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "shadow_dirt"
+    },
+    {
+      "name": "ShadowGrass",
+      "type": "block",
+      "sortid": 419,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "shadow_grass"
+    },
+    {
+      "name": "ShadowGrassUpdateTick",
+      "type": "procedure",
+      "sortid": 420,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_grass_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShadowHills",
+      "type": "biome",
+      "sortid": 421,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_hills"
     }
   ],
   "variable_elements": [],
@@ -4098,6 +4163,7 @@
       "block.the_deepest_depths.bloodshroom_fence": "Bloodshroom Planks",
       "biome.the_deepest_depths.bloodshroom_forest": "Bloodshroom Forest",
       "biome.the_deepest_depths.alien_plains": "Alien Plains",
+      "block.the_deepest_depths.shadow_shrub": "Shadow Shrub",
       "item.the_deepest_depths.flesh_hunter_spawn_egg": "Flesh Hunter Spawn Egg",
       "biome.the_deepest_depths.bloody_barrens": "Bloody Barrens",
       "block.the_deepest_depths.ghostly_slab": "Ghostly Slab",
@@ -4158,6 +4224,7 @@
       "block.the_deepest_depths.alien_leaves": "Alien Leaves",
       "block.the_deepest_depths.slate_slab": "Slate Slab",
       "block.the_deepest_depths.alien_rock": "Alien Rock",
+      "block.the_deepest_depths.shadow_grass": "Shadow Grass",
       "block.the_deepest_depths.ghostly_stairs": "Ghostly Stairs",
       "item.the_deepest_depths.muscle_helmet": "Muscle Cap",
       "entity.the_deepest_depths.shadow_guardian": "Shadow Guardian",
@@ -4195,8 +4262,10 @@
       "item.the_deepest_depths.diamond_bloodhound_sickle": "Diamond Bloodhound Sickle",
       "item.the_deepest_depths.shadow_dimension": "Shadow Dimension Portal Igniter",
       "block.the_deepest_depths.bloodshroom_planks": "Bloodshroom Planks",
+      "biome.the_deepest_depths.shadow_hills": "Shadow Desert",
       "block.the_deepest_depths.ghostly_log": "Ghostly Log",
-      "block.the_deepest_depths.shadow_sand": "Shadow Sand"
+      "block.the_deepest_depths.shadow_sand": "Shadow Sand",
+      "block.the_deepest_depths.shadow_dirt": "Shadow Dirt"
     }
   },
   "foldersRoot": {

@@ -58,7 +58,8 @@ public class EntitySetTargetProcedureProcedure extends TheDeepestDepthsModElemen
 							|| ((Math.abs(((sourceentity.getPosY()) - (entity.getPosY()))) > 12)
 									|| (Math.abs(((sourceentity.getPosZ()) - (entity.getPosZ()))) > 12)))) {
 						sourceentity.getPersistentData().putBoolean("outing", (true));
-						while ((true)) {
+						sourceentity.setInvisible((true));
+						for (int index1 = 0; index1 < (int) (Math.ceil((sourceentity.getPosY()))); index1++) {
 							if ((((sourceentity.getPosY()) <= 0) || (!(world.isAirBlock(new BlockPos((int) (sourceentity.getPosX()),
 									(int) ((sourceentity.getPosY()) + 1.2), (int) (sourceentity.getPosZ()))))))) {
 								{
@@ -72,24 +73,27 @@ public class EntitySetTargetProcedureProcedure extends TheDeepestDepthsModElemen
 												_ent.rotationPitch, Collections.emptySet());
 									}
 								}
-								sourceentity.setInvisible((true));
 								sourceentity.setInvulnerable((true));
 								break;
 							}
 							sourceentity.setNoGravity((true));
 							{
 								Entity _ent = sourceentity;
-								_ent.setPositionAndUpdate((sourceentity.getPosX()), ((sourceentity.getPosY()) - (-0.25)), (sourceentity.getPosZ()));
+								_ent.setPositionAndUpdate((sourceentity.getPosX()), ((sourceentity.getPosY()) - 0.25), (sourceentity.getPosZ()));
 								if (_ent instanceof ServerPlayerEntity) {
 									((ServerPlayerEntity) _ent).connection.setPlayerLocation((sourceentity.getPosX()),
-											((sourceentity.getPosY()) - (-0.25)), (sourceentity.getPosZ()), _ent.rotationYaw, _ent.rotationPitch,
+											((sourceentity.getPosY()) - 0.25), (sourceentity.getPosZ()), _ent.rotationYaw, _ent.rotationPitch,
 											Collections.emptySet());
 								}
 							}
 							sourceentity.setMotion((sourceentity.getMotion().getX()), (-1.6), (sourceentity.getMotion().getZ()));
 							if (world instanceof ServerWorld) {
 								((ServerWorld) world).spawnParticle(ParticleTypes.SMOKE, (sourceentity.getPosX()), (sourceentity.getPosY()),
-										(sourceentity.getPosZ()), (int) 2, 1, 1, 1, 0.1);
+										(sourceentity.getPosZ()), (int) 5, 0.3, 0.3, 0.3, 0.1);
+							}
+							if (world instanceof ServerWorld) {
+								((ServerWorld) world).spawnParticle(ParticleTypes.SMOKE, (sourceentity.getPosX()), (entity.getPosY()),
+										(sourceentity.getPosZ()), (int) 5, 0.2, 0.2, 0.2, 0.1);
 							}
 						}
 						sourceentity.setNoGravity((true));
@@ -148,6 +152,31 @@ public class EntitySetTargetProcedureProcedure extends TheDeepestDepthsModElemen
 														_ent.rotationPitch, Collections.emptySet());
 											}
 										}
+										new Object() {
+											private int ticks = 0;
+											private float waitTicks;
+											private IWorld world;
+											public void start(IWorld world, int waitTicks) {
+												this.waitTicks = waitTicks;
+												MinecraftForge.EVENT_BUS.register(this);
+												this.world = world;
+											}
+
+											@SubscribeEvent
+											public void tick(TickEvent.ServerTickEvent event) {
+												if (event.phase == TickEvent.Phase.END) {
+													this.ticks += 1;
+													if (this.ticks >= this.waitTicks)
+														run();
+												}
+											}
+
+											private void run() {
+												sourceentity.setInvisible((false));
+												sourceentity.setInvulnerable((false));
+												MinecraftForge.EVENT_BUS.unregister(this);
+											}
+										}.start(world, (int) 6);
 										for (int index2 = 0; index2 < (int) (200); index2++) {
 											if (((world.isAirBlock(new BlockPos((int) (sourceentity.getPosX()), (int) (sourceentity.getPosY()),
 													(int) (sourceentity.getPosZ()))))
@@ -168,15 +197,13 @@ public class EntitySetTargetProcedureProcedure extends TheDeepestDepthsModElemen
 											}
 											if (world instanceof ServerWorld) {
 												((ServerWorld) world).spawnParticle(ParticleTypes.SMOKE, (sourceentity.getPosX()),
-														(sourceentity.getPosY()), (sourceentity.getPosZ()), (int) 5, 1, 1, 1, 0.1);
+														(sourceentity.getPosY()), (sourceentity.getPosZ()), (int) 5, 0.3, 0.3, 0.3, 0.1);
 											}
 											if (world instanceof ServerWorld) {
 												((ServerWorld) world).spawnParticle(ParticleTypes.SMOKE, (sourceentity.getPosX()), (entity.getPosY()),
 														(sourceentity.getPosZ()), (int) 5, 0.2, 0.2, 0.2, 0.1);
 											}
 										}
-										sourceentity.setInvulnerable((false));
-										sourceentity.setInvisible((false));
 										MinecraftForge.EVENT_BUS.unregister(this);
 									}
 								}.start(world, (int) 17);
@@ -188,13 +215,16 @@ public class EntitySetTargetProcedureProcedure extends TheDeepestDepthsModElemen
 				} else if (((Math.abs(((sourceentity.getPosX()) - (entity.getPosX()))) > 4)
 						|| ((Math.abs(((sourceentity.getPosY()) - (entity.getPosY()))) > 4)
 								|| (Math.abs(((sourceentity.getPosZ()) - (entity.getPosZ()))) > 4)))) {
-					sourceentity.getPersistentData().putDouble("shootcooldown", ((sourceentity.getPersistentData().getDouble("shootcooldown")) + 1));
-					if (((sourceentity.getPersistentData().getDouble("shootcooldown")) >= 24)) {
-						sourceentity.getPersistentData().putDouble("shootcooldown", 0);
-						if (sourceentity instanceof LivingEntity) {
-							Entity _ent = sourceentity;
-							if (!_ent.world.isRemote()) {
-								ShadowBallItem.shoot(_ent.world, (LivingEntity) sourceentity, new Random(), (float) 0.5, (float) 12, (int) 0.5);
+					if ((!(sourceentity.getPersistentData().getBoolean("outing")))) {
+						sourceentity.getPersistentData().putDouble("shootcooldown",
+								((sourceentity.getPersistentData().getDouble("shootcooldown")) + 1));
+						if (((sourceentity.getPersistentData().getDouble("shootcooldown")) >= 24)) {
+							sourceentity.getPersistentData().putDouble("shootcooldown", 0);
+							if (sourceentity instanceof LivingEntity) {
+								Entity _ent = sourceentity;
+								if (!_ent.world.isRemote()) {
+									ShadowBallItem.shoot(_ent.world, (LivingEntity) sourceentity, new Random(), (float) 0.5, (float) 12, (int) 0.5);
+								}
 							}
 						}
 					}

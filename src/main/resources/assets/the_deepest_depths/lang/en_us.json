@@ -26,6 +26,7 @@
   "block.the_deepest_depths.bloodshroom_fence": "Bloodshroom Planks",
   "biome.the_deepest_depths.bloodshroom_forest": "Bloodshroom Forest",
   "biome.the_deepest_depths.alien_plains": "Alien Plains",
+  "block.the_deepest_depths.shadow_shrub": "Shadow Shrub",
   "item.the_deepest_depths.flesh_hunter_spawn_egg": "Flesh Hunter Spawn Egg",
   "biome.the_deepest_depths.bloody_barrens": "Bloody Barrens",
   "block.the_deepest_depths.ghostly_slab": "Ghostly Slab",
@@ -86,6 +87,7 @@
   "block.the_deepest_depths.alien_leaves": "Alien Leaves",
   "block.the_deepest_depths.slate_slab": "Slate Slab",
   "block.the_deepest_depths.alien_rock": "Alien Rock",
+  "block.the_deepest_depths.shadow_grass": "Shadow Grass",
   "block.the_deepest_depths.ghostly_stairs": "Ghostly Stairs",
   "item.the_deepest_depths.muscle_helmet": "Muscle Cap",
   "entity.the_deepest_depths.shadow_guardian": "Shadow Guardian",
@@ -123,6 +125,8 @@
   "item.the_deepest_depths.diamond_bloodhound_sickle": "Diamond Bloodhound Sickle",
   "item.the_deepest_depths.shadow_dimension": "Shadow Dimension Portal Igniter",
   "block.the_deepest_depths.bloodshroom_planks": "Bloodshroom Planks",
+  "biome.the_deepest_depths.shadow_hills": "Shadow Desert",
   "block.the_deepest_depths.ghostly_log": "Ghostly Log",
-  "block.the_deepest_depths.shadow_sand": "Shadow Sand"
+  "block.the_deepest_depths.shadow_sand": "Shadow Sand",
+  "block.the_deepest_depths.shadow_dirt": "Shadow Dirt"
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "the_deepest_depths:blocks/shadowshrub",
+    "particle": "the_deepest_depths:blocks/shadowshrub"
+  }
+}

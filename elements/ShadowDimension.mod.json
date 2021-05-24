@@ -5,6 +5,9 @@
     "biomesInDimension": [
       {
         "value": "CUSTOM:ShadowDesert"
+      },
+      {
+        "value": "CUSTOM:ShadowHills"
       }
     ],
     "worldGenType": "Normal world gen",

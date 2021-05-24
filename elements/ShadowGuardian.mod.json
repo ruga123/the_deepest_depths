@@ -59,7 +59,7 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "disableCollisions": false,
+    "disableCollisions": true,
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
@@ -109,15 +109,18 @@
       "value": ""
     },
     "rangedItemType": "Default item",
-    "spawnThisMob": false,
+    "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningProbability": 1,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 2,
+    "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [
       {
-        "value": "CUSTOM:AlienPlains"
+        "value": "CUSTOM:ShadowDesert"
+      },
+      {
+        "value": "CUSTOM:ShadowHills"
       }
     ],
     "spawnInDungeons": false
