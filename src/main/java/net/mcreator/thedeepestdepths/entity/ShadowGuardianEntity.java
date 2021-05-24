@@ -25,6 +25,7 @@ import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
+import net.minecraft.entity.ai.goal.LookAtGoal;
 import net.minecraft.entity.ai.goal.HurtByTargetGoal;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -33,7 +34,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureAttribute;
 
-import net.mcreator.thedeepestdepths.itemgroup.VergoZoneItemGroup;
+import net.mcreator.thedeepestdepths.itemgroup.ShadowItemGroup;
 import net.mcreator.thedeepestdepths.entity.renderer.ShadowGuardianRenderer;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
 
@@ -51,7 +52,7 @@ public class ShadowGuardianEntity extends TheDeepestDepthsModElements.ModElement
 	@Override
 	public void initElements() {
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -10092442, -13434829, new Item.Properties().group(VergoZoneItemGroup.tab))
+		elements.items.add(() -> new SpawnEggItem(entity, -10092442, -13434829, new Item.Properties().group(ShadowItemGroup.tab))
 				.setRegistryName("shadow_guardian_spawn_egg"));
 	}
 
@@ -63,8 +64,8 @@ public class ShadowGuardianEntity extends TheDeepestDepthsModElements.ModElement
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
 			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.33);
-			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 150);
-			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 12);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 200);
+			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 21);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 10);
 			ammma = ammma.createMutableAttribute(Attributes.KNOCKBACK_RESISTANCE, 0.1);
 			event.put(entity, ammma.create());
@@ -91,12 +92,15 @@ public class ShadowGuardianEntity extends TheDeepestDepthsModElements.ModElement
 		protected void registerGoals() {
 			super.registerGoals();
 			this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true));
-			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
-			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, false, false));
-			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, AnimalEntity.class, false, false));
-			this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 1));
-			this.targetSelector.addGoal(6, new HurtByTargetGoal(this));
-			this.goalSelector.addGoal(7, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(2, new LookAtGoal(this, PlayerEntity.class, (float) 12));
+			this.goalSelector.addGoal(3, new LookAtGoal(this, ServerPlayerEntity.class, (float) 12));
+			this.goalSelector.addGoal(4, new LookAtGoal(this, AnimalEntity.class, (float) 12));
+			this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, ServerPlayerEntity.class, false, false));
+			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, AnimalEntity.class, false, false));
+			this.goalSelector.addGoal(8, new RandomWalkingGoal(this, 1));
+			this.targetSelector.addGoal(9, new HurtByTargetGoal(this));
+			this.goalSelector.addGoal(10, new LookRandomlyGoal(this));
 		}
 
 		@Override

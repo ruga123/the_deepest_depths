@@ -22,6 +22,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
+import net.mcreator.thedeepestdepths.item.PurpleDiamondItem;
 import net.mcreator.thedeepestdepths.block.BloodshroomBrainRootBlock;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsModElements;
 import net.mcreator.thedeepestdepths.TheDeepestDepthsMod;
@@ -96,6 +97,135 @@ public class AncientTomeOnBlockRightClickedProcedure extends TheDeepestDepthsMod
 			ItemEntity entityToSpawn = new ItemEntity((World) world, (x + 0.5), (y + 1), (z + 0.5), (item));
 			entityToSpawn.setPickupDelay((int) 20);
 			world.addEntity(entityToSpawn);
+		}
+		if ((new ItemStack(PurpleDiamondItem.block, (int) (1)).getItem() == (item).getItem())) {
+			xe = (double) x;
+			ye = (double) 256;
+			ze = (double) z;
+			{
+				List<Entity> _entfound = world.getEntitiesWithinAABB(Entity.class,
+						new AxisAlignedBB(x - (6 / 2d), (y + 1) - (6 / 2d), z - (6 / 2d), x + (6 / 2d), (y + 1) + (6 / 2d), z + (6 / 2d)), null)
+						.stream().sorted(new Object() {
+							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+							}
+						}.compareDistOf(x, (y + 1), z)).collect(Collectors.toList());
+				for (Entity entityiterator : _entfound) {
+					if (((entityiterator instanceof PlayerEntity) == (entityiterator instanceof ServerPlayerEntity))) {
+						if (((world instanceof World ? (((World) world).getDimensionKey()) : World.OVERWORLD) == (RegistryKey
+								.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("the_deepest_depths:shadow_dimension"))))) {
+							if (world instanceof ServerWorld) {
+								IWorld _worldorig = world;
+								world = ((ServerWorld) world).getServer().getWorld(World.OVERWORLD);
+								if (world != null) {
+									while ((true)) {
+										if ((((world.getBlockState(new BlockPos((int) (xe), (int) (ye), (int) (ze)))).getBlock() == Blocks.AIR
+												.getDefaultState().getBlock())
+												&& (((world.getBlockState(new BlockPos((int) (xe), (int) ((ye) + 1), (int) (ze))))
+														.getBlock() == Blocks.AIR.getDefaultState().getBlock())
+														&& (world.getBlockState(new BlockPos((int) (xe), (int) ((ye) - 1), (int) (ze)))
+																.isSolid())))) {
+											break;
+										}
+										ye = (double) ((ye) - 1);
+										if (((ye) <= 0)) {
+											xe = (double) ((xe) + (((new Random()).nextInt((int) 18 + 1)) - 9));
+											ze = (double) ((ze) + (((new Random()).nextInt((int) 18 + 1)) - 9));
+											ye = (double) 256;
+										}
+									}
+									{
+										Entity _ent = entityiterator;
+										if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
+											RegistryKey<World> destinationType = World.OVERWORLD;
+											ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
+											if (nextWorld != null) {
+												((ServerPlayerEntity) _ent).connection
+														.sendPacket(new SChangeGameStatePacket(SChangeGameStatePacket.field_241768_e_, 0));
+												((ServerPlayerEntity) _ent).teleport(nextWorld, nextWorld.getSpawnPoint().getX(),
+														nextWorld.getSpawnPoint().getY() + 1, nextWorld.getSpawnPoint().getZ(), _ent.rotationYaw,
+														_ent.rotationPitch);
+												((ServerPlayerEntity) _ent).connection
+														.sendPacket(new SPlayerAbilitiesPacket(((ServerPlayerEntity) _ent).abilities));
+												for (EffectInstance effectinstance : ((ServerPlayerEntity) _ent).getActivePotionEffects()) {
+													((ServerPlayerEntity) _ent).connection
+															.sendPacket(new SPlayEntityEffectPacket(_ent.getEntityId(), effectinstance));
+												}
+												((ServerPlayerEntity) _ent).connection
+														.sendPacket(new SPlaySoundEventPacket(1032, BlockPos.ZERO, 0, false));
+											}
+										}
+									}
+									{
+										Entity _ent = entityiterator;
+										_ent.setPositionAndUpdate((x + 0.5), (ye), (z + 0.5));
+										if (_ent instanceof ServerPlayerEntity) {
+											((ServerPlayerEntity) _ent).connection.setPlayerLocation((x + 0.5), (ye), (z + 0.5), _ent.rotationYaw,
+													_ent.rotationPitch, Collections.emptySet());
+										}
+									}
+								}
+								world = _worldorig;
+							}
+						} else {
+							if (world instanceof ServerWorld) {
+								IWorld _worldorig = world;
+								world = ((ServerWorld) world).getServer().getWorld(
+										RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("the_deepest_depths:shadow_dimension")));
+								if (world != null) {
+									while ((true)) {
+										if ((((world.getBlockState(new BlockPos((int) (xe), (int) (ye), (int) (ze)))).getBlock() == Blocks.AIR
+												.getDefaultState().getBlock())
+												&& (((world.getBlockState(new BlockPos((int) (xe), (int) ((ye) + 1), (int) (ze))))
+														.getBlock() == Blocks.AIR.getDefaultState().getBlock())
+														&& (world.getBlockState(new BlockPos((int) (xe), (int) ((ye) - 1), (int) (ze)))
+																.isSolid())))) {
+											break;
+										}
+										ye = (double) ((ye) - 1);
+										if (((ye) <= 0)) {
+											xe = (double) ((xe) + (((new Random()).nextInt((int) 18 + 1)) - 9));
+											ze = (double) ((ze) + (((new Random()).nextInt((int) 18 + 1)) - 9));
+											ye = (double) 256;
+										}
+									}
+								}
+								world = _worldorig;
+							}
+							{
+								Entity _ent = entityiterator;
+								if (!_ent.world.isRemote && _ent instanceof ServerPlayerEntity) {
+									RegistryKey<World> destinationType = RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+											new ResourceLocation("the_deepest_depths:shadow_dimension"));
+									ServerWorld nextWorld = _ent.getServer().getWorld(destinationType);
+									if (nextWorld != null) {
+										((ServerPlayerEntity) _ent).connection
+												.sendPacket(new SChangeGameStatePacket(SChangeGameStatePacket.field_241768_e_, 0));
+										((ServerPlayerEntity) _ent).teleport(nextWorld, nextWorld.getSpawnPoint().getX(),
+												nextWorld.getSpawnPoint().getY() + 1, nextWorld.getSpawnPoint().getZ(), _ent.rotationYaw,
+												_ent.rotationPitch);
+										((ServerPlayerEntity) _ent).connection
+												.sendPacket(new SPlayerAbilitiesPacket(((ServerPlayerEntity) _ent).abilities));
+										for (EffectInstance effectinstance : ((ServerPlayerEntity) _ent).getActivePotionEffects()) {
+											((ServerPlayerEntity) _ent).connection
+													.sendPacket(new SPlayEntityEffectPacket(_ent.getEntityId(), effectinstance));
+										}
+										((ServerPlayerEntity) _ent).connection.sendPacket(new SPlaySoundEventPacket(1032, BlockPos.ZERO, 0, false));
+									}
+								}
+							}
+							{
+								Entity _ent = entityiterator;
+								_ent.setPositionAndUpdate((x + 0.5), (ye), (z + 0.5));
+								if (_ent instanceof ServerPlayerEntity) {
+									((ServerPlayerEntity) _ent).connection.setPlayerLocation((x + 0.5), (ye), (z + 0.5), _ent.rotationYaw,
+											_ent.rotationPitch, Collections.emptySet());
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		if ((new ItemStack(BloodshroomBrainRootBlock.block, (int) (1)).getItem() == (item).getItem())) {
 			xe = (double) x;

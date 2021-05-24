@@ -2,19 +2,19 @@
   "_fv": 18,
   "_type": "biome",
   "definition": {
-    "name": "Alien Plains",
+    "name": "Shadow Desert",
     "groundBlock": {
-      "value": "CUSTOM:AlienRock"
+      "value": "CUSTOM:ShadowSand"
     },
     "undergroundBlock": {
-      "value": "CUSTOM:AlienRock"
+      "value": "CUSTOM:ShadowSand"
     },
     "airColor": {
-      "value": -8911240,
+      "value": -16777165,
       "falpha": 0.0
     },
     "waterFogColor": {
-      "value": -6750055,
+      "value": -13434829,
       "falpha": 0.0
     },
     "ambientSound": {
@@ -35,19 +35,20 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
-    "biomeCategory": "NONE",
+    "biomeCategory": "DESERT",
     "parent": {
       "value": "No parent"
     },
     "rainingPossibility": 0.5,
     "temperature": 2.0,
-    "baseHeight": 0.2,
-    "heightVariation": 0.32,
-    "biomeType": "WARM",
-    "spawnBiome": false,
-    "biomeWeight": 10,
+    "baseHeight": 0.1,
+    "heightVariation": 0.1,
+    "biomeType": "DESERT",
+    "spawnBiome": true,
+    "biomeWeight": 20,
     "biomeDictionaryTypes": [
-      "END"
+      "DRY",
+      "SANDY"
     ],
     "grassPerChunk": 0,
     "seagrassPerChunk": 0,
@@ -86,7 +87,9 @@
     "spawnOceanMonument": false,
     "spawnShipwreck": false,
     "oceanRuinType": "NONE",
-    "defaultFeatures": [],
+    "defaultFeatures": [
+      "Caves"
+    ],
     "spawnEntries": []
   }
 }

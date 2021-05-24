@@ -3503,39 +3503,6 @@
       "registry_name": "alien_fence_gate_recipe"
     },
     {
-      "name": "GreatDestructionEntityIsHurt",
-      "type": "procedure",
-      "sortid": 355,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "great_destruction_entity_is_hurt",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "Tardagen",
       "type": "mob",
       "sortid": 356,
@@ -4020,6 +3987,84 @@
       "ids": {},
       "registry_name": "warped_grass_spawn",
       "path": "~/AlienTreeFolder"
+    },
+    {
+      "name": "ShadowBall",
+      "type": "gun",
+      "sortid": 411,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_ball"
+    },
+    {
+      "name": "ShadowBallRangedItemUsed",
+      "type": "procedure",
+      "sortid": 412,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_ball_ranged_item_used",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShadowDesert",
+      "type": "biome",
+      "sortid": 413,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_desert"
+    },
+    {
+      "name": "ShadowStone",
+      "type": "block",
+      "sortid": 414,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_stone"
+    },
+    {
+      "name": "Shadow",
+      "type": "tab",
+      "sortid": 415,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow"
+    },
+    {
+      "name": "ShadowDimension",
+      "type": "dimension",
+      "sortid": 413,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_dimension",
+      "metadata": {
+        "ep": false
+      }
+    },
+    {
+      "name": "ShadowSand",
+      "type": "block",
+      "sortid": 416,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shadow_sand"
     }
   ],
   "variable_elements": [],
@@ -4041,6 +4086,7 @@
       "block.the_deepest_depths.slate_stairs": "Slate Stairs",
       "entity.the_deepest_depths.blood_hound": "Bloodhound",
       "item.the_deepest_depths.blood_hound_spawn_egg": "Bloodhound Spawn Egg",
+      "itemGroup.tabshadow": "Shadow Realm",
       "block.the_deepest_depths.ancient_tome": "Ancient Tome",
       "item.the_deepest_depths.blood_world": "Blood World Portal Igniter",
       "item.the_deepest_depths.muscle_fiber": "Muscle Fiber",
@@ -4080,7 +4126,7 @@
       "block.the_deepest_depths.rune_y": "Ancient Rune",
       "block.the_deepest_depths.rune_z": "Ancient Rune",
       "block.the_deepest_depths.rune_k": "Ancient Rune",
-      "block.the_deepest_depths.dead_alien_rock": "Alien Rock",
+      "block.the_deepest_depths.dead_alien_rock": "Dead Alien Rock",
       "block.the_deepest_depths.rune_l": "Ancient Rune",
       "item.the_deepest_depths.alien_bubble_spawn_egg": "Alien Bubble Spawn Egg",
       "block.the_deepest_depths.rune_m": "Ancient Rune",
@@ -4121,6 +4167,7 @@
       "biome.the_deepest_depths.death_valley": "Death Valley",
       "item.the_deepest_depths.purple_diamond": "Purple Diamond",
       "block.the_deepest_depths.bloodshroom_block": "Bloodshroom Block",
+      "block.the_deepest_depths.shadow_stone": "Shadow Stone",
       "entity.the_deepest_depths.great_destruction": "Great Destruction",
       "block.the_deepest_depths.bloodshroom_brain_block": "Bloodshroom Brain Block",
       "item.the_deepest_depths.great_destruction_spawn_egg": "Great Destruction Spawn Egg",
@@ -4128,6 +4175,7 @@
       "block.the_deepest_depths.bloodstone_stairs": "Bloodstone Stairs",
       "item.the_deepest_depths.shadow_guardian_spawn_egg": "Shadow Guardian Spawn Egg",
       "block.the_deepest_depths.alien_stairs": "Alien Planks",
+      "biome.the_deepest_depths.shadow_desert": "Shadow Desert",
       "block.the_deepest_depths.pyro_ore": "Pyro-Radiant Ore",
       "block.the_deepest_depths.pyro_crystal_block": "Pyro Crystal Block",
       "block.the_deepest_depths.pyroxene_slab": "Pyroxene Slab",
@@ -4137,15 +4185,18 @@
       "block.the_deepest_depths.alien_fence": "Alien Planks",
       "block.the_deepest_depths.rooted_bloodstone": "Rooted Bloodstone",
       "item.the_deepest_depths.pyro_crystal": "Pyro-Crystal",
-      "itemGroup.tabvergo_zone": "Vergo Zone",
+      "item.the_deepest_depths.shadow_ball": "Shadow Ball",
+      "itemGroup.tabvergo_zone": "Vergo Dimension",
       "entity.the_deepest_depths.head_hunter": "Head Hunter",
       "block.the_deepest_depths.alien_fence_gate": "Alien Planks",
       "item.the_deepest_depths.blood_god_spawn_egg": "Blood God Spawn Egg",
       "block.the_deepest_depths.purple_diamond_ore": "Purple Diamond Ore",
       "item.the_deepest_depths.iron_bloodhound_sickle": "Iron Bloodhound Sickle",
       "item.the_deepest_depths.diamond_bloodhound_sickle": "Diamond Bloodhound Sickle",
+      "item.the_deepest_depths.shadow_dimension": "Shadow Dimension Portal Igniter",
       "block.the_deepest_depths.bloodshroom_planks": "Bloodshroom Planks",
-      "block.the_deepest_depths.ghostly_log": "Ghostly Log"
+      "block.the_deepest_depths.ghostly_log": "Ghostly Log",
+      "block.the_deepest_depths.shadow_sand": "Shadow Sand"
     }
   },
   "foldersRoot": {

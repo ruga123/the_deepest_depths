@@ -2,7 +2,7 @@
   "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "deadalantium",
+    "texture": "shadow_stone",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -32,14 +32,14 @@
         "subtract": false
       }
     ],
-    "name": "Dead Alien Rock",
+    "name": "Shadow Stone",
     "specialInfo": [],
-    "hardness": 3.0,
-    "resistance": 4.0,
+    "hardness": 5.0,
+    "resistance": 6.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:VergoZone"
+      "value": "CUSTOM:Shadow"
     },
     "destroyTool": "pickaxe",
     "customDrop": {
@@ -105,15 +105,12 @@
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "CUSTOM:AlienRock"
+        "value": "Blocks.STONE"
       }
     ],
-    "frequencyPerChunks": 32,
-    "frequencyOnChunk": 32,
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 256,
-    "generateCondition": {
-      "name": "DeadAlienRockAdditionalGenerationCondition"
-    }
+    "maxGenerateHeight": 64
   }
 }
